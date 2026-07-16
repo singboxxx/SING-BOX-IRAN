@@ -1,0 +1,409 @@
+{
+  "log": {
+    "level": "warn",
+    "timestamp": true
+  },
+  "dns": {
+    "servers": [
+      {
+        "type": "https",
+        "tag": "dns-remote",
+        "detour": "Telegram ➡ @SINGBOXXX",
+        "server": "8.8.8.8"
+      },
+      {
+        "type": "udp",
+        "tag": "dns-direct",
+        "server": "178.22.122.100",
+        "server_port": 53
+      },
+      {
+        "type": "fakeip",
+        "tag": "dns-fake",
+        "inet4_range": "198.18.0.0/15",
+        "inet6_range": "fc00::/18"
+      }
+    ],
+    "rules": [
+      {
+        "domain": [
+          "raw.githubusercontent.com"
+        ],
+        "server": "dns-direct"
+      },
+      {
+        "rule_set": [
+          "geosite-malware",
+          "geosite-phishing",
+          "geosite-cryptominers",
+          "geosite-category-ads-all"
+        ],
+        "action": "reject"
+      },
+      {
+        "rule_set": [
+          "geosite-ir"
+        ],
+        "server": "dns-direct"
+      },
+      {
+        "clash_mode": "@SINGBOXXX",
+        "server": "dns-remote"
+      },
+      {
+        "inbound": [
+          "tun-in"
+        ],
+        "query_type": [
+          "A",
+          "AAAA"
+        ],
+        "server": "dns-fake"
+      }
+    ],
+    "strategy": "prefer_ipv4",
+    "independent_cache": true
+  },
+  "ntp": {
+    "enabled": true,
+    "interval": "30m0s",
+    "server": "time.cloudflare.com",
+    "server_port": 123,
+    "domain_resolver": "dns-direct"
+  },
+  "inbounds": [
+    {
+      "type": "tun",
+      "tag": "tun-in",
+      "mtu": 1500,
+      "address": [
+        "172.18.0.1/30",
+        "fdfe:dcba:9876::1/126"
+      ],
+      "auto_route": true,
+      "strict_route": true,
+      "stack": "mixed",
+      "endpoint_independent_nat": true
+    },
+    {
+      "type": "mixed",
+      "tag": "mixed-in",
+      "listen": "0.0.0.0",
+      "listen_port": 2080
+    }
+  ],
+  "outbounds": [
+    {
+      "type": "selector",
+      "tag": "Telegram ➡ @SINGBOXXX",
+      "outbounds": [
+        "🚀 Auto Pilot",
+        "🇫🇷 FR-VLESS-TCP",
+        "🇳🇴 NO-VLESS-Reality",
+        "🇩🇪 DE-VLESS-TCP",
+        "🇳🇱 NL-VLESS-Reality",
+        "🇵🇱 PL-VLESS-Reality",
+        "🇺🇸 US-VLESS-Reality",
+        "🇱🇻 LV-VLESS-Reality",
+        "🇩🇪 DE-Trojan-WS-TLS",
+        "🇮🇪 IE-Trojan-TCP-TLS",
+        "🇮🇳 IN-Shadowsocks",
+        "direct"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "🚀 Auto Pilot",
+      "outbounds": [
+        "🇫🇷 FR-VLESS-TCP",
+        "🇳🇴 NO-VLESS-Reality",
+        "🇩🇪 DE-VLESS-TCP",
+        "🇳🇱 NL-VLESS-Reality",
+        "🇵🇱 PL-VLESS-Reality",
+        "🇺🇸 US-VLESS-Reality",
+        "🇱🇻 LV-VLESS-Reality",
+        "🇩🇪 DE-Trojan-WS-TLS",
+        "🇮🇪 IE-Trojan-TCP-TLS",
+        "🇮🇳 IN-Shadowsocks"
+      ],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "30s",
+      "tolerance": 50,
+      "idle_timeout": "20m"
+    },
+    {
+      "type": "vless",
+      "tag": "🇫🇷 FR-VLESS-TCP",
+      "server": "85.222.198.181",
+      "server_port": 2550,
+      "uuid": "d8b42cd5-a149-4356-9e61-000000000000"
+    },
+    {
+      "type": "vless",
+      "tag": "🇳🇴 NO-VLESS-Reality",
+      "server": "185.231.101.85",
+      "server_port": 8443,
+      "uuid": "ecad47b0-249e-000c-adff-e3c8f02b1897",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "se.quattro-tech.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "10rVZPoOUP1TlQviIAsQ_jAROX0fRQxH0C92nq_zGQc",
+          "short_id": "43dcff53849b81e6"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇩🇪 DE-VLESS-TCP",
+      "server": "85.192.28.199",
+      "server_port": 51598,
+      "uuid": "47883fd8-0478-414f-8230-6eeecedc234e"
+    },
+    {
+      "type": "vless",
+      "tag": "🇳🇱 NL-VLESS-Reality",
+      "server": "46.243.142.12",
+      "server_port": 8443,
+      "uuid": "fa9c9f0f-a89c-0005-95d6-a8b47311a6d6",
+      "tls": {
+        "enabled": true,
+        "server_name": "rutube.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "10rVZPoOUP1TlQviIAsQ_jAROX0fRQxH0C92nq_zGQc",
+          "short_id": "43dcff53849b81e6"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇵🇱 PL-VLESS-Reality",
+      "server": "80.249.150.24",
+      "server_port": 443,
+      "uuid": "e5573bd4-6b10-4010-a67d-54ea2b51e8bf",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "dzen.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "olcTApVIdrdt_bsMJaLsZ-8bYR73oMNzgCZJuR_4sFA",
+          "short_id": "7c83683ed7507a69"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 US-VLESS-Reality",
+      "server": "129.146.65.178",
+      "server_port": 20001,
+      "uuid": "65c56e1f-5c41-40bc-b0b5-9346772476ca",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.lamer.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "mDIWlNxW_Qa_iqqDy1Ad5rk0gEoZz02Nu3khRvwAOSQ",
+          "short_id": "8de808c042cc01"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇱🇻 LV-VLESS-Reality",
+      "server": "51.250.12.22",
+      "server_port": 443,
+      "uuid": "4392b776-41a2-4300-b545-a3d2724b605b",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "cdn.tracker.yandex.net",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "KYNrRy0ElOU9Hg5tmWRwpf-Ff3R8Gjcjdk91jZt2nGg",
+          "short_id": "bb6c8a1e7c"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇩🇪 DE-Trojan-WS-TLS",
+      "server": "wangcai.yunzhongzhuan.com",
+      "server_port": 443,
+      "password": "521314",
+      "tls": {
+        "enabled": true,
+        "server_name": "tjplay.lxdxo.kdns.fr"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/Telegram🇨🇳",
+        "headers": {
+          "Host": "tjplay.lxdxo.kdns.fr"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇮🇪 IE-Trojan-TCP-TLS",
+      "server": "singular-lark.rooster465.autos",
+      "server_port": 443,
+      "password": "XG59623478",
+      "tls": {
+        "enabled": true,
+        "server_name": "singular-lark.rooster465.autos"
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇮🇳 IN-Shadowsocks",
+      "server": "103.111.114.55",
+      "server_port": 28061,
+      "method": "chacha20-ietf-poly1305",
+      "password": "WOir3lXBhMHDcLFPQdEZXPu37_pTQDcXfm"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    }
+  ],
+  "route": {
+    "rules": [
+      {
+        "action": "sniff"
+      },
+      {
+        "protocol": [
+          "dns"
+        ],
+        "action": "hijack-dns"
+      },
+      {
+        "clash_mode": "@SINGBOXXX",
+        "outbound": "Telegram ➡ @SINGBOXXX"
+      },
+      {
+        "network": [
+          "udp"
+        ],
+        "port": [
+          80,
+          443
+        ],
+        "action": "reject"
+      },
+      {
+        "rule_set": [
+          "geosite-malware",
+          "geoip-malware",
+          "geosite-phishing",
+          "geoip-phishing",
+          "geosite-cryptominers",
+          "geosite-category-ads-all"
+        ],
+        "action": "reject"
+      },
+      {
+        "rule_set": [
+          "geosite-ir",
+          "geoip-ir"
+        ],
+        "outbound": "direct"
+      }
+    ],
+    "rule_set": [
+      {
+        "type": "remote",
+        "tag": "geosite-malware",
+        "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-malware.srs",
+        "download_detour": "direct"
+      },
+      {
+        "type": "remote",
+        "tag": "geoip-malware",
+        "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geoip-malware.srs",
+        "download_detour": "direct"
+      },
+      {
+        "type": "remote",
+        "tag": "geosite-phishing",
+        "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-phishing.srs",
+        "download_detour": "direct"
+      },
+      {
+        "type": "remote",
+        "tag": "geoip-phishing",
+        "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geoip-phishing.srs",
+        "download_detour": "direct"
+      },
+      {
+        "type": "remote",
+        "tag": "geosite-cryptominers",
+        "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-cryptominers.srs",
+        "download_detour": "direct"
+      },
+      {
+        "type": "remote",
+        "tag": "geosite-category-ads-all",
+        "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-category-ads-all.srs",
+        "download_detour": "direct"
+      },
+      {
+        "type": "remote",
+        "tag": "geosite-ir",
+        "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-ir.srs",
+        "download_detour": "direct"
+      },
+      {
+        "type": "remote",
+        "tag": "geoip-ir",
+        "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geoip-ir.srs",
+        "download_detour": "direct"
+      }
+    ],
+    "final": "Telegram ➡ @SINGBOXXX",
+    "auto_detect_interface": true,
+    "default_domain_resolver": {
+      "server": "dns-direct",
+      "strategy": "prefer_ipv4",
+      "rewrite_ttl": 60
+    }
+  },
+  "experimental": {
+    "cache_file": {
+      "enabled": true,
+      "store_fakeip": true
+    },
+    "clash_api": {
+      "external_controller": "127.0.0.1:9090",
+      "external_ui": "ui",
+      "external_ui_download_url": "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip",
+      "external_ui_download_detour": "direct",
+      "default_mode": "SMART MODE"
+    }
+  }
+}
