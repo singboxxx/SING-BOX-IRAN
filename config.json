@@ -98,26 +98,20 @@
       "tag": "Telegram ➡ @SINGBOXXX",
       "outbounds": [
         "🚀 Auto Pilot",
-        "🇦🇱 AL-Shadowsocks",
+        "🇮🇹 IT-Shadowsocks",
         "🇵🇭 PH-Shadowsocks",
         "🇮🇳 IN-Shadowsocks",
-        "🇹🇼 TW-Shadowsocks",
+        "🇵🇱 PL-Shadowsocks",
         "🇳🇱 NL1-Shadowsocks",
         "🇳🇱 NL2-Shadowsocks",
-        "🇨🇦 CA1-Shadowsocks",
+        "🇨🇦 CA-Shadowsocks",
         "🇸🇬 SG-Shadowsocks",
-        "🇦🇺 AU-Shadowsocks",
-        "🇺🇸 US1-Shadowsocks",
-        "🇷🇺 RU1-Hysteria2",
-        "🇷🇺 RU2-Hysteria2",
-        "🇫🇷 FR1-VLESS-TCP",
-        "🇩🇪 DE1-VLESS-gRPC",
-        "🇬🇧 GB-VLESS-gRPC",
-        "🇩🇪 DE2-VLESS-gRPC",
-        "🇨🇦 CA2-VLESS-WS",
-        "🇺🇸 US2-VLESS-WS",
-        "🇫🇷 FR2-VLESS-TCP",
-        "🇺🇸 US3-Trojan-TLS",
+        "🇦🇺 AU1-Shadowsocks",
+        "🇦🇺 AU2-Shadowsocks",
+        "🇷🇴 RO-Shadowsocks",
+        "🇷🇺 RU-Hysteria2",
+        "🇺🇸 US-VLESS-WS",
+        "🇱🇹 LT-Trojan-TLS",
         "direct"
       ]
     },
@@ -125,26 +119,20 @@
       "type": "urltest",
       "tag": "🚀 Auto Pilot",
       "outbounds": [
-        "🇦🇱 AL-Shadowsocks",
+        "🇮🇹 IT-Shadowsocks",
         "🇵🇭 PH-Shadowsocks",
         "🇮🇳 IN-Shadowsocks",
-        "🇹🇼 TW-Shadowsocks",
+        "🇵🇱 PL-Shadowsocks",
         "🇳🇱 NL1-Shadowsocks",
         "🇳🇱 NL2-Shadowsocks",
-        "🇨🇦 CA1-Shadowsocks",
+        "🇨🇦 CA-Shadowsocks",
         "🇸🇬 SG-Shadowsocks",
-        "🇦🇺 AU-Shadowsocks",
-        "🇺🇸 US1-Shadowsocks",
-        "🇷🇺 RU1-Hysteria2",
-        "🇷🇺 RU2-Hysteria2",
-        "🇫🇷 FR1-VLESS-TCP",
-        "🇩🇪 DE1-VLESS-gRPC",
-        "🇬🇧 GB-VLESS-gRPC",
-        "🇩🇪 DE2-VLESS-gRPC",
-        "🇨🇦 CA2-VLESS-WS",
-        "🇺🇸 US2-VLESS-WS",
-        "🇫🇷 FR2-VLESS-TCP",
-        "🇺🇸 US3-Trojan-TLS"
+        "🇦🇺 AU1-Shadowsocks",
+        "🇦🇺 AU2-Shadowsocks",
+        "🇷🇴 RO-Shadowsocks",
+        "🇷🇺 RU-Hysteria2",
+        "🇺🇸 US-VLESS-WS",
+        "🇱🇹 LT-Trojan-TLS"
       ],
       "url": "https://www.gstatic.com/generate_204",
       "interval": "30s",
@@ -153,11 +141,11 @@
     },
     {
       "type": "shadowsocks",
-      "tag": "🇦🇱 AL-Shadowsocks",
-      "server": "130.49.189.158",
-      "server_port": 10792,
-      "method": "chacha20-ietf-poly1305",
-      "password": "ETUOOQTpdrrKln72UYxwiw"
+      "tag": "🇮🇹 IT-Shadowsocks",
+      "server": "185.198.235.208",
+      "server_port": 20129,
+      "method": "aes-256-gcm",
+      "password": "6512030961473f21"
     },
     {
       "type": "shadowsocks",
@@ -177,11 +165,11 @@
     },
     {
       "type": "shadowsocks",
-      "tag": "🇹🇼 TW-Shadowsocks",
-      "server": "r3mrcg001286ek2.cybervena.com",
-      "server_port": 50099,
-      "method": "chacha20-ietf-poly1305",
-      "password": "7e731ec3-f8e1-43f6-92cf-3978d14705c4"
+      "tag": "🇵🇱 PL-Shadowsocks",
+      "server": "92.118.205.211",
+      "server_port": 5600,
+      "password": "Y6R9pAtvxxzmGC",
+      "method": "aes-256-gcm"
     },
     {
       "type": "shadowsocks",
@@ -201,7 +189,7 @@
     },
     {
       "type": "shadowsocks",
-      "tag": "🇨🇦 CA1-Shadowsocks",
+      "tag": "🇨🇦 CA-Shadowsocks",
       "server": "185.196.61.82",
       "server_port": 8080,
       "method": "aes-256-gcm",
@@ -217,7 +205,7 @@
     },
     {
       "type": "shadowsocks",
-      "tag": "🇦🇺 AU-Shadowsocks",
+      "tag": "🇦🇺 AU1-Shadowsocks",
       "server": "103.106.231.82",
       "server_port": 5600,
       "method": "aes-256-gcm",
@@ -225,15 +213,23 @@
     },
     {
       "type": "shadowsocks",
-      "tag": "🇺🇸 US1-Shadowsocks",
-      "server": "172.245.235.84",
-      "server_port": 2375,
-      "method": "aes-256-gcm",
-      "password": "faBAoD54k87UJG7"
+      "tag": "🇦🇺 AU2-Shadowsocks",
+      "server": "45.77.232.213",
+      "server_port": 15675,
+      "password": "TWG7J1KR5KsPaV5qZI+rieueKxxafZSpCH",
+      "method": "chacha20-ietf-poly1305"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇷🇴 RO-Shadowsocks",
+      "server": "154.46.31.106",
+      "server_port": 443,
+      "password": "QFWzCw2uX9B9i6qAYeFBIE",
+      "method": "chacha20-ietf-poly1305"
     },
     {
       "type": "hysteria2",
-      "tag": "🇷🇺 RU1-Hysteria2",
+      "tag": "🇷🇺 RU-Hysteria2",
       "server": "80.66.81.78",
       "server_port": 9443,
       "password": "rs2mR3g9bZiMloftx6lZQ59Um1Ld",
@@ -248,78 +244,8 @@
       }
     },
     {
-      "type": "hysteria2",
-      "tag": "🇷🇺 RU2-Hysteria2",
-      "server": "musicclips.videolinks.ru",
-      "server_port": 8443,
-      "password": "eltgrek81o6w5cd4",
-      "tls": {
-        "enabled": true,
-        "server_name": "musicclips.videolinks.ru",
-        "insecure": false
-      },
-      "obfs": {
-        "type": "salamander",
-        "password": "8zzng75tz4tf82pj"
-      }
-    },
-    {
       "type": "vless",
-      "tag": "🇫🇷 FR1-VLESS-TCP",
-      "server": "fn.fifapes.monster",
-      "server_port": 2090,
-      "uuid": "eab915bc-d2df-73d1-47d0-6eb240497055"
-    },
-    {
-      "type": "vless",
-      "tag": "🇩🇪 DE1-VLESS-gRPC",
-      "server": "81.31.211.117",
-      "server_port": 2085,
-      "uuid": "3067642d-02fa-47e9-a6a2-fb5dda565969",
-      "transport": {
-        "type": "grpc",
-        "service_name": "vless"
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇬🇧 GB-VLESS-gRPC",
-      "server": "45.86.159.137",
-      "server_port": 2085,
-      "uuid": "a4d80598-8736-41ee-b78f-543f206da4db",
-      "transport": {
-        "type": "grpc",
-        "service_name": "vless"
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇩🇪 DE2-VLESS-gRPC",
-      "server": "81.31.211.111",
-      "server_port": 2085,
-      "uuid": "3d244afc-60ef-468a-9b19-f4bbad7e8ef1",
-      "transport": {
-        "type": "grpc",
-        "service_name": "vless"
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇨🇦 CA2-VLESS-WS",
-      "server": "premium-us-ca-01-gthost.efgwf.online",
-      "server_port": 8080,
-      "uuid": "4e0f4e59-3613-4f0c-b824-7348413d20e6",
-      "transport": {
-        "type": "ws",
-        "path": "/ws-6Tta3kYF",
-        "headers": {
-          "Host": "premium-us-ca-01-gthost.efgwf.online"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇺🇸 US2-VLESS-WS",
+      "tag": "🇺🇸 US-VLESS-WS",
       "server": "uspanel.unixzone.us",
       "server_port": 30016,
       "uuid": "03dc60cb-a8d4-4226-93fe-0e6cbf77fe5a",
@@ -329,21 +255,14 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "🇫🇷 FR2-VLESS-TCP",
-      "server": "140.233.177.250",
-      "server_port": 55715,
-      "uuid": "914f97ee-1e5e-475d-9f04-fb93ef8585e7"
-    },
-    {
       "type": "trojan",
-      "tag": "🇺🇸 US3-Trojan-TLS",
-      "server": "tolerant-rattler.rooster465.autos",
+      "tag": "🇱🇹 LT-Trojan-TLS",
+      "server": "89.39.70.233",
       "server_port": 443,
-      "password": "CF68213490",
+      "password": "KV63147582",
       "tls": {
         "enabled": true,
-        "server_name": "tolerant-rattler.rooster465.autos",
+        "server_name": "game-firefly.rooster465.autos",
         "insecure": false
       }
     },
