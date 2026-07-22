@@ -1,0 +1,37 @@
+name: Sync VMess
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'  # Every 6 hours
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Download VMess from source
+        run: |
+          curl -L -o VMess.txt https://raw.githubusercontent.com/F0rc3Run/F0rc3Run/refs/heads/main/splitted-by-protocol/vmess.txt
+          if [ ! -s VMess.txt ]; then
+            echo "Failed to download file"
+            exit 1
+          fi
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          
+          if git diff --quiet VMess.txt; then
+            echo "✓ No changes detected"
+          else
+            git add VMess.txt
+            git commit -m "chore: sync VMess from F0rc3Run/F0rc3Run"
+            git push
+          fi
