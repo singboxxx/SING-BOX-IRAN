@@ -1,0 +1,53 @@
+name: Sync VLESS every 3 hours
+
+on:
+  schedule:
+    # Runs every 3 hours at minute 0
+    - cron: '0 */3 * * *'
+  # Allow manual trigger
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
+      - name: Download latest VLESS file
+        run: |
+          curl -s https://raw.githubusercontent.com/F0rc3Run/F0rc3Run/refs/heads/main/splitted-by-protocol/vless.txt -o VLESS_temp.txt
+          
+      - name: Transform tags and update file
+        run: |
+          # Replace the telegram link pattern with the new tag format
+          sed 's|https:%2F%2Ft\.me%2FForceRunVPN|#%40SINGBOXXX|g' VLESS_temp.txt > VLESS.txt
+          rm VLESS_temp.txt
+          
+      - name: Verify file was updated
+        run: |
+          if [ -f VLESS.txt ]; then
+            echo "✓ File updated successfully"
+            echo "Total lines: $(wc -l < VLESS.txt)"
+            echo "Files containing #@SINGBOXXX: $(grep -c '#%40SINGBOXXX' VLESS.txt || echo 0)"
+          else
+            echo "✗ File update failed"
+            exit 1
+          fi
+          
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add VLESS.txt
+          
+          # Only commit if there are changes
+          if git diff --cached --quiet; then
+            echo "No changes detected"
+          else
+            git commit -m "chore: sync VLESS servers from upstream ($(date +'%Y-%m-%d %H:%M:%S UTC'))"
+            git push
+          fi
