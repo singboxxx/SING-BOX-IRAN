@@ -1,0 +1,443 @@
+{
+  "log": {
+    "level": "warn",
+    "timestamp": true
+  },
+  "dns": {
+    "servers": [
+      {
+        "type": "https",
+        "tag": "dns-remote",
+        "detour": "Telegram ➡ @SINGBOXXX",
+        "server": "8.8.8.8"
+      },
+      {
+        "type": "udp",
+        "tag": "dns-direct",
+        "server": "178.22.122.100",
+        "server_port": 53
+      },
+      {
+        "type": "fakeip",
+        "tag": "dns-fake",
+        "inet4_range": "198.18.0.0/15",
+        "inet6_range": "fc00::/18"
+      }
+    ],
+    "rules": [
+      {
+        "domain": "raw.githubusercontent.com",
+        "server": "dns-direct"
+      },
+      {
+        "rule_set": [
+          "geosite-malware",
+          "geosite-phishing",
+          "geosite-cryptominers",
+          "geosite-category-ads-all"
+        ],
+        "action": "reject"
+      },
+      {
+        "rule_set": "geosite-ir",
+        "server": "dns-direct"
+      },
+      {
+        "clash_mode": "@SINGBOXXX",
+        "server": "dns-remote"
+      },
+      {
+        "inbound": "tun-in",
+        "query_type": [
+          "A",
+          "AAAA"
+        ],
+        "server": "dns-fake"
+      }
+    ],
+    "strategy": "prefer_ipv4",
+    "independent_cache": true
+  },
+  "ntp": {
+    "enabled": true,
+    "interval": "30m0s",
+    "server": "time.cloudflare.com",
+    "server_port": 123,
+    "domain_resolver": "dns-direct"
+  },
+  "inbounds": [
+    {
+      "type": "tun",
+      "tag": "tun-in",
+      "mtu": 1500,
+      "address": [
+        "172.18.0.1/30",
+        "fdfe:dcba:9876::1/126"
+      ],
+      "auto_route": true,
+      "strict_route": true,
+      "stack": "mixed",
+      "endpoint_independent_nat": true
+    },
+    {
+      "type": "mixed",
+      "tag": "mixed-in",
+      "listen": "0.0.0.0",
+      "listen_port": 2080
+    }
+  ],
+  "outbounds": [
+    {
+      "type": "selector",
+      "tag": "Telegram ➡ @SINGBOXXX",
+      "outbounds": [
+        "🚀 Auto Pilot",
+        "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE",
+        "🇵🇱 @sɪɴɢʙᴏxxx ▪ PL",
+        "🇫🇷 @sɪɴɢʙᴏxxx ▪ FR",
+        "🇸🇬 @sɪɴɢʙᴏxxx ▪ SG",
+        "🇨🇦 @sɪɴɢʙᴏxxx ▪ CA¹",
+        "🇨🇦 @sɪɴɢʙᴏxxx ▪ CA²",
+        "🇯🇵 @sɪɴɢʙᴏxxx ▪ JP",
+        "🇦🇱 @sɪɴɢʙᴏxxx ▪ AL",
+        "🇺🇸 @sɪɴɢʙᴏxxx ▪ US",
+        "🇷🇺 @sɪɴɢʙᴏxxx ▪ RU",
+        "direct"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "🚀 Auto Pilot",
+      "outbounds": [
+        "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE",
+        "🇵🇱 @sɪɴɢʙᴏxxx ▪ PL",
+        "🇫🇷 @sɪɴɢʙᴏxxx ▪ FR",
+        "🇸🇬 @sɪɴɢʙᴏxxx ▪ SG",
+        "🇨🇦 @sɪɴɢʙᴏxxx ▪ CA¹",
+        "🇨🇦 @sɪɴɢʙᴏxxx ▪ CA²",
+        "🇯🇵 @sɪɴɢʙᴏxxx ▪ JP",
+        "🇦🇱 @sɪɴɢʙᴏxxx ▪ AL",
+        "🇺🇸 @sɪɴɢʙᴏxxx ▪ US",
+        "🇷🇺 @sɪɴɢʙᴏxxx ▪ RU"
+      ],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "30s",
+      "tolerance": 50,
+      "idle_timeout": "20m0s"
+    },
+    {
+      "type": "vless",
+      "tag": "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE",
+      "server": "159.195.46.178",
+      "server_port": 443,
+      "uuid": "859a537b-09cf-4bce-8da4-ecbb72950e3a",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "4.oncloudnineservicestreang.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "P5ceHLOW8Gmz45z-ozbm9T6xsdSsIGLB71-jMfSjCBQ",
+          "short_id": "04bc695105689674"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇵🇱 @sɪɴɢʙᴏxxx ▪ PL",
+      "server": "45.198.96.153",
+      "server_port": 443,
+      "uuid": "83ab4443-ec22-4b3d-a587-53090be7beb2",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "storage.yandex.net",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "9Y-_jCI3Z1x6SXK2tHdZ6V1CN9IJPNPnoxSW0cbXxD8",
+          "short_id": "764f497dda21c4fc"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇫🇷 @sɪɴɢʙᴏxxx ▪ FR",
+      "server": "45.192.2.157",
+      "server_port": 443,
+      "uuid": "5098e189-3462-4ff7-8ddd-4aaecfd060ea",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "yandex.net",
+        "alpn": "http/1.1",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "1oUeBtHH4DskTM_jCh-6enWRkFMDX9l1OU5kWYl4kxA",
+          "short_id": "f34818a561dfd1fe"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇸🇬 @sɪɴɢʙᴏxxx ▪ SG",
+      "server": "3.0.111.82",
+      "server_port": 17623,
+      "uuid": "814bd064-544d-4255-a070-5705c03f6da9",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0",
+          "short_id": "48050fab"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇨🇦 @sɪɴɢʙᴏxxx ▪ CA¹",
+      "server": "216.152.147.28",
+      "server_port": 443,
+      "uuid": "d9e4721d-cdac-44c7-bc91-117367eac194",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.cloudflare.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "kjiuPmjM4IutdZudHfcPZHEwcrBEFY4qBLlvfC6A_Ss",
+          "short_id": "b9f8d3f8"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇨🇦 @sɪɴɢʙᴏxxx ▪ CA²",
+      "server": "45.206.5.122",
+      "server_port": 443,
+      "uuid": "11e57eeb-ffdf-4983-a9fa-ad352dea7253",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "storage.yandex.net",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "pPi-WO8qQFFZ9UJWNLW9YClbjcoAAZWJQ2_FM3Kjhz8",
+          "short_id": "500aec9e9e5e2212"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇯🇵 @sɪɴɢʙᴏxxx ▪ JP",
+      "server": "14.137.238.159",
+      "server_port": 10000,
+      "uuid": "431fe973-a43a-4fac-bf83-2a772e0d0625"
+    },
+    {
+      "type": "vless",
+      "tag": "🇦🇱 @sɪɴɢʙᴏxxx ▪ AL",
+      "server": "144.31.129.42",
+      "server_port": 443,
+      "uuid": "7b81d175-d180-4ec8-bbc5-dfe80e8d3b68",
+      "tls": {
+        "enabled": true,
+        "server_name": "morphbinerkkw.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "CxMPFpwhcR9Ocp-Xy_1J08mo-atdHKUf58WLOy_XlgM",
+          "short_id": "d9662905"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "nexusGrpc"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 @sɪɴɢʙᴏxxx ▪ US",
+      "server": "154.193.55.183",
+      "server_port": 443,
+      "uuid": "11e57eeb-ffdf-4983-a9fa-ad352dea7253",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "storage.yandex.net",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "EMS0wzISeSbEe4JABPD8EgDnyLXgDmrX4_lcfG6VVX4",
+          "short_id": "dbbe8dca27a92c35"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇷🇺 @sɪɴɢʙᴏxxx ▪ RU",
+      "server": "88.218.44.4",
+      "server_port": 993,
+      "uuid": "7c74b0e4-f132-5583-4692-622a7d6b71a4",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "dl.google.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "Rt2wltCWOxIroFggNWMudZDBJXls8DsF4icaWqxKDk8"
+        }
+      }
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    }
+  ],
+  "route": {
+    "rules": [
+      {
+        "action": "sniff"
+      },
+      {
+        "protocol": "dns",
+        "action": "hijack-dns"
+      },
+      {
+        "clash_mode": "@SINGBOXXX",
+        "outbound": "Telegram ➡ @SINGBOXXX"
+      },
+      {
+        "network": "udp",
+        "port": [
+          80,
+          443
+        ],
+        "action": "reject"
+      },
+      {
+        "rule_set": [
+          "geosite-malware",
+          "geoip-malware",
+          "geosite-phishing",
+          "geoip-phishing",
+          "geosite-cryptominers",
+          "geosite-category-ads-all"
+        ],
+        "action": "reject"
+      },
+      {
+        "rule_set": [
+          "geosite-ir",
+          "geoip-ir"
+        ],
+        "outbound": "direct"
+      }
+    ],
+    "rule_set": [
+      {
+        "type": "remote",
+        "tag": "geosite-malware",
+        "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-malware.srs",
+        "download_detour": "direct"
+      },
+      {
+        "type": "remote",
+        "tag": "geoip-malware",
+        "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geoip-malware.srs",
+        "download_detour": "direct"
+      },
+      {
+        "type": "remote",
+        "tag": "geosite-phishing",
+        "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-phishing.srs",
+        "download_detour": "direct"
+      },
+      {
+        "type": "remote",
+        "tag": "geoip-phishing",
+        "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geoip-phishing.srs",
+        "download_detour": "direct"
+      },
+      {
+        "type": "remote",
+        "tag": "geosite-cryptominers",
+        "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-cryptominers.srs",
+        "download_detour": "direct"
+      },
+      {
+        "type": "remote",
+        "tag": "geosite-category-ads-all",
+        "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-category-ads-all.srs",
+        "download_detour": "direct"
+      },
+      {
+        "type": "remote",
+        "tag": "geosite-ir",
+        "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-ir.srs",
+        "download_detour": "direct"
+      },
+      {
+        "type": "remote",
+        "tag": "geoip-ir",
+        "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geoip-ir.srs",
+        "download_detour": "direct"
+      }
+    ],
+    "final": "Telegram ➡ @SINGBOXXX",
+    "auto_detect_interface": true,
+    "default_domain_resolver": {
+      "server": "dns-direct",
+      "strategy": "prefer_ipv4",
+      "rewrite_ttl": 60
+    }
+  },
+  "experimental": {
+    "cache_file": {
+      "enabled": true,
+      "store_fakeip": true
+    },
+    "clash_api": {
+      "external_controller": "127.0.0.1:9090",
+      "external_ui": "ui",
+      "external_ui_download_url": "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip",
+      "external_ui_download_detour": "direct",
+      "default_mode": "SMART MODE"
+    }
+  }
+}
