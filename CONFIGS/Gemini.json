@@ -99,7 +99,7 @@
         "🇨🇦 @sɪɴɢʙᴏxxx ▪ CA¹",
         "🇨🇦 @sɪɴɢʙᴏxxx ▪ CA²",
         "🇯🇵 @sɪɴɢʙᴏxxx ▪ JP",
-        "🇦🇱 @sɪɴɢʙᴏxxx ▪ AL",
+        "🇱🇻 @sɪɴɢʙᴏxxx ▪ LV",
         "🇺🇸 @sɪɴɢʙᴏxxx ▪ US",
         "🇷🇺 @sɪɴɢʙᴏxxx ▪ RU",
         "direct"
@@ -116,7 +116,7 @@
         "🇨🇦 @sɪɴɢʙᴏxxx ▪ CA¹",
         "🇨🇦 @sɪɴɢʙᴏxxx ▪ CA²",
         "🇯🇵 @sɪɴɢʙᴏxxx ▪ JP",
-        "🇦🇱 @sɪɴɢʙᴏxxx ▪ AL",
+        "🇱🇻 @sɪɴɢʙᴏxxx ▪ LV",
         "🇺🇸 @sɪɴɢʙᴏxxx ▪ US",
         "🇷🇺 @sɪɴɢʙᴏxxx ▪ RU"
       ],
@@ -259,28 +259,24 @@
       "server_port": 10000,
       "uuid": "431fe973-a43a-4fac-bf83-2a772e0d0625"
     },
-    {
+{
       "type": "vless",
-      "tag": "🇦🇱 @sɪɴɢʙᴏxxx ▪ AL",
-      "server": "144.31.129.42",
-      "server_port": 443,
-      "uuid": "7b81d175-d180-4ec8-bbc5-dfe80e8d3b68",
+      "tag": "🇱🇻 @sɪɴɢʙᴏxxx ▪ LV",
+      "server": "91.218.143.194",
+      "server_port": 43798,
+      "uuid": "b7725d23-840a-4f8e-993c-69b40424cfc0",
       "tls": {
         "enabled": true,
-        "server_name": "morphbinerkkw.ru",
+        "server_name": "yahoo.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
-          "public_key": "CxMPFpwhcR9Ocp-Xy_1J08mo-atdHKUf58WLOy_XlgM",
-          "short_id": "d9662905"
+          "public_key": "W3aiFnhZRvZuZP0Zyfy7888t-NbHc0RmMEyFa7fYShU",
+          "short_id": "f71c22"
         }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "nexusGrpc"
       }
     },
     {
