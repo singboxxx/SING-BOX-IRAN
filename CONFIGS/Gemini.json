@@ -94,11 +94,11 @@
         "🚀 Auto Pilot",
         "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE",
         "🇵🇱 @sɪɴɢʙᴏxxx ▪ PL",
-        "🇫🇷 @sɪɴɢʙᴏxxx ▪ FR",
+        "🇫🇷 @sɪɴɢʙᴏxxx ▪ FR¹",
         "🇸🇬 @sɪɴɢʙᴏxxx ▪ SG",
         "🇨🇦 @sɪɴɢʙᴏxxx ▪ CA¹",
         "🇨🇦 @sɪɴɢʙᴏxxx ▪ CA²",
-        "🇯🇵 @sɪɴɢʙᴏxxx ▪ JP",
+        "🇫🇷 @sɪɴɢʙᴏxxx ▪ FR²",
         "🇱🇻 @sɪɴɢʙᴏxxx ▪ LV",
         "🇺🇸 @sɪɴɢʙᴏxxx ▪ US",
         "🇷🇺 @sɪɴɢʙᴏxxx ▪ RU",
@@ -111,11 +111,11 @@
       "outbounds": [
         "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE",
         "🇵🇱 @sɪɴɢʙᴏxxx ▪ PL",
-        "🇫🇷 @sɪɴɢʙᴏxxx ▪ FR",
+        "🇫🇷 @sɪɴɢʙᴏxxx ▪ FR¹",
         "🇸🇬 @sɪɴɢʙᴏxxx ▪ SG",
         "🇨🇦 @sɪɴɢʙᴏxxx ▪ CA¹",
         "🇨🇦 @sɪɴɢʙᴏxxx ▪ CA²",
-        "🇯🇵 @sɪɴɢʙᴏxxx ▪ JP",
+        "🇫🇷 @sɪɴɢʙᴏxxx ▪ FR²",
         "🇱🇻 @sɪɴɢʙᴏxxx ▪ LV",
         "🇺🇸 @sɪɴɢʙᴏxxx ▪ US",
         "🇷🇺 @sɪɴɢʙᴏxxx ▪ RU"
@@ -169,7 +169,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇫🇷 @sɪɴɢʙᴏxxx ▪ FR",
+      "tag": "🇫🇷 @sɪɴɢʙᴏxxx ▪ FR¹",
       "server": "45.192.2.157",
       "server_port": 443,
       "uuid": "5098e189-3462-4ff7-8ddd-4aaecfd060ea",
@@ -252,13 +252,25 @@
         }
       }
     },
-    {
-      "type": "vless",
-      "tag": "🇯🇵 @sɪɴɢʙᴏxxx ▪ JP",
-      "server": "14.137.238.159",
-      "server_port": 10000,
-      "uuid": "431fe973-a43a-4fac-bf83-2a772e0d0625"
-    },
+{
+  "type": "trojan",
+  "tag": "🇫🇷 @sɪɴɢʙᴏxxx ▪ FR²",
+  "server": "104.16.174.6",
+  "server_port": 443,
+  "password": "humanity",
+  "tls": {
+    "enabled": true,
+    "server_name": "www.ignitelimit.com",
+    "insecure": false
+  },
+  "transport": {
+    "type": "ws",
+    "path": "/assignment",
+    "headers": {
+      "Host": "www.ignitelimit.com"
+    }
+  }
+},
 {
       "type": "vless",
       "tag": "🇱🇻 @sɪɴɢʙᴏxxx ▪ LV",
