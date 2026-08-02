@@ -93,7 +93,8 @@
       "outbounds": [
         "🚀 Auto Pilot",
         "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE",
-        "🇵🇱 @sɪɴɢʙᴏxxx ▪ PL",
+        "🇵🇱 @sɪɴɢʙᴏxxx ▪ PL¹",
+        "🇵🇱 @sɪɴɢʙᴏxxx ▪ PL²",
         "🇫🇷 @sɪɴɢʙᴏxxx ▪ FR¹",
         "🇸🇬 @sɪɴɢʙᴏxxx ▪ SG",
         "🇨🇦 @sɪɴɢʙᴏxxx ▪ CA¹",
@@ -111,7 +112,8 @@
       "tag": "🚀 Auto Pilot",
       "outbounds": [
         "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE",
-        "🇵🇱 @sɪɴɢʙᴏxxx ▪ PL",
+        "🇵🇱 @sɪɴɢʙᴏxxx ▪ PL¹",
+        "🇵🇱 @sɪɴɢʙᴏxxx ▪ PL²",
         "🇫🇷 @sɪɴɢʙᴏxxx ▪ FR¹",
         "🇸🇬 @sɪɴɢʙᴏxxx ▪ SG",
         "🇨🇦 @sɪɴɢʙᴏxxx ▪ CA¹",
@@ -150,7 +152,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇵🇱 @sɪɴɢʙᴏxxx ▪ PL",
+      "tag": "🇵🇱 @sɪɴɢʙᴏxxx ▪ PL¹",
       "server": "45.198.96.153",
       "server_port": 443,
       "uuid": "83ab4443-ec22-4b3d-a587-53090be7beb2",
@@ -166,6 +168,27 @@
           "enabled": true,
           "public_key": "9Y-_jCI3Z1x6SXK2tHdZ6V1CN9IJPNPnoxSW0cbXxD8",
           "short_id": "764f497dda21c4fc"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇵🇱 @sɪɴɢʙᴏxxx ▪ PL²",
+      "server": "144.31.0.34",
+      "server_port": 7443,
+      "uuid": "1fef5248-fdd2-40d6-b3b9-6c33d4e74724",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "storage.yandex.net",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "8wD0IhR27ftD5LyJDq9CaFzi6DgA4vFtB-UP6QIdWVc",
+          "short_id": "e8ca5079a5e91481"
         }
       }
     },
