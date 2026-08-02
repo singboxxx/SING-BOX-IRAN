@@ -94,14 +94,14 @@
         "🚀 Auto Pilot",
         "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE",
         "🇵🇱 @sɪɴɢʙᴏxxx ▪ PL",
-        "🇫🇷 @sɪɴɢʙᴏxxx ▪ FR",
+        "🇫🇷 @sɪɴɢʙᴏxxx ▪ FR¹",
         "🇸🇬 @sɪɴɢʙᴏxxx ▪ SG",
         "🇨🇦 @sɪɴɢʙᴏxxx ▪ CA¹",
         "🇨🇦 @sɪɴɢʙᴏxxx ▪ CA²",
         "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL",
         "🇱🇻 @sɪɴɢʙᴏxxx ▪ LV",
         "🇺🇸 @sɪɴɢʙᴏxxx ▪ US",
-        "🇫🇮 @sɪɴɢʙᴏxxx ▪ FI",
+        "🇫🇷 @sɪɴɢʙᴏxxx ▪ FR²",
         "direct"
       ]
     },
@@ -111,14 +111,14 @@
       "outbounds": [
         "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE",
         "🇵🇱 @sɪɴɢʙᴏxxx ▪ PL",
-        "🇫🇷 @sɪɴɢʙᴏxxx ▪ FR",
+        "🇫🇷 @sɪɴɢʙᴏxxx ▪ FR¹",
         "🇸🇬 @sɪɴɢʙᴏxxx ▪ SG",
         "🇨🇦 @sɪɴɢʙᴏxxx ▪ CA¹",
         "🇨🇦 @sɪɴɢʙᴏxxx ▪ CA²",
         "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL",
         "🇱🇻 @sɪɴɢʙᴏxxx ▪ LV",
         "🇺🇸 @sɪɴɢʙᴏxxx ▪ US",
-        "🇫🇮 @sɪɴɢʙᴏxxx ▪ FI"
+        "🇫🇷 @sɪɴɢʙᴏxxx ▪ FR²"
       ],
       "url": "https://www.gstatic.com/generate_204",
       "interval": "30s",
@@ -169,7 +169,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇫🇷 @sɪɴɢʙᴏxxx ▪ FR",
+      "tag": "🇫🇷 @sɪɴɢʙᴏxxx ▪ FR¹",
       "server": "45.192.2.157",
       "server_port": 443,
       "uuid": "5098e189-3462-4ff7-8ddd-4aaecfd060ea",
@@ -318,21 +318,22 @@
     },
 {
   "type": "vless",
-  "tag": "🇫🇮 @sɪɴɢʙᴏxxx ▪ FI",
-  "server": "65.109.219.3",
+  "tag": "🇫🇷 @sɪɴɢʙᴏxxx ▪ FR²",
+  "server": "45.192.2.51",
   "server_port": 443,
-  "uuid": "4926d92f-81e2-4c68-9ddf-4470f376c49c",
+  "uuid": "44a6901d-6675-41b1-9a80-ee3308699e1d",
+  "flow": "xtls-rprx-vision",
   "tls": {
     "enabled": true,
-    "server_name": "play.google.com",
+    "server_name": "yandex.net",
     "utls": {
       "enabled": true,
       "fingerprint": "chrome"
     },
     "reality": {
       "enabled": true,
-      "public_key": "eVLFrQx077o9uFmtkX2jFL3SMjru1BBdKJBHFFn3shQ",
-      "short_id": "b7ebb6c8"
+      "public_key": "1oUeBtHH4DskTM_jCh-6enWRkFMDX9l1OU5kWYl4kxA",
+      "short_id": "f34818a561dfd1fe"
     }
   }
 },
