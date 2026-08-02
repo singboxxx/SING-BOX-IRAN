@@ -102,6 +102,7 @@
         "🇱🇻 @sɪɴɢʙᴏxxx ▪ LV",
         "🇺🇸 @sɪɴɢʙᴏxxx ▪ US",
         "🇫🇷 @sɪɴɢʙᴏxxx ▪ FR²",
+        "🇭🇺 @sɪɴɢʙᴏxxx ▪ HU",
         "direct"
       ]
     },
@@ -118,7 +119,8 @@
         "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL",
         "🇱🇻 @sɪɴɢʙᴏxxx ▪ LV",
         "🇺🇸 @sɪɴɢʙᴏxxx ▪ US",
-        "🇫🇷 @sɪɴɢʙᴏxxx ▪ FR²"
+        "🇫🇷 @sɪɴɢʙᴏxxx ▪ FR²",
+        "🇭🇺 @sɪɴɢʙᴏxxx ▪ HU"
       ],
       "url": "https://www.gstatic.com/generate_204",
       "interval": "30s",
@@ -334,6 +336,30 @@
       "enabled": true,
       "public_key": "1oUeBtHH4DskTM_jCh-6enWRkFMDX9l1OU5kWYl4kxA",
       "short_id": "f34818a561dfd1fe"
+    }
+  }
+},
+    {
+  "type": "vless",
+  "tag": "🇭🇺 @sɪɴɢʙᴏxxx ▪ HU",
+  "server": "45.195.111.15",
+  "server_port": 443,
+  "uuid": "45459159-1536-4e98-95b3-aa1dbbfb4172",
+  "flow": "xtls-rprx-vision",
+  "tls": {
+    "enabled": true,
+    "server_name": "storage.yandex.net",
+    "alpn": [
+      "http/1.1"
+    ],
+    "utls": {
+      "enabled": true,
+      "fingerprint": "qq"
+    },
+    "reality": {
+      "enabled": true,
+      "public_key": "7zd9mJilgjOrg_ohtw23Vmio-pdnYqeP_r-kiWt87Cg",
+      "short_id": "2715592069f36fe7"
     }
   }
 },
