@@ -110,7 +110,7 @@
         "🇬🇧 GB2-VLESS-REALITY",
         "🇸🇬 SG2-TROJAN-TCP",
         "🇫🇷 FR1-TROJAN-TCP",
-        "🇳🇱 NL3-SHADWSOCKS",
+        "🇳🇱 NL3-SHADOWSOCKS",
         "🇵🇱 PL1-SHADOWSOCKS",
         "direct"
       ]
@@ -137,7 +137,7 @@
         "🇬🇧 GB2-VLESS-REALITY",
         "🇸🇬 SG2-TROJAN-TCP",
         "🇫🇷 FR1-TROJAN-TCP",
-        "🇳🇱 NL3-SHADWSOCKS",
+        "🇳🇱 NL3-SHADOWSOCKS",
         "🇵🇱 PL1-SHADOWSOCKS"
       ],
       "url": "https://www.gstatic.com/generate_204",
@@ -494,7 +494,7 @@
     },
     {
       "type": "shadowsocks",
-      "tag": "🇳🇱 NL3-SHADWSOCKS",
+      "tag": "🇳🇱 NL3-SHADOWSOCKS",
       "server": "82.38.31.200",
       "server_port": 8080,
       "method": "chacha20-ietf-poly1305",
