@@ -93,25 +93,25 @@
       "outbounds": [
         "🚀 Auto Pilot",
         "🇬🇧 GB1-VMESS-TCP",
+        "🇳🇱 NL1-VLESS-REALITY",
         "🇳🇱 NL2-VLESS-REALITY",
-        "🇳🇱 NL3-VLESS-REALITY",
         "🇸🇬 SG1-VLESS-REALITY",
         "🇺🇸 US1-VLESS-REALITY",
         "🇨🇿 CZ1-VLESS-REALITY",
-        "🇫🇷 FR1-VLESS-DIRECT",
+        "🇯🇵 JP1-VLESS-REALITY",
         "🇵🇰 PK1-VLESS-REALITY",
         "🇱🇹 LT1-VLESS-REALITY",
-        "🇺🇸 US3-VLESS-WS-TLS",
-        "🇺🇸 US4-VLESS-WS-TLS",
-        "🇺🇸 US5-VLESS-WS-TLS",
-        "🇺🇸 US6-VLESS-WS-TLS",
-        "🇩🇪 DE3-VMESS-TCP",
-        "🇩🇪 DE4-TROJAN-TCP",
-        "🇬🇧 GB2-TROJAN-WS",
-        "🇺🇸 US7-TROJAN-WS",
-        "🇫🇷 FR-TROJAN-WS",
-        "🇳🇱 NL-SHADWSOCKS",
-        "🇮🇹 IT1-SHADOWSOCKS",
+        "🇸🇪 SE1-VLESS-REALITY",
+        "🇭🇰 HK1-VLESS-REALITY",
+        "🇹🇷 TR1-VLESS-REALITY",
+        "🇫🇮 FI1-VLESS-REALITY",
+        "🇩🇪 DE1-VMESS-TCP",
+        "🇩🇪 DE2-VLESS-REALITY",
+        "🇬🇧 GB2-VLESS-REALITY",
+        "🇸🇬 SG2-TROJAN-TCP",
+        "🇫🇷 FR1-TROJAN-TCP",
+        "🇳🇱 NL3-SHADWSOCKS",
+        "🇵🇱 PL1-SHADOWSOCKS",
         "direct"
       ]
     },
@@ -120,25 +120,25 @@
       "tag": "🚀 Auto Pilot",
       "outbounds": [
         "🇬🇧 GB1-VMESS-TCP",
+        "🇳🇱 NL1-VLESS-REALITY",
         "🇳🇱 NL2-VLESS-REALITY",
-        "🇳🇱 NL3-VLESS-REALITY",
         "🇸🇬 SG1-VLESS-REALITY",
-        "🇺🇸 US1-VLESS-REALITY",
+        "🇫🇮 FI1-VLESS-REALITY",
         "🇨🇿 CZ1-VLESS-REALITY",
-        "🇫🇷 FR1-VLESS-DIRECT",
+        "🇯🇵 JP1-VLESS-REALITY",
         "🇵🇰 PK1-VLESS-REALITY",
         "🇱🇹 LT1-VLESS-REALITY",
-        "🇺🇸 US3-VLESS-WS-TLS",
-        "🇺🇸 US4-VLESS-WS-TLS",
-        "🇺🇸 US5-VLESS-WS-TLS",
-        "🇺🇸 US6-VLESS-WS-TLS",
-        "🇩🇪 DE3-VMESS-TCP",
-        "🇩🇪 DE4-TROJAN-TCP",
-        "🇬🇧 GB2-TROJAN-WS",
-        "🇺🇸 US7-TROJAN-WS",
-        "🇫🇷 FR-TROJAN-WS",
-        "🇳🇱 NL-SHADWSOCKS",
-        "🇮🇹 IT1-SHADOWSOCKS"
+        "🇸🇪 SE1-VLESS-REALITY",
+        "🇭🇰 HK1-VLESS-REALITY",
+        "🇹🇷 TR1-VLESS-REALITY",
+        "🇫🇮 FI1-VLESS-REALITY",
+        "🇩🇪 DE1-VMESS-TCP",
+        "🇩🇪 DE2-VLESS-REALITY",
+        "🇬🇧 GB2-VLESS-REALITY",
+        "🇸🇬 SG2-TROJAN-TCP",
+        "🇫🇷 FR1-TROJAN-TCP",
+        "🇳🇱 NL3-SHADWSOCKS",
+        "🇵🇱 PL1-SHADOWSOCKS"
       ],
       "url": "https://www.gstatic.com/generate_204",
       "interval": "30s",
@@ -155,7 +155,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇳🇱 NL2-VLESS-REALITY",
+      "tag": "🇳🇱 NL1-VLESS-REALITY",
       "server": "5.255.110.147",
       "server_port": 443,
       "uuid": "e2e1ddaa-1acf-4c4c-a211-92284f6440ed",
@@ -176,7 +176,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇳🇱 NL3-VLESS-REALITY",
+      "tag": "🇳🇱 NL2-VLESS-REALITY",
       "server": "85.155.226.156",
       "server_port": 443,
       "uuid": "39c42b0a-b823-4c93-bb99-74b4183e518d",
@@ -259,10 +259,24 @@
     },
     {
       "type": "vless",
-      "tag": "🇫🇷 FR1-VLESS-DIRECT",
-      "server": "167.233.233.187",
-      "server_port": 1234,
-      "uuid": "83b69fd2-ae76-4a35-8f0e-65b90babcc6f"
+      "tag": "🇯🇵 JP1-VLESS-REALITY",
+      "server": "3.114.220.22",
+      "server_port": 10583,
+      "uuid": "814bd064-544d-4255-a070-5705c03f6da9",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0",
+          "short_id": "48050fab"
+        }
+      }
     },
     {
       "type": "vless",
@@ -307,105 +321,156 @@
     },
     {
       "type": "vless",
-      "tag": "🇺🇸 US3-VLESS-WS-TLS",
-      "server": "104.26.14.85",
-      "server_port": 8443,
-      "uuid": "f798a2c4-c51b-409d-b349-ca8455b36796",
+      "tag": "🇸🇪 SE1-VLESS-REALITY",
+      "server": "150.241.72.5",
+      "server_port": 443,
+      "uuid": "fc1b3bda-b226-452a-8c5c-b0e36a1f8f88",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "chopin.adaspoloandco.com",
+        "server_name": "eu-central.cendora.ru",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/download.php",
-        "headers": {
-          "Host": "chopin.adaspoloandco.com"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "b-Cm9hX-3UHsS1L_lnUB6AMjuKhlN1IDdBbZ506itjI",
+          "short_id": "00bca5982f82d083"
         }
       }
     },
     {
       "type": "vless",
-      "tag": "🇺🇸 US4-VLESS-WS-TLS",
-      "server": "173.245.59.1",
-      "server_port": 443,
-      "uuid": "cf39fab0-bb85-42cb-9945-2ad69d78e575",
+      "tag": "🇭🇰 HK1-VLESS-REALITY",
+      "server": "85.11.161.8",
+      "server_port": 444,
+      "uuid": "0b9bcbc1-b289-4a64-86fa-a5b731b65384",
       "tls": {
         "enabled": true,
-        "server_name": "rubifen.adaspoloandco.com",
+        "server_name": "web.max.ru",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "lxq7uAa7l0ozobBgTRrQIF_aCxDeJqZZFaNv8CFA9TQ",
+          "short_id": "8622176789abcdef"
         }
       },
       "transport": {
-        "type": "ws",
-        "path": "/GOrbEh",
-        "headers": {
-          "Host": "rubifen.adaspoloandco.com"
-        }
+        "type": "grpc",
+        "service_name": "web.max.ru"
       }
     },
     {
       "type": "vless",
-      "tag": "🇺🇸 US5-VLESS-WS-TLS",
-      "server": "173.245.59.1",
+      "tag": "🇹🇷 TR1-VLESS-REALITY",
+      "server": "139.28.241.21",
       "server_port": 443,
-      "uuid": "cf39fab0-bb85-42cb-9945-2ad69d78e575",
+      "uuid": "218fd696-e3a2-4c33-b397-a5f13a82969e",
       "tls": {
         "enabled": true,
-        "server_name": "rubifen.adaspoloandco.com"
+        "server_name": "www.telekom.de",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "faEedJtYwpjrjMXXhIMs3yT6BGIAdC-UCeX6TRC2ABs",
+          "short_id": "312c0c39"
+        }
       },
       "transport": {
-        "type": "ws",
-        "path": "/GOrbEh",
-        "headers": {
-          "Host": "rubifen.adaspoloandco.com"
-        }
+        "type": "grpc",
+        "service_name": "grpc"
       }
     },
     {
       "type": "vless",
-      "tag": "🇺🇸 US6-VLESS-WS-TLS",
-      "server": "173.245.59.1",
+      "tag": "🇫🇮 FI1-VLESS-REALITY",
+      "server": "31.76.80.205",
       "server_port": 443,
-      "uuid": "cf39fab0-bb85-42cb-9945-2ad69d78e575",
+      "uuid": "b6f29f8d-016e-4f30-b57f-c0cdafab2a40",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "rubifen.adaspoloandco.com",
+        "server_name": "ads.x5.ru",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/GOrbEh",
-        "headers": {
-          "Host": "rubifen.adaspoloandco.com"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "nPcUKydxoRI66O3tT9O4QCZpLjOBvkGsiXG7pDX1BBw",
+          "short_id": "6ba85179e30d4fc2"
         }
       }
     },
     {
       "type": "vmess",
-      "tag": "🇩🇪 DE3-VMESS-TCP",
+      "tag": "🇩🇪 DE1-VMESS-TCP",
       "server": "195.133.193.18",
       "server_port": 27726,
       "uuid": "98e2be3c-8f84-4b85-996b-b68dcc2fbcb6",
       "security": "auto"
     },
     {
-      "type": "trojan",
-      "tag": "🇩🇪 DE4-TROJAN-TCP",
-      "server": "3.120.37.181",
+      "type": "vless",
+      "tag": "🇩🇪 DE2-VLESS-REALITY",
+      "server": "88.216.220.87",
       "server_port": 443,
-      "password": "UO36402987",
+      "uuid": "a8e3155b-ceb1-4fcb-bc0c-2e77ec005401",
       "tls": {
         "enabled": true,
-        "server_name": "many-cricket.rooster465.autos",
+        "server_name": "api.noneok.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "S8O8R938N960cpQfIIDXsJTxeGAkbVv6PlIqP0-d30w",
+          "short_id": "1ea59febb8d4fc8e"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "api.v1.StreamService"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇬🇧 GB2-VLESS-REALITY",
+      "server": "144.31.213.225",
+      "server_port": 443,
+      "uuid": "9e3de7f7-a595-4117-b1b6-dc41eb870ab1",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.cloudflare.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "ABNRlkjlonYV9TOFYgjWwz0wn1s6sg_yCErsLYkU_Sg",
+          "short_id": "d6ff9019a77e354a"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇸🇬 SG2-TROJAN-TCP",
+      "server": "18.163.180.201",
+      "server_port": 6357,
+      "password": "d1960ba9f0f6353353994fa844cf817b",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.nintendogames.net",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -414,66 +479,22 @@
     },
     {
       "type": "trojan",
-      "tag": "🇬🇧 GB2-TROJAN-WS",
-      "server": "185.18.250.245",
+      "tag": "🇫🇷 FR1-TROJAN-TCP",
+      "server": "15.237.137.197",
       "server_port": 443,
-      "password": "humanity",
+      "password": "ND91608427",
       "tls": {
         "enabled": true,
-        "server_name": "www.calmlunch.com",
+        "server_name": "fancy-skink.rooster465.autos",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/assignment"
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "🇺🇸 US7-TROJAN-WS",
-      "server": "172.67.149.60",
-      "server_port": 443,
-      "password": "humanity",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.ignitelimit.com"
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/assignment",
-        "headers": {
-          "Host": "www.ignitelimit.com"
-        }
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "🇫🇷 FR-TROJAN-WS",
-      "server": "104.17.121.43",
-      "server_port": 443,
-      "password": "humanity",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.calmlunch.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/assignment",
-        "headers": {
-          "Host": "www.calmlunch.com"
         }
       }
     },
     {
       "type": "shadowsocks",
-      "tag": "🇳🇱 NL-SHADWSOCKS",
+      "tag": "🇳🇱 NL3-SHADWSOCKS",
       "server": "82.38.31.200",
       "server_port": 8080,
       "method": "chacha20-ietf-poly1305",
@@ -481,11 +502,11 @@
     },
     {
       "type": "shadowsocks",
-      "tag": "🇮🇹 IT1-SHADOWSOCKS",
-      "server": "62.76.234.75",
-      "server_port": 10901,
+      "tag": "🇵🇱 PL1-SHADOWSOCKS",
+      "server": "92.118.205.211",
+      "server_port": 5600,
       "method": "aes-256-gcm",
-      "password": "d1fa2f4b98a38bc8"
+      "password": "Y6R9pAtvxxzmGC"
     },
     {
       "type": "direct",
