@@ -92,18 +92,20 @@
       "tag": "Telegram ➡ @SINGBOXXX",
       "outbounds": [
         "🚀 Auto Pilot",
-        "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE",
-        "🇵🇱 @sɪɴɢʙᴏxxx ▪ PL¹",
-        "🇵🇱 @sɪɴɢʙᴏxxx ▪ PL²",
-        "🇫🇷 @sɪɴɢʙᴏxxx ▪ FR¹",
-        "🇸🇬 @sɪɴɢʙᴏxxx ▪ SG",
-        "🇨🇦 @sɪɴɢʙᴏxxx ▪ CA¹",
-        "🇨🇦 @sɪɴɢʙᴏxxx ▪ CA²",
-        "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL",
-        "🇱🇻 @sɪɴɢʙᴏxxx ▪ LV",
+        "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE¹",
+        "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL¹",
+        "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL²",
+        "🇸🇬 @sɪɴɢʙᴏxxx ▪ SG¹",
+        "🇸🇬 @sɪɴɢʙᴏxxx ▪ SG²",
+        "🇨🇦 @sɪɴɢʙᴏxxx ▪ CA",
+        "🇯🇵 @sɪɴɢʙᴏxxx ▪ JP",
+        "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL³",
         "🇺🇸 @sɪɴɢʙᴏxxx ▪ US",
-        "🇫🇷 @sɪɴɢʙᴏxxx ▪ FR²",
+        "🇮🇹 @sɪɴɢʙᴏxxx ▪ IT",
+        "🇵🇱 @sɪɴɢʙᴏxxx ▪ PL",
         "🇭🇺 @sɪɴɢʙᴏxxx ▪ HU",
+        "🇫🇷 @sɪɴɢʙᴏxxx ▪ FR",
+        "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE²",
         "direct"
       ]
     },
@@ -111,18 +113,20 @@
       "type": "urltest",
       "tag": "🚀 Auto Pilot",
       "outbounds": [
-        "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE",
-        "🇵🇱 @sɪɴɢʙᴏxxx ▪ PL¹",
-        "🇵🇱 @sɪɴɢʙᴏxxx ▪ PL²",
-        "🇫🇷 @sɪɴɢʙᴏxxx ▪ FR¹",
-        "🇸🇬 @sɪɴɢʙᴏxxx ▪ SG",
-        "🇨🇦 @sɪɴɢʙᴏxxx ▪ CA¹",
-        "🇨🇦 @sɪɴɢʙᴏxxx ▪ CA²",
-        "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL",
-        "🇱🇻 @sɪɴɢʙᴏxxx ▪ LV",
+        "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE¹",
+        "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL¹",
+        "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL²",
+        "🇸🇬 @sɪɴɢʙᴏxxx ▪ SG¹",
+        "🇸🇬 @sɪɴɢʙᴏxxx ▪ SG²",
+        "🇨🇦 @sɪɴɢʙᴏxxx ▪ CA",
+        "🇯🇵 @sɪɴɢʙᴏxxx ▪ JP",
+        "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL³",
         "🇺🇸 @sɪɴɢʙᴏxxx ▪ US",
-        "🇫🇷 @sɪɴɢʙᴏxxx ▪ FR²",
-        "🇭🇺 @sɪɴɢʙᴏxxx ▪ HU"
+        "🇮🇹 @sɪɴɢʙᴏxxx ▪ IT",
+        "🇵🇱 @sɪɴɢʙᴏxxx ▪ PL",
+        "🇭🇺 @sɪɴɢʙᴏxxx ▪ HU",
+        "🇫🇷 @sɪɴɢʙᴏxxx ▪ FR",
+        "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE²"
       ],
       "url": "https://www.gstatic.com/generate_204",
       "interval": "30s",
@@ -131,7 +135,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE",
+      "tag": "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE¹",
       "server": "159.195.46.178",
       "server_port": 443,
       "uuid": "859a537b-09cf-4bce-8da4-ecbb72950e3a",
@@ -152,71 +156,70 @@
     },
     {
       "type": "vless",
-      "tag": "🇵🇱 @sɪɴɢʙᴏxxx ▪ PL¹",
-      "server": "45.198.96.153",
+      "tag": "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL¹",
+      "server": "5.255.110.147",
       "server_port": 443,
-      "uuid": "83ab4443-ec22-4b3d-a587-53090be7beb2",
+      "uuid": "e2e1ddaa-1acf-4c4c-a211-92284f6440ed",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "storage.yandex.net",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "9Y-_jCI3Z1x6SXK2tHdZ6V1CN9IJPNPnoxSW0cbXxD8",
-          "short_id": "764f497dda21c4fc"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇵🇱 @sɪɴɢʙᴏxxx ▪ PL²",
-      "server": "144.31.0.34",
-      "server_port": 7443,
-      "uuid": "1fef5248-fdd2-40d6-b3b9-6c33d4e74724",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "storage.yandex.net",
+        "server_name": "nll.scroogethebest.com",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
-          "public_key": "8wD0IhR27ftD5LyJDq9CaFzi6DgA4vFtB-UP6QIdWVc",
-          "short_id": "e8ca5079a5e91481"
+          "public_key": "AYQOZFxjvHN-RIzKYEibwFiFsp03cdlWGdCmyFfuNVc",
+          "short_id": "4fa44664f6a566d3"
         }
       }
     },
     {
       "type": "vless",
-      "tag": "🇫🇷 @sɪɴɢʙᴏxxx ▪ FR¹",
-      "server": "45.192.2.157",
+      "tag": "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL²",
+      "server": "85.155.226.156",
       "server_port": 443,
-      "uuid": "5098e189-3462-4ff7-8ddd-4aaecfd060ea",
+      "uuid": "39c42b0a-b823-4c93-bb99-74b4183e518d",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "yandex.net",
-        "alpn": "http/1.1",
+        "server_name": "getsavesafe.net",
         "utls": {
           "enabled": true,
           "fingerprint": "qq"
         },
         "reality": {
           "enabled": true,
-          "public_key": "1oUeBtHH4DskTM_jCh-6enWRkFMDX9l1OU5kWYl4kxA",
-          "short_id": "f34818a561dfd1fe"
+          "public_key": "5Z6PwoPSNBLPIsX8lZtHM7-Y-psMMR1vz5Pit0EVISs",
+          "short_id": "82f5d3a1e9c0b661"
         }
       }
     },
     {
       "type": "vless",
-      "tag": "🇸🇬 @sɪɴɢʙᴏxxx ▪ SG",
+      "tag": "🇸🇬 @sɪɴɢʙᴏxxx ▪ SG¹",
+      "server": "91.192.81.214",
+      "server_port": 443,
+      "uuid": "607801ac-dbdd-4938-a167-129015d9978e",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.cloudflare.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "bMcyxNueltQhz5Kuxcf8odDStWHowYfLhKNdCbUweDc",
+          "short_id": "d1742269"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇸🇬 @sɪɴɢʙᴏxxx ▪ SG²",
       "server": "3.0.111.82",
       "server_port": 17623,
       "uuid": "814bd064-544d-4255-a070-5705c03f6da9",
@@ -237,7 +240,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇨🇦 @sɪɴɢʙᴏxxx ▪ CA¹",
+      "tag": "🇨🇦 @sɪɴɢʙᴏxxx ▪ CA",
       "server": "216.152.147.28",
       "server_port": 443,
       "uuid": "d9e4721d-cdac-44c7-bc91-117367eac194",
@@ -258,134 +261,158 @@
     },
     {
       "type": "vless",
-      "tag": "🇨🇦 @sɪɴɢʙᴏxxx ▪ CA²",
-      "server": "45.206.5.122",
-      "server_port": 443,
-      "uuid": "11e57eeb-ffdf-4983-a9fa-ad352dea7253",
+      "tag": "🇯🇵 @sɪɴɢʙᴏxxx ▪ JP",
+      "server": "3.114.220.22",
+      "server_port": 10583,
+      "uuid": "814bd064-544d-4255-a070-5705c03f6da9",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "storage.yandex.net",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "pPi-WO8qQFFZ9UJWNLW9YClbjcoAAZWJQ2_FM3Kjhz8",
-          "short_id": "500aec9e9e5e2212"
-        }
-      }
-    },
-{
-  "type": "vless",
-  "tag": "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL",
-  "server": "2.26.82.237",
-  "server_port": 443,
-  "uuid": "906be882-7f16-47c3-8702-59db2ada9688",
-  "tls": {
-    "enabled": true,
-    "server_name": "speed.cloudflare.com",
-    "utls": {
-      "enabled": true,
-      "fingerprint": "chrome"
-    },
-    "reality": {
-      "enabled": true,
-      "public_key": "VmBEjLUpiEnoNIaPNGDfVPIOzH_ktSDdsGGAvissxgI"
-    }
-  },
-  "transport": {
-    "type": "grpc",
-    "service_name": "grpc"
-  }
-},
-{
-      "type": "vless",
-      "tag": "🇱🇻 @sɪɴɢʙᴏxxx ▪ LV",
-      "server": "91.218.143.194",
-      "server_port": 43798,
-      "uuid": "b7725d23-840a-4f8e-993c-69b40424cfc0",
-      "tls": {
-        "enabled": true,
-        "server_name": "yahoo.com",
+        "server_name": "www.apple.com",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
-          "public_key": "W3aiFnhZRvZuZP0Zyfy7888t-NbHc0RmMEyFa7fYShU",
-          "short_id": "f71c22"
+          "public_key": "k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0",
+          "short_id": "48050fab"
         }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL³",
+      "server": "2.26.82.237",
+      "server_port": 443,
+      "uuid": "906be882-7f16-47c3-8702-59db2ada9688",
+      "tls": {
+        "enabled": true,
+        "server_name": "speed.cloudflare.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "VmBEjLUpiEnoNIaPNGDfVPIOzH_ktSDdsGGAvissxgI"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc"
       }
     },
     {
       "type": "vless",
       "tag": "🇺🇸 @sɪɴɢʙᴏxxx ▪ US",
-      "server": "154.193.55.183",
+      "server": "8.47.69.0",
+      "server_port": 2095,
+      "uuid": "86c50e3a-5b87-49dd-bd20-03c7f2735e40",
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "fuckingfangbinxing.pusytroller.cf"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇮🇹 @sɪɴɢʙᴏxxx ▪ IT",
+      "server": "57.131.32.191",
+      "server_port": 80,
+      "uuid": "1e280316-0408-47c4-b058-05b8f1f17f02",
+      "transport": {
+        "type": "ws",
+        "path": "/vless/",
+        "headers": {
+          "Host": "ov-italy1.09vpn.com"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇵🇱 @sɪɴɢʙᴏxxx ▪ PL",
+      "server": "104.21.35.235",
+      "server_port": 2053,
+      "uuid": "da4747a6-be0d-4c1b-90f4-d82ec3012be2",
+      "tls": {
+        "enabled": true,
+        "server_name": "music1000.melobitmusic1.ir",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "music1000.melobitmusic1.ir"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇭🇺 @sɪɴɢʙᴏxxx ▪ HU",
+      "server": "45.195.111.15",
       "server_port": 443,
-      "uuid": "11e57eeb-ffdf-4983-a9fa-ad352dea7253",
+      "uuid": "45459159-1536-4e98-95b3-aa1dbbfb4172",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
         "server_name": "storage.yandex.net",
+        "alpn": "http/1.1",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "qq"
         },
         "reality": {
           "enabled": true,
-          "public_key": "EMS0wzISeSbEe4JABPD8EgDnyLXgDmrX4_lcfG6VVX4",
-          "short_id": "dbbe8dca27a92c35"
+          "public_key": "7zd9mJilgjOrg_ohtw23Vmio-pdnYqeP_r-kiWt87Cg",
+          "short_id": "2715592069f36fe7"
         }
       }
     },
-{
-  "type": "vless",
-  "tag": "🇫🇷 @sɪɴɢʙᴏxxx ▪ FR²",
-  "server": "45.192.2.51",
-  "server_port": 443,
-  "uuid": "44a6901d-6675-41b1-9a80-ee3308699e1d",
-  "flow": "xtls-rprx-vision",
-  "tls": {
-    "enabled": true,
-    "server_name": "yandex.net",
-    "utls": {
-      "enabled": true,
-      "fingerprint": "chrome"
-    },
-    "reality": {
-      "enabled": true,
-      "public_key": "1oUeBtHH4DskTM_jCh-6enWRkFMDX9l1OU5kWYl4kxA",
-      "short_id": "f34818a561dfd1fe"
-    }
-  }
-},
     {
-  "type": "vless",
-  "tag": "🇭🇺 @sɪɴɢʙᴏxxx ▪ HU",
-  "server": "45.195.111.15",
-  "server_port": 443,
-  "uuid": "45459159-1536-4e98-95b3-aa1dbbfb4172",
-  "flow": "xtls-rprx-vision",
-  "tls": {
-    "enabled": true,
-    "server_name": "storage.yandex.net",
-    "alpn": [
-      "http/1.1"
-    ],
-    "utls": {
-      "enabled": true,
-      "fingerprint": "qq"
+      "type": "trojan",
+      "tag": "🇫🇷 @sɪɴɢʙᴏxxx ▪ FR",
+      "server": "15.237.137.197",
+      "server_port": 443,
+      "password": "ND91608427",
+      "tls": {
+        "enabled": true,
+        "server_name": "fancy-skink.rooster465.autos",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
     },
-    "reality": {
-      "enabled": true,
-      "public_key": "7zd9mJilgjOrg_ohtw23Vmio-pdnYqeP_r-kiWt87Cg",
-      "short_id": "2715592069f36fe7"
-    }
-  }
-},
+    {
+      "type": "trojan",
+      "tag": "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE²",
+      "server": "188.114.97.6",
+      "server_port": 443,
+      "password": "MiTiVPN",
+      "tls": {
+        "enabled": true,
+        "server_name": "Nl1-MiTiVPN--MiTiVPN--MiTiVPN---MiTiVPN--MiTiVPN--MiTiVPN.mitiVpN.lIfeStyLe",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/dde---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN",
+        "headers": {
+          "Host": "nlls-MiTiVPN--MiTiVPN--MiTiVPN---MiTiVPN--MiTiVPN--MiTiVPN.mitiVpN.lIfeStyLe"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      }
+    },
     {
       "type": "direct",
       "tag": "direct"
