@@ -92,7 +92,7 @@
       "tag": "Telegram ➡ @SINGBOXXX",
       "outbounds": [
         "🚀 Auto Pilot",
-        "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE¹",
+        "🇧🇪 @sɪɴɢʙᴏxxx ▪ BE",
         "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL¹",
         "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL²",
         "🇸🇬 @sɪɴɢʙᴏxxx ▪ SG¹",
@@ -100,12 +100,14 @@
         "🇨🇦 @sɪɴɢʙᴏxxx ▪ CA",
         "🇯🇵 @sɪɴɢʙᴏxxx ▪ JP",
         "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL³",
-        "🇺🇸 @sɪɴɢʙᴏxxx ▪ US",
+        "🇺🇸 @sɪɴɢʙᴏxxx ▪ US¹",
         "🇮🇹 @sɪɴɢʙᴏxxx ▪ IT",
-        "🇵🇱 @sɪɴɢʙᴏxxx ▪ PL",
+        "🇵🇱 @sɪɴɢʙᴏxxx ▪ PL¹",
+        "🇵🇱 @sɪɴɢʙᴏxxx ▪ PL²",
         "🇭🇺 @sɪɴɢʙᴏxxx ▪ HU",
         "🇫🇷 @sɪɴɢʙᴏxxx ▪ FR",
-        "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE²",
+        "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE",
+        "🇺🇸 @sɪɴɢʙᴏxxx ▪ US²",
         "direct"
       ]
     },
@@ -113,7 +115,7 @@
       "type": "urltest",
       "tag": "🚀 Auto Pilot",
       "outbounds": [
-        "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE¹",
+        "🇧🇪 @sɪɴɢʙᴏxxx ▪ BE",
         "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL¹",
         "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL²",
         "🇸🇬 @sɪɴɢʙᴏxxx ▪ SG¹",
@@ -121,12 +123,14 @@
         "🇨🇦 @sɪɴɢʙᴏxxx ▪ CA",
         "🇯🇵 @sɪɴɢʙᴏxxx ▪ JP",
         "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL³",
-        "🇺🇸 @sɪɴɢʙᴏxxx ▪ US",
+        "🇺🇸 @sɪɴɢʙᴏxxx ▪ US¹",
         "🇮🇹 @sɪɴɢʙᴏxxx ▪ IT",
-        "🇵🇱 @sɪɴɢʙᴏxxx ▪ PL",
+        "🇵🇱 @sɪɴɢʙᴏxxx ▪ PL¹",
+        "🇵🇱 @sɪɴɢʙᴏxxx ▪ PL²",
         "🇭🇺 @sɪɴɢʙᴏxxx ▪ HU",
         "🇫🇷 @sɪɴɢʙᴏxxx ▪ FR",
-        "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE²"
+        "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE",
+        "🇺🇸 @sɪɴɢʙᴏxxx ▪ US²"
       ],
       "url": "https://www.gstatic.com/generate_204",
       "interval": "30s",
@@ -135,22 +139,21 @@
     },
     {
       "type": "vless",
-      "tag": "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE¹",
-      "server": "159.195.46.178",
+      "tag": "🇧🇪 @sɪɴɢʙᴏxxx ▪ BE",
+      "server": "109.69.218.164",
       "server_port": 443,
-      "uuid": "859a537b-09cf-4bce-8da4-ecbb72950e3a",
+      "uuid": "c28ee61d-0d43-4e69-8e6a-6397ed0ffc03",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "4.oncloudnineservicestreang.com",
+        "server_name": "zealous-vortex.cdn.cachefleet.com",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
-          "public_key": "P5ceHLOW8Gmz45z-ozbm9T6xsdSsIGLB71-jMfSjCBQ",
-          "short_id": "04bc695105689674"
+          "public_key": "cv_KJnMzQUZruACPbH-BCgLWrYqPm2dbUymg-gW_sVc"
         }
       }
     },
@@ -305,7 +308,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇺🇸 @sɪɴɢʙᴏxxx ▪ US",
+      "tag": "🇺🇸 @sɪɴɢʙᴏxxx ▪ US¹",
       "server": "8.47.69.0",
       "server_port": 2095,
       "uuid": "86c50e3a-5b87-49dd-bd20-03c7f2735e40",
@@ -333,7 +336,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇵🇱 @sɪɴɢʙᴏxxx ▪ PL",
+      "tag": "🇵🇱 @sɪɴɢʙᴏxxx ▪ PL¹",
       "server": "104.21.35.235",
       "server_port": 2053,
       "uuid": "da4747a6-be0d-4c1b-90f4-d82ec3012be2",
@@ -350,6 +353,27 @@
         "path": "/",
         "headers": {
           "Host": "music1000.melobitmusic1.ir"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇵🇱 @sɪɴɢʙᴏxxx ▪ PL²",
+      "server": "144.31.0.34",
+      "server_port": 7443,
+      "uuid": "1fef5248-fdd2-40d6-b3b9-6c33d4e74724",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "storage.yandex.net",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "8wD0IhR27ftD5LyJDq9CaFzi6DgA4vFtB-UP6QIdWVc",
+          "short_id": "e8ca5079a5e91481"
         }
       }
     },
@@ -392,7 +416,7 @@
     },
     {
       "type": "trojan",
-      "tag": "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE²",
+      "tag": "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE",
       "server": "188.114.97.6",
       "server_port": 443,
       "password": "MiTiVPN",
@@ -412,6 +436,14 @@
         },
         "early_data_header_name": "Sec-WebSocket-Protocol"
       }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇺🇸 @sɪɴɢʙᴏxxx ▪ US²",
+      "server": "198.98.53.130",
+      "server_port": 443,
+      "method": "chacha20-ietf-poly1305",
+      "password": "eDfN7SODQceIOmIAbtJJtK"
     },
     {
       "type": "direct",
