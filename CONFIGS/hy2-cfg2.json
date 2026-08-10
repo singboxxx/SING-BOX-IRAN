@@ -1,0 +1,624 @@
+{
+  "log": {
+    "level": "warn",
+    "timestamp": true
+  },
+  "dns": {
+    "servers": [
+      {
+        "type": "udp",
+        "tag": "dns-direct",
+        "server": "1.1.1.1",
+        "server_port": 53
+      },
+      {
+        "type": "https",
+        "tag": "dns-remote",
+        "detour": "Telegram ➡ @SINGBOXXX",
+        "server": "https://1.1.1.1/dns-query"
+      },
+      {
+        "type": "fakeip",
+        "tag": "dns-fake",
+        "inet4_range": "198.18.0.0/15",
+        "inet6_range": "fc00::/18"
+      }
+    ],
+    "rules": [
+      {
+        "domain": "raw.githubusercontent.com",
+        "server": "dns-direct"
+      },
+      {
+        "rule_set": [
+          "geosite-malware",
+          "geosite-phishing",
+          "geosite-cryptominers",
+          "geosite-category-ads-all"
+        ],
+        "action": "reject"
+      },
+      {
+        "rule_set": "geosite-ir",
+        "server": "dns-direct"
+      },
+      {
+        "inbound": "tun-in",
+        "query_type": [
+          "A",
+          "AAAA"
+        ],
+        "server": "dns-fake"
+      }
+    ],
+    "strategy": "prefer_ipv4",
+    "independent_cache": true
+  },
+  "ntp": {
+    "enabled": true,
+    "interval": "30m0s",
+    "server": "time.cloudflare.com",
+    "server_port": 123,
+    "domain_resolver": "dns-direct"
+  },
+  "inbounds": [
+    {
+      "type": "tun",
+      "tag": "tun-in",
+      "mtu": 1400,
+      "address": [
+        "172.19.0.1/30",
+        "fdfe:dcba:9876::1/126"
+      ],
+      "auto_route": true,
+      "strict_route": true,
+      "stack": "mixed",
+      "endpoint_independent_nat": true
+    },
+    {
+      "type": "mixed",
+      "tag": "mixed-in",
+      "listen": "0.0.0.0",
+      "listen_port": 2080
+    }
+  ],
+  "outbounds": [
+    {
+      "type": "selector",
+      "tag": "Telegram ➡ @SINGBOXXX",
+      "outbounds": [
+        "🚀 Auto Pilot",
+        "🇷🇸 @sɪɴɢʙᴏxxx ▪ RS",
+        "🇸🇪 @sɪɴɢʙᴏxxx ▪ SE",
+        "🇹🇷 @sɪɴɢʙᴏxxx ▪ TR",
+        "🇺🇦 @sɪɴɢʙᴏxxx ▪ UA",
+        "🇦🇱 @sɪɴɢʙᴏxxx ▪ AL",
+        "🇦🇹 @sɪɴɢʙᴏxxx ▪ AT",
+        "🇧🇪 @sɪɴɢʙᴏxxx ▪ BE",
+        "🇦🇷 @sɪɴɢʙᴏxxx ▪ AR",
+        "🇧🇬 @sɪɴɢʙᴏxxx ▪ BG",
+        "🇵🇱 @sɪɴɢʙᴏxxx ▪ PL",
+        "🇵🇹 @sɪɴɢʙᴏxxx ▪ PT",
+        "🇨🇦 @sɪɴɢʙᴏxxx ▪ CA",
+        "🇦🇺 @sɪɴɢʙᴏxxx ▪ AU",
+        "🇧🇷 @sɪɴɢʙᴏxxx ▪ BR",
+        "🇭🇷 @sɪɴɢʙᴏxxx ▪ HR",
+        "🇮🇪 @sɪɴɢʙᴏxxx ▪ IE",
+        "🇭🇺 @sɪɴɢʙᴏxxx ▪ HU",
+        "🇿🇦 @sɪɴɢʙᴏxxx ▪ ZA",
+        "🇲🇾 @sɪɴɢʙᴏxxx ▪ MY",
+        "🇮🇩 @sɪɴɢʙᴏxxx ▪ ID",
+        "direct"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "🚀 Auto Pilot",
+      "outbounds": [
+        "🇷🇸 @sɪɴɢʙᴏxxx ▪ RS",
+        "🇸🇪 @sɪɴɢʙᴏxxx ▪ SE",
+        "🇹🇷 @sɪɴɢʙᴏxxx ▪ TR",
+        "🇺🇦 @sɪɴɢʙᴏxxx ▪ UA",
+        "🇦🇱 @sɪɴɢʙᴏxxx ▪ AL",
+        "🇦🇹 @sɪɴɢʙᴏxxx ▪ AT",
+        "🇧🇪 @sɪɴɢʙᴏxxx ▪ BE",
+        "🇦🇷 @sɪɴɢʙᴏxxx ▪ AR",
+        "🇧🇬 @sɪɴɢʙᴏxxx ▪ BG",
+        "🇵🇱 @sɪɴɢʙᴏxxx ▪ PL",
+        "🇵🇹 @sɪɴɢʙᴏxxx ▪ PT",
+        "🇨🇦 @sɪɴɢʙᴏxxx ▪ CA",
+        "🇦🇺 @sɪɴɢʙᴏxxx ▪ AU",
+        "🇧🇷 @sɪɴɢʙᴏxxx ▪ BR",
+        "🇭🇷 @sɪɴɢʙᴏxxx ▪ HR",
+        "🇮🇪 @sɪɴɢʙᴏxxx ▪ IE",
+        "🇭🇺 @sɪɴɢʙᴏxxx ▪ HU",
+        "🇿🇦 @sɪɴɢʙᴏxxx ▪ ZA",
+        "🇲🇾 @sɪɴɢʙᴏxxx ▪ MY",
+        "🇮🇩 @sɪɴɢʙᴏxxx ▪ ID"
+      ],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "1m0s",
+      "tolerance": 50,
+      "idle_timeout": "20m"
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇷🇸 @sɪɴɢʙᴏxxx ▪ RS",
+      "server": "assets.gateway-stream.com",
+      "server_port": 52059,
+      "password": "k1dom6dyqelryllv",
+      "tls": {
+        "enabled": true,
+        "server_name": "assets.gateway-stream.com",
+        "alpn": [
+          "h3"
+        ],
+        "insecure": true
+      },
+      "obfs": {
+        "type": "salamander",
+        "password": "vic6damutmthllnd"
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇸🇪 @sɪɴɢʙᴏxxx ▪ SE",
+      "server": "assets.gateway-stream.com",
+      "server_port": 52060,
+      "password": "k1dom6dyqelryllv",
+      "tls": {
+        "enabled": true,
+        "server_name": "assets.gateway-stream.com",
+        "alpn": [
+          "h3"
+        ],
+        "insecure": true
+      },
+      "obfs": {
+        "type": "salamander",
+        "password": "l960g2kn19nphlra"
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇹🇷 @sɪɴɢʙᴏxxx ▪ TR",
+      "server": "assets.gateway-stream.com",
+      "server_port": 52067,
+      "password": "k1dom6dyqelryllv",
+      "tls": {
+        "enabled": true,
+        "server_name": "assets.gateway-stream.com",
+        "alpn": [
+          "h3"
+        ],
+        "insecure": true
+      },
+      "obfs": {
+        "type": "salamander",
+        "password": "txwr28j1lntoy0sj"
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇺🇦 @sɪɴɢʙᴏxxx ▪ UA",
+      "server": "assets.gateway-stream.com",
+      "server_port": 52068,
+      "password": "k1dom6dyqelryllv",
+      "tls": {
+        "enabled": true,
+        "server_name": "assets.gateway-stream.com",
+        "alpn": [
+          "h3"
+        ],
+        "insecure": true
+      },
+      "obfs": {
+        "type": "salamander",
+        "password": "ene2f0oo4n8i3inf"
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇦🇱 @sɪɴɢʙᴏxxx ▪ AL",
+      "server": "assets.gateway-stream.com",
+      "server_port": 52000,
+      "password": "k1dom6dyqelryllv",
+      "tls": {
+        "enabled": true,
+        "server_name": "assets.gateway-stream.com",
+        "alpn": [
+          "h3"
+        ],
+        "insecure": true
+      },
+      "obfs": {
+        "type": "salamander",
+        "password": "gu74jg3ym0e21zco"
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇦🇹 @sɪɴɢʙᴏxxx ▪ AT",
+      "server": "assets.gateway-stream.com",
+      "server_port": 52002,
+      "password": "k1dom6dyqelryllv",
+      "tls": {
+        "enabled": true,
+        "server_name": "assets.gateway-stream.com",
+        "alpn": [
+          "h3"
+        ],
+        "insecure": true
+      },
+      "obfs": {
+        "type": "salamander",
+        "password": "ielzukpwth087afx"
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇧🇪 @sɪɴɢʙᴏxxx ▪ BE",
+      "server": "assets.gateway-stream.com",
+      "server_port": 52008,
+      "password": "k1dom6dyqelryllv",
+      "tls": {
+        "enabled": true,
+        "server_name": "assets.gateway-stream.com",
+        "alpn": [
+          "h3"
+        ],
+        "insecure": true
+      },
+      "obfs": {
+        "type": "salamander",
+        "password": "93lc6r07zfx4crct"
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇦🇷 @sɪɴɢʙᴏxxx ▪ AR",
+      "server": "assets.gateway-stream.com",
+      "server_port": 52001,
+      "password": "k1dom6dyqelryllv",
+      "tls": {
+        "enabled": true,
+        "server_name": "assets.gateway-stream.com",
+        "alpn": [
+          "h3"
+        ],
+        "insecure": true
+      },
+      "obfs": {
+        "type": "salamander",
+        "password": "527zd9w4nuaccd7g"
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇧🇬 @sɪɴɢʙᴏxxx ▪ BG",
+      "server": "assets.gateway-stream.com",
+      "server_port": 52009,
+      "password": "k1dom6dyqelryllv",
+      "tls": {
+        "enabled": true,
+        "server_name": "assets.gateway-stream.com",
+        "alpn": [
+          "h3"
+        ],
+        "insecure": true
+      },
+      "obfs": {
+        "type": "salamander",
+        "password": "kf1lypzqidy6pimt"
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇵🇱 @sɪɴɢʙᴏxxx ▪ PL",
+      "server": "assets.gateway-stream.com",
+      "server_port": 52056,
+      "password": "k1dom6dyqelryllv",
+      "tls": {
+        "enabled": true,
+        "server_name": "assets.gateway-stream.com",
+        "alpn": [
+          "h3"
+        ],
+        "insecure": true
+      },
+      "obfs": {
+        "type": "salamander",
+        "password": "pha76a5o7ormjepb"
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇵🇹 @sɪɴɢʙᴏxxx ▪ PT",
+      "server": "assets.gateway-stream.com",
+      "server_port": 52057,
+      "password": "k1dom6dyqelryllv",
+      "tls": {
+        "enabled": true,
+        "server_name": "assets.gateway-stream.com",
+        "alpn": [
+          "h3"
+        ],
+        "insecure": false
+      },
+      "obfs": {
+        "type": "salamander",
+        "password": "auw7lhtk2kxyq4g9"
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇨🇦 @sɪɴɢʙᴏxxx ▪ CA",
+      "server": "assets.gateway-stream.com",
+      "server_port": 52012,
+      "password": "k1dom6dyqelryllv",
+      "tls": {
+        "enabled": true,
+        "server_name": "assets.gateway-stream.com",
+        "alpn": [
+          "h3"
+        ],
+        "insecure": false
+      },
+      "obfs": {
+        "type": "salamander",
+        "password": "sdx1qdzqgp8lcajn"
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇦🇺 @sɪɴɢʙᴏxxx ▪ AU",
+      "server": "assets.gateway-stream.com",
+      "server_port": 52003,
+      "password": "k1dom6dyqelryllv",
+      "tls": {
+        "enabled": true,
+        "server_name": "assets.gateway-stream.com",
+        "alpn": [
+          "h3"
+        ],
+        "insecure": false
+      },
+      "obfs": {
+        "type": "salamander",
+        "password": "5xo4v7u2pv8bktvb"
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇧🇷 @sɪɴɢʙᴏxxx ▪ BR",
+      "server": "assets.gateway-stream.com",
+      "server_port": 52010,
+      "password": "k1dom6dyqelryllv",
+      "tls": {
+        "enabled": true,
+        "server_name": "assets.gateway-stream.com",
+        "alpn": [
+          "h3"
+        ],
+        "insecure": false
+      },
+      "obfs": {
+        "type": "salamander",
+        "password": "ntygj5lde0e7tm1m"
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇭🇷 @sɪɴɢʙᴏxxx ▪ HR",
+      "server": "assets.gateway-stream.com",
+      "server_port": 52038,
+      "password": "k1dom6dyqelryllv",
+      "tls": {
+        "enabled": true,
+        "server_name": "assets.gateway-stream.com",
+        "alpn": [
+          "h3"
+        ],
+        "insecure": false
+      },
+      "obfs": {
+        "type": "salamander",
+        "password": "957df5ae9ci6tkbk"
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇮🇪 @sɪɴɢʙᴏxxx ▪ IE",
+      "server": "assets.gateway-stream.com",
+      "server_port": 52041,
+      "password": "k1dom6dyqelryllv",
+      "tls": {
+        "enabled": true,
+        "server_name": "assets.gateway-stream.com",
+        "alpn": [
+          "h3"
+        ],
+        "insecure": false
+      },
+      "obfs": {
+        "type": "salamander",
+        "password": "ovh5m03o3l97igco"
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇭🇺 @sɪɴɢʙᴏxxx ▪ HU",
+      "server": "assets.gateway-stream.com",
+      "server_port": 52039,
+      "password": "k1dom6dyqelryllv",
+      "tls": {
+        "enabled": true,
+        "server_name": "assets.gateway-stream.com",
+        "alpn": [
+          "h3"
+        ],
+        "insecure": false
+      },
+      "obfs": {
+        "type": "salamander",
+        "password": "p56kl4pnloz585ce"
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇿🇦 @sɪɴɢʙᴏxxx ▪ ZA",
+      "server": "assets.gateway-stream.com",
+      "server_port": 52089,
+      "password": "k1dom6dyqelryllv",
+      "tls": {
+        "enabled": true,
+        "server_name": "assets.gateway-stream.com",
+        "alpn": [
+          "h3"
+        ],
+        "insecure": false
+      },
+      "obfs": {
+        "type": "salamander",
+        "password": "hitar6eeayxd7imh"
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇲🇾 @sɪɴɢʙᴏxxx ▪ MY",
+      "server": "assets.gateway-stream.com",
+      "server_port": 52048,
+      "password": "k1dom6dyqelryllv",
+      "tls": {
+        "enabled": true,
+        "server_name": "assets.gateway-stream.com",
+        "alpn": [
+          "h3"
+        ],
+        "insecure": false
+      },
+      "obfs": {
+        "type": "salamander",
+        "password": "rfsh74w3ncbh9lhd"
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇮🇩 @sɪɴɢʙᴏxxx ▪ ID",
+      "server": "assets.gateway-stream.com",
+      "server_port": 52040,
+      "password": "k1dom6dyqelryllv",
+      "tls": {
+        "enabled": true,
+        "server_name": "assets.gateway-stream.com",
+        "alpn": [
+          "h3"
+        ],
+        "insecure": false
+      },
+      "obfs": {
+        "type": "salamander",
+        "password": "7206pa46enqqdnmt"
+      }
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    }
+  ],
+  "route": {
+    "rules": [
+      {
+        "action": "sniff"
+      },
+      {
+        "protocol": "dns",
+        "action": "hijack-dns"
+      },
+      {
+        "network": "udp",
+        "port": [
+          80,
+          443
+        ],
+        "action": "reject"
+      },
+      {
+        "rule_set": [
+          "geosite-malware",
+          "geoip-malware",
+          "geosite-phishing",
+          "geoip-phishing",
+          "geosite-cryptominers",
+          "geosite-category-ads-all"
+        ],
+        "action": "reject"
+      },
+      {
+        "rule_set": [
+          "geosite-ir",
+          "geoip-ir"
+        ],
+        "outbound": "direct"
+      }
+    ],
+    "rule_set": [
+      {
+        "type": "remote",
+        "tag": "geosite-malware",
+        "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-malware.srs",
+        "download_detour": "direct"
+      },
+      {
+        "type": "remote",
+        "tag": "geoip-malware",
+        "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geoip-malware.srs",
+        "download_detour": "direct"
+      },
+      {
+        "type": "remote",
+        "tag": "geosite-phishing",
+        "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-phishing.srs",
+        "download_detour": "direct"
+      },
+      {
+        "type": "remote",
+        "tag": "geoip-phishing",
+        "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geoip-phishing.srs",
+        "download_detour": "direct"
+      },
+      {
+        "type": "remote",
+        "tag": "geosite-cryptominers",
+        "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-cryptominers.srs",
+        "download_detour": "direct"
+      },
+      {
+        "type": "remote",
+        "tag": "geosite-category-ads-all",
+        "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-category-ads-all.srs",
+        "download_detour": "direct"
+      },
+      {
+        "type": "remote",
+        "tag": "geosite-ir",
+        "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-ir.srs",
+        "download_detour": "direct"
+      },
+      {
+        "type": "remote",
+        "tag": "geoip-ir",
+        "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geoip-ir.srs",
+        "download_detour": "direct"
+      }
+    ],
+    "final": "Telegram ➡ @SINGBOXXX",
+    "auto_detect_interface": true
+  },
+  "experimental": {
+    "cache_file": {
+      "enabled": true,
+      "store_fakeip": true
+    }
+  }
+}
