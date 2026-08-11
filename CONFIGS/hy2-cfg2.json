@@ -108,6 +108,8 @@
         "🇿🇦 @sɪɴɢʙᴏxxx ▪ ZA",
         "🇲🇾 @sɪɴɢʙᴏxxx ▪ MY",
         "🇮🇩 @sɪɴɢʙᴏxxx ▪ ID",
+        "🇷🇴 @sɪɴɢʙᴏxxx ▪ RO¹",
+        "🇷🇴 @sɪɴɢʙᴏxxx ▪ RO²",      
         "direct"
       ]
     },
@@ -134,7 +136,9 @@
         "🇭🇺 @sɪɴɢʙᴏxxx ▪ HU",
         "🇿🇦 @sɪɴɢʙᴏxxx ▪ ZA",
         "🇲🇾 @sɪɴɢʙᴏxxx ▪ MY",
-        "🇮🇩 @sɪɴɢʙᴏxxx ▪ ID"
+        "🇮🇩 @sɪɴɢʙᴏxxx ▪ ID",
+        "🇷🇴 @sɪɴɢʙᴏxxx ▪ RO¹",
+        "🇷🇴 @sɪɴɢʙᴏxxx ▪ RO²"        
       ],
       "url": "https://www.gstatic.com/generate_204",
       "interval": "1m0s",
@@ -521,6 +525,30 @@
         "password": "7206pa46enqqdnmt"
       }
     },
+    {
+      "type": "hysteria2",
+      "tag": "🇷🇴 @sɪɴɢʙᴏxxx ▪ RO¹",
+      "server": "ro.h2corp.org",
+      "server_port": 443,
+      "password": "uj7XGZGUqRlmdpk6rysyZMN333RWsxTFj0hBIMaFV-NUCd5r",
+      "tls": {
+        "enabled": true,
+        "server_name": "ro.h2corp.org",
+        "insecure": false
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇷🇴 @sɪɴɢʙᴏxxx ▪ RO²",
+      "server": "205.237.109.213",
+      "server_port": 8443,
+      "password": "s0_sdK93x9wer_D02Lz9cvK3_Sa014Oakl_C2z",
+      "tls": {
+        "enabled": true,
+        "server_name": "grape-turbo-fr.roxa.org",
+        "insecure": false
+      }
+    },    
     {
       "type": "direct",
       "tag": "direct"
