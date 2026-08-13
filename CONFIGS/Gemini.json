@@ -97,6 +97,7 @@
         "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL²",
         "🇸🇬 @sɪɴɢʙᴏxxx ▪ SG¹",
         "🇸🇬 @sɪɴɢʙᴏxxx ▪ SG²",
+        "🇸🇬 @sɪɴɢʙᴏxxx ▪ SG³",
         "🇨🇦 @sɪɴɢʙᴏxxx ▪ CA",
         "🇯🇵 @sɪɴɢʙᴏxxx ▪ JP",
         "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL³",
@@ -105,8 +106,9 @@
         "🇵🇱 @sɪɴɢʙᴏxxx ▪ PL¹",
         "🇵🇱 @sɪɴɢʙᴏxxx ▪ PL²",
         "🇭🇺 @sɪɴɢʙᴏxxx ▪ HU",
-        "🇫🇷 @sɪɴɢʙᴏxxx ▪ FR",
+        "🇫🇷 @sɪɴɢʙᴏxxx ▪ FR¹",
         "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE",
+        "🇫🇷 @sɪɴɢʙᴏxxx ▪ FR²",
         "🇺🇸 @sɪɴɢʙᴏxxx ▪ US²",
         "direct"
       ]
@@ -120,6 +122,7 @@
         "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL²",
         "🇸🇬 @sɪɴɢʙᴏxxx ▪ SG¹",
         "🇸🇬 @sɪɴɢʙᴏxxx ▪ SG²",
+        "🇸🇬 @sɪɴɢʙᴏxxx ▪ SG³",
         "🇨🇦 @sɪɴɢʙᴏxxx ▪ CA",
         "🇯🇵 @sɪɴɢʙᴏxxx ▪ JP",
         "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL³",
@@ -128,8 +131,9 @@
         "🇵🇱 @sɪɴɢʙᴏxxx ▪ PL¹",
         "🇵🇱 @sɪɴɢʙᴏxxx ▪ PL²",
         "🇭🇺 @sɪɴɢʙᴏxxx ▪ HU",
-        "🇫🇷 @sɪɴɢʙᴏxxx ▪ FR",
+        "🇫🇷 @sɪɴɢʙᴏxxx ▪ FR¹",
         "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE",
+        "🇫🇷 @sɪɴɢʙᴏxxx ▪ FR²",
         "🇺🇸 @sɪɴɢʙᴏxxx ▪ US²"
       ],
       "url": "https://www.gstatic.com/generate_204",
@@ -238,6 +242,27 @@
           "enabled": true,
           "public_key": "k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0",
           "short_id": "48050fab"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇸🇬 @sɪɴɢʙᴏxxx ▪ SG³",
+      "server": "178.128.112.70",
+      "server_port": 443,
+      "uuid": "9206ae06-88ee-49b1-a558-531ade80fcaa",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.amazon.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "-O8QFkqeMAc6TzQp6eY1s38my_8jhBd7HDHxNki6QlY",
+          "short_id": "7f7f"
         }
       }
     },
@@ -401,7 +426,7 @@
     },
     {
       "type": "trojan",
-      "tag": "🇫🇷 @sɪɴɢʙᴏxxx ▪ FR",
+      "tag": "🇫🇷 @sɪɴɢʙᴏxxx ▪ FR¹",
       "server": "15.237.137.197",
       "server_port": 443,
       "password": "ND91608427",
@@ -436,6 +461,14 @@
         },
         "early_data_header_name": "Sec-WebSocket-Protocol"
       }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇫🇷 @sɪɴɢʙᴏxxx ▪ FR²",
+      "server": "64.31.63.244",
+      "server_port": 8881,
+      "method": "aes-256-gcm",
+      "password": "kDWvXYZoTBcGkC4"
     },
     {
       "type": "shadowsocks",
