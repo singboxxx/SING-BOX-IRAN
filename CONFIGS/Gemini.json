@@ -92,6 +92,7 @@
       "tag": "Telegram ➡ @SINGBOXXX",
       "outbounds": [
         "🚀 Auto Pilot",
+        "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE¹",
         "🇧🇪 @sɪɴɢʙᴏxxx ▪ BE",
         "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL¹",
         "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL²",
@@ -107,8 +108,9 @@
         "🇵🇱 @sɪɴɢʙᴏxxx ▪ PL²",
         "🇭🇺 @sɪɴɢʙᴏxxx ▪ HU",
         "🇫🇷 @sɪɴɢʙᴏxxx ▪ FR¹",
-        "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE",
+        "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE²",
         "🇫🇷 @sɪɴɢʙᴏxxx ▪ FR²",
+        "🇪🇸 @sɪɴɢʙᴏxxx ▪ ES¹",
         "🇺🇸 @sɪɴɢʙᴏxxx ▪ US²",
         "direct"
       ]
@@ -117,6 +119,7 @@
       "type": "urltest",
       "tag": "🚀 Auto Pilot",
       "outbounds": [
+        "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE¹",
         "🇧🇪 @sɪɴɢʙᴏxxx ▪ BE",
         "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL¹",
         "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL²",
@@ -132,14 +135,21 @@
         "🇵🇱 @sɪɴɢʙᴏxxx ▪ PL²",
         "🇭🇺 @sɪɴɢʙᴏxxx ▪ HU",
         "🇫🇷 @sɪɴɢʙᴏxxx ▪ FR¹",
-        "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE",
+        "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE²",
         "🇫🇷 @sɪɴɢʙᴏxxx ▪ FR²",
+        "🇪🇸 @sɪɴɢʙᴏxxx ▪ ES¹",
         "🇺🇸 @sɪɴɢʙᴏxxx ▪ US²"
       ],
       "url": "https://www.gstatic.com/generate_204",
       "interval": "30s",
       "tolerance": 50,
       "idle_timeout": "20m0s"
+    },
+    {
+      "type": "socks",
+      "tag": "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE¹",
+      "server": "45.147.76.55",
+      "server_port": 10808
     },
     {
       "type": "vless",
@@ -441,7 +451,7 @@
     },
     {
       "type": "trojan",
-      "tag": "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE",
+      "tag": "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE²",
       "server": "188.114.97.6",
       "server_port": 443,
       "password": "MiTiVPN",
@@ -469,6 +479,14 @@
       "server_port": 8881,
       "method": "aes-256-gcm",
       "password": "kDWvXYZoTBcGkC4"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇪🇸 @sɪɴɢʙᴏxxx ▪ ES¹",
+      "server": "108.181.121.226",
+      "server_port": 8388,
+      "method": "chacha20-ietf-poly1305",
+      "password": "WSyL4XTwNsdv"
     },
     {
       "type": "shadowsocks",
