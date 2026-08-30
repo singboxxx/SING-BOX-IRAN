@@ -1,0 +1,862 @@
+{
+  "log": {
+    "level": "warn",
+    "timestamp": true
+  },
+  "dns": {
+    "servers": [
+      {
+        "type": "https",
+        "tag": "dns-remote",
+        "detour": "Telegram ➡ @SINGBOXXX",
+        "server": "8.8.8.8"
+      },
+      {
+        "type": "udp",
+        "tag": "dns-direct",
+        "server": "178.22.122.100",
+        "server_port": 53
+      },
+      {
+        "type": "fakeip",
+        "tag": "dns-fake",
+        "inet4_range": "198.18.0.0/15",
+        "inet6_range": "fc00::/18"
+      }
+    ],
+    "rules": [
+      {
+        "domain": [
+          "raw.githubusercontent.com"
+        ],
+        "server": "dns-direct"
+      },
+      {
+        "rule_set": [
+          "geosite-malware",
+          "geosite-phishing",
+          "geosite-cryptominers",
+          "geosite-category-ads-all"
+        ],
+        "action": "reject"
+      },
+      {
+        "rule_set": [
+          "geosite-ir"
+        ],
+        "server": "dns-direct"
+      },
+      {
+        "clash_mode": "@SINGBOXXX",
+        "server": "dns-remote"
+      },
+      {
+        "inbound": [
+          "tun-in"
+        ],
+        "query_type": [
+          "A",
+          "AAAA"
+        ],
+        "server": "dns-fake"
+      }
+    ],
+    "strategy": "prefer_ipv4",
+    "independent_cache": true
+  },
+  "ntp": {
+    "enabled": true,
+    "interval": "30m0s",
+    "server": "time.cloudflare.com",
+    "server_port": 123,
+    "domain_resolver": "dns-direct"
+  },
+  "inbounds": [
+    {
+      "type": "tun",
+      "tag": "tun-in",
+      "mtu": 1500,
+      "address": [
+        "172.18.0.1/30",
+        "fdfe:dcba:9876::1/126"
+      ],
+      "auto_route": true,
+      "strict_route": true,
+      "stack": "mixed",
+      "endpoint_independent_nat": true
+    },
+    {
+      "type": "mixed",
+      "tag": "mixed-in",
+      "listen": "0.0.0.0",
+      "listen_port": 2080
+    }
+  ],
+  "outbounds": [
+    {
+      "type": "selector",
+      "tag": "Telegram ➡ @SINGBOXXX",
+      "outbounds": [
+        "🚀 Auto Pilot",
+        "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE¹",
+        "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE²",
+        "🇬🇧 @sɪɴɢʙᴏxxx ▪ GB¹",
+        "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE³",
+        "🇬🇧 @sɪɴɢʙᴏxxx ▪ GB²",
+        "🇬🇧 @sɪɴɢʙᴏxxx ▪ GB³",
+        "🇬🇧 @sɪɴɢʙᴏxxx ▪ GB⁴",
+        "🇬🇧 @sɪɴɢʙᴏxxx ▪ GB⁵",
+        "🇬🇧 @sɪɴɢʙᴏxxx ▪ GB⁶",
+        "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE⁴",
+        "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE⁵",
+        "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE⁶",
+        "🇵🇱 @sɪɴɢʙᴏxxx ▪ PL¹",
+        "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE⁷",
+        "🇵🇱 @sɪɴɢʙᴏxxx ▪ PL²",
+        "🇬🇧 @sɪɴɢʙᴏxxx ▪ GB⁸",
+        "🇫🇮 @sɪɴɢʙᴏxxx ▪ FI",
+        "🇵🇱 @sɪɴɢʙᴏxxx ▪ PL³",
+        "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE⁸",
+        "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL",
+        "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE⁹",
+        "🇵🇱 @sɪɴɢʙᴏxxx ▪ PL⁴",
+        "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE¹⁰",
+        "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE¹¹",
+        "🇬🇧 @sɪɴɢʙᴏxxx ▪ GB⁹",
+        "🇭🇺 @sɪɴɢʙᴏxxx ▪ HU",
+        "🇬🇧 @sɪɴɢʙᴏxxx ▪ GB¹⁰",
+        "🇺🇦 @sɪɴɢʙᴏxxx ▪ UA",
+        "🇨🇦 @sɪɴɢʙᴏxxx ▪ CA¹",
+        "🇺🇿 @sɪɴɢʙᴏxxx ▪ UZ¹",
+        "🇺🇿 @sɪɴɢʙᴏxxx ▪ UZ²",
+        "🇱🇦 @sɪɴɢʙᴏxxx ▪ LA",
+        "🇺🇿 @sɪɴɢʙᴏxxx ▪ UZ³",
+        "🇺🇿 @sɪɴɢʙᴏxxx ▪ UZ⁴",
+        "🇺🇿 @sɪɴɢʙᴏxxx ▪ UZ⁵",
+        "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE¹²",
+        "🇨🇼 @sɪɴɢʙᴏxxx ▪ CW",
+        "🇷🇸 @sɪɴɢʙᴏxxx ▪ RS",
+        "🇧🇬 @sɪɴɢʙᴏxxx ▪ BG",
+        "🇮🇳 @sɪɴɢʙᴏxxx ▪ IN¹",
+        "🇦🇱 @sɪɴɢʙᴏxxx ▪ AL",
+        "🇺🇸 @sɪɴɢʙᴏxxx ▪ US¹",
+        "🇨🇦 @sɪɴɢʙᴏxxx ▪ CA²",
+        "🇲🇾 @sɪɴɢʙᴏxxx ▪ MY",
+        "🇺🇸 @sɪɴɢʙᴏxxx ▪ US²",
+        "🇦🇩 @sɪɴɢʙᴏxxx ▪ AD",
+        "🇰🇷 @sɪɴɢʙᴏxxx ▪ KR",
+        "🇵🇭 @sɪɴɢʙᴏxxx ▪ PH",
+        "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE¹³",
+        "🇦🇬 @sɪɴɢʙᴏxxx ▪ AG",
+        "🇨🇦 @sɪɴɢʙᴏxxx ▪ CA³",
+        "🇮🇳 @sɪɴɢʙᴏxxx ▪ IN²",
+        "direct"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "🚀 Auto Pilot",
+      "outbounds": [
+        "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE¹",
+        "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE²",
+        "🇬🇧 @sɪɴɢʙᴏxxx ▪ GB¹",
+        "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE³",
+        "🇬🇧 @sɪɴɢʙᴏxxx ▪ GB²",
+        "🇬🇧 @sɪɴɢʙᴏxxx ▪ GB³",
+        "🇬🇧 @sɪɴɢʙᴏxxx ▪ GB⁴",
+        "🇬🇧 @sɪɴɢʙᴏxxx ▪ GB⁵",
+        "🇬🇧 @sɪɴɢʙᴏxxx ▪ GB⁶",
+        "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE⁴",
+        "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE⁵",
+        "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE⁶",
+        "🇵🇱 @sɪɴɢʙᴏxxx ▪ PL¹",
+        "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE⁷",
+        "🇵🇱 @sɪɴɢʙᴏxxx ▪ PL²",
+        "🇬🇧 @sɪɴɢʙᴏxxx ▪ GB⁸",
+        "🇫🇮 @sɪɴɢʙᴏxxx ▪ FI",
+        "🇵🇱 @sɪɴɢʙᴏxxx ▪ PL³",
+        "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE⁸",
+        "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL",
+        "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE⁹",
+        "🇵🇱 @sɪɴɢʙᴏxxx ▪ PL⁴",
+        "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE¹⁰",
+        "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE¹¹",
+        "🇬🇧 @sɪɴɢʙᴏxxx ▪ GB⁹",
+        "🇭🇺 @sɪɴɢʙᴏxxx ▪ HU",
+        "🇬🇧 @sɪɴɢʙᴏxxx ▪ GB¹⁰",
+        "🇺🇦 @sɪɴɢʙᴏxxx ▪ UA",
+        "🇨🇦 @sɪɴɢʙᴏxxx ▪ CA¹",
+        "🇺🇿 @sɪɴɢʙᴏxxx ▪ UZ¹",
+        "🇺🇿 @sɪɴɢʙᴏxxx ▪ UZ²",
+        "🇱🇦 @sɪɴɢʙᴏxxx ▪ LA",
+        "🇺🇿 @sɪɴɢʙᴏxxx ▪ UZ³",
+        "🇺🇿 @sɪɴɢʙᴏxxx ▪ UZ⁴",
+        "🇺🇿 @sɪɴɢʙᴏxxx ▪ UZ⁵",
+        "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE¹²",
+        "🇨🇼 @sɪɴɢʙᴏxxx ▪ CW",
+        "🇷🇸 @sɪɴɢʙᴏxxx ▪ RS",
+        "🇧🇬 @sɪɴɢʙᴏxxx ▪ BG",
+        "🇮🇳 @sɪɴɢʙᴏxxx ▪ IN¹",
+        "🇦🇱 @sɪɴɢʙᴏxxx ▪ AL",
+        "🇺🇸 @sɪɴɢʙᴏxxx ▪ US¹",
+        "🇨🇦 @sɪɴɢʙᴏxxx ▪ CA²",
+        "🇲🇾 @sɪɴɢʙᴏxxx ▪ MY",
+        "🇺🇸 @sɪɴɢʙᴏxxx ▪ US²",
+        "🇦🇩 @sɪɴɢʙᴏxxx ▪ AD",
+        "🇰🇷 @sɪɴɢʙᴏxxx ▪ KR",
+        "🇵🇭 @sɪɴɢʙᴏxxx ▪ PH",
+        "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE¹³",
+        "🇦🇬 @sɪɴɢʙᴏxxx ▪ AG",
+        "🇨🇦 @sɪɴɢʙᴏxxx ▪ CA³",
+        "🇮🇳 @sɪɴɢʙᴏxxx ▪ IN²"
+      ],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "30s",
+      "tolerance": 50,
+      "idle_timeout": "20m"
+    },
+    {
+      "type": "vless",
+      "tag": "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE¹",
+      "server": "163.8.195.241",
+      "server_port": 2087,
+      "uuid": "56ba5d34-ef22-4ba6-8090-4188b807df54",
+      "transport": {
+        "type": "ws",
+        "path": "/29c8fed7ca22"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE²",
+      "server": "82.24.203.10",
+      "server_port": 2087,
+      "uuid": "3165b4d0-40f7-4df0-9f59-4c89ccdac92d",
+      "transport": {
+        "type": "ws",
+        "path": "/3bfc3e3ed603"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇬🇧 @sɪɴɢʙᴏxxx ▪ GB¹",
+      "server": "188.220.67.198",
+      "server_port": 2087,
+      "uuid": "90da514d-8888-4a53-912e-ac2981c8c6ee",
+      "transport": {
+        "type": "ws",
+        "path": "/8f2690e2d016"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE³",
+      "server": "82.24.203.2",
+      "server_port": 2087,
+      "uuid": "3165b4d0-40f7-4df0-9f59-4c89ccdac92d",
+      "transport": {
+        "type": "ws",
+        "path": "/3bfc3e3ed603"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇬🇧 @sɪɴɢʙᴏxxx ▪ GB²",
+      "server": "188.220.67.140",
+      "server_port": 2087,
+      "uuid": "90da514d-8888-4a53-912e-ac2981c8c6ee",
+      "transport": {
+        "type": "ws",
+        "path": "/8f2690e2d016"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇬🇧 @sɪɴɢʙᴏxxx ▪ GB³",
+      "server": "188.220.67.224",
+      "server_port": 2087,
+      "uuid": "90da514d-8888-4a53-912e-ac2981c8c6ee",
+      "transport": {
+        "type": "ws",
+        "path": "/8f2690e2d016"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇬🇧 @sɪɴɢʙᴏxxx ▪ GB⁴",
+      "server": "188.220.67.245",
+      "server_port": 2087,
+      "uuid": "90da514d-8888-4a53-912e-ac2981c8c6ee",
+      "transport": {
+        "type": "ws",
+        "path": "/8f2690e2d016"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇬🇧 @sɪɴɢʙᴏxxx ▪ GB⁵",
+      "server": "188.220.67.161",
+      "server_port": 2087,
+      "uuid": "90da514d-8888-4a53-912e-ac2981c8c6ee",
+      "transport": {
+        "type": "ws",
+        "path": "/8f2690e2d016"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇬🇧 @sɪɴɢʙᴏxxx ▪ GB⁶",
+      "server": "188.220.67.198",
+      "server_port": 2087,
+      "uuid": "90da514d-8888-4a53-912e-ac2981c8c6ee",
+      "transport": {
+        "type": "ws",
+        "path": "/8f2690e2d016"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE⁴",
+      "server": "82.24.203.9",
+      "server_port": 2087,
+      "uuid": "3165b4d0-40f7-4df0-9f59-4c89ccdac92d",
+      "transport": {
+        "type": "ws",
+        "path": "/3bfc3e3ed603"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE⁵",
+      "server": "82.24.203.92",
+      "server_port": 2083,
+      "uuid": "f2616bce-337a-4d13-8c58-1b5e71986569",
+      "transport": {
+        "type": "grpc",
+        "service_name": "chat.deepseek.com"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE⁶",
+      "server": "82.24.203.20",
+      "server_port": 2087,
+      "uuid": "5fcdc9b7-e70f-4a5c-85c3-e018ad818326",
+      "transport": {
+        "type": "ws",
+        "path": "/fd5ba98a3970"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇵🇱 @sɪɴɢʙᴏxxx ▪ PL¹",
+      "server": "178.95.170.98",
+      "server_port": 2087,
+      "uuid": "bf443e4a-aa9e-4509-abf0-d0f6828d57be",
+      "transport": {
+        "type": "ws",
+        "path": "/4bc027a44532"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE⁷",
+      "server": "82.24.203.70",
+      "server_port": 2087,
+      "uuid": "90715c6b-6c65-4466-a50c-234660f1f531",
+      "transport": {
+        "type": "ws",
+        "path": "/d51f7fbe4da2"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇵🇱 @sɪɴɢʙᴏxxx ▪ PL²",
+      "server": "178.95.170.115",
+      "server_port": 2087,
+      "uuid": "bf443e4a-aa9e-4509-abf0-d0f6828d57be",
+      "transport": {
+        "type": "ws",
+        "path": "/4bc027a44532"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇬🇧 @sɪɴɢʙᴏxxx ▪ GB⁸",
+      "server": "188.220.67.181",
+      "server_port": 2087,
+      "uuid": "90da514d-8888-4a53-912e-ac2981c8c6ee",
+      "transport": {
+        "type": "ws",
+        "path": "/8f2690e2d016"
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇫🇮 @sɪɴɢʙᴏxxx ▪ FI",
+      "server": "185.117.119.8",
+      "server_port": 1080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "ztToshu4qYAD9zXqHwu4vA"
+    },
+    {
+      "type": "vless",
+      "tag": "🇵🇱 @sɪɴɢʙᴏxxx ▪ PL³",
+      "server": "178.95.170.115",
+      "server_port": 2087,
+      "uuid": "bf443e4a-aa9e-4509-abf0-d0f6828d57be",
+      "transport": {
+        "type": "ws",
+        "path": "/4bc027a44532"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE⁸",
+      "server": "82.24.203.37",
+      "server_port": 2087,
+      "uuid": "44573770-963a-41f5-a080-3cc11e4957a2",
+      "transport": {
+        "type": "ws",
+        "path": "/5c62e3c616d8"
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL",
+      "server": "190.2.147.119",
+      "server_port": 1080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "ztToshu4qYAD9zXqHwu4vA"
+    },
+    {
+      "type": "vless",
+      "tag": "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE⁹",
+      "server": "82.24.203.15",
+      "server_port": 2083,
+      "uuid": "f2616bce-337a-4d13-8c58-1b5e71986569",
+      "transport": {
+        "type": "grpc",
+        "service_name": "chat.deepseek.com"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇵🇱 @sɪɴɢʙᴏxxx ▪ PL⁴",
+      "server": "178.95.170.83",
+      "server_port": 2087,
+      "uuid": "bf443e4a-aa9e-4509-abf0-d0f6828d57be",
+      "transport": {
+        "type": "ws",
+        "path": "/4bc027a44532"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE¹⁰",
+      "server": "82.24.203.174",
+      "server_port": 2083,
+      "uuid": "f2616bce-337a-4d13-8c58-1b5e71986569",
+      "transport": {
+        "type": "grpc",
+        "service_name": "chat.deepseek.com"
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE¹¹",
+      "server": "62.113.237.3",
+      "server_port": 1080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "ztToshu4qYAD9zXqHwu4vA"
+    },
+    {
+      "type": "vless",
+      "tag": "🇬🇧 @sɪɴɢʙᴏxxx ▪ GB⁹",
+      "server": "185.126.238.87",
+      "server_port": 2083,
+      "uuid": "7668f678-faee-40cc-9b56-9c39dc773388",
+      "transport": {
+        "type": "grpc",
+        "service_name": "security.debian.org"
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇭🇺 @sɪɴɢʙᴏxxx ▪ HU",
+      "server": "146.70.203.254",
+      "server_port": 1080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "ztToshu4qYAD9zXqHwu4vA"
+    },
+    {
+      "type": "vless",
+      "tag": "🇬🇧 @sɪɴɢʙᴏxxx ▪ GB¹⁰",
+      "server": "185.126.238.87",
+      "server_port": 2083,
+      "uuid": "7668f678-faee-40cc-9b56-9c39dc773388",
+      "transport": {
+        "type": "grpc",
+        "service_name": "security.debian.org"
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇺🇦 @sɪɴɢʙᴏxxx ▪ UA",
+      "server": "194.54.80.37",
+      "server_port": 1080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "ztToshu4qYAD9zXqHwu4vA"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇨🇦 @sɪɴɢʙᴏxxx ▪ CA¹",
+      "server": "68.168.114.226",
+      "server_port": 1080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "ztToshu4qYAD9zXqHwu4vA"
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇿 @sɪɴɢʙᴏxxx ▪ UZ¹",
+      "server": "157.22.133.130",
+      "server_port": 2087,
+      "uuid": "e6d369db-22be-4f30-8685-455c717aaa8c",
+      "transport": {
+        "type": "ws",
+        "path": "/5021201ef53f"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇿 @sɪɴɢʙᴏxxx ▪ UZ²",
+      "server": "189.74.97.47",
+      "server_port": 2087,
+      "uuid": "894fe9f0-b998-49c0-8003-a5007de921e1",
+      "transport": {
+        "type": "ws",
+        "path": "/755276b33b6f"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇱🇦 @sɪɴɢʙᴏxxx ▪ LA",
+      "server": "38.54.59.209",
+      "server_port": 2087,
+      "uuid": "cd842ef8-9577-47f3-83ca-627147ed291b",
+      "transport": {
+        "type": "ws",
+        "path": "/d1000b16fe76"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇿 @sɪɴɢʙᴏxxx ▪ UZ³",
+      "server": "157.22.133.130",
+      "server_port": 2087,
+      "uuid": "e6d369db-22be-4f30-8685-455c717aaa8c",
+      "transport": {
+        "type": "ws",
+        "path": "/5021201ef53f"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇿 @sɪɴɢʙᴏxxx ▪ UZ⁴",
+      "server": "189.74.97.47",
+      "server_port": 2087,
+      "uuid": "894fe9f0-b998-49c0-8003-a5007de921e1",
+      "transport": {
+        "type": "ws",
+        "path": "/755276b33b6f"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇿 @sɪɴɢʙᴏxxx ▪ UZ⁵",
+      "server": "189.74.97.43",
+      "server_port": 2087,
+      "uuid": "10f7eb2d-d96d-4778-9d36-aff11e9d6629",
+      "transport": {
+        "type": "ws",
+        "path": "/73b6faea2d00"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE¹²",
+      "server": "82.24.203.196",
+      "server_port": 2092,
+      "uuid": "d6e9c318-237d-431f-9cb6-48220d1bce83",
+      "transport": {
+        "type": "http",
+        "path": "/cbf6b669af74730980afc712"
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇨🇼 @sɪɴɢʙᴏxxx ▪ CW",
+      "server": "146.70.222.126",
+      "server_port": 1080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "ztToshu4qYAD9zXqHwu4vA"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇷🇸 @sɪɴɢʙᴏxxx ▪ RS",
+      "server": "146.70.221.238",
+      "server_port": 1080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "ztToshu4qYAD9zXqHwu4vA"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇧🇬 @sɪɴɢʙᴏxxx ▪ BG",
+      "server": "185.210.217.94",
+      "server_port": 1080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "ztToshu4qYAD9zXqHwu4vA"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇮🇳 @sɪɴɢʙᴏxxx ▪ IN¹",
+      "server": "103.111.114.137",
+      "server_port": 23559,
+      "method": "chacha20-ietf-poly1305",
+      "password": "QPGm3ZcDI_CoSxfWej9U-H5hFKaYs="
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇦🇱 @sɪɴɢʙᴏxxx ▪ AL",
+      "server": "31.171.152.222",
+      "server_port": 1080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "ztToshu4qYAD9zXqHwu4vA"
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 @sɪɴɢʙᴏxxx ▪ US¹",
+      "server": "176.111.218.212",
+      "server_port": 2087,
+      "uuid": "7c04b737-d6a7-47ec-99bf-94e668090fcf",
+      "transport": {
+        "type": "ws",
+        "path": "/ffc10963e4f8"
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇨🇦 @sɪɴɢʙᴏxxx ▪ CA²",
+      "server": "38.113.188.118",
+      "server_port": 1080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "ztToshu4qYAD9zXqHwu4vA"
+    },
+    {
+      "type": "vless",
+      "tag": "🇲🇾 @sɪɴɢʙᴏxxx ▪ MY",
+      "server": "38.60.168.98",
+      "server_port": 2087,
+      "uuid": "8a346b7c-5b95-4845-affa-0e5d9929e9ae",
+      "transport": {
+        "type": "ws",
+        "path": "/db55c40bbc75"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 @sɪɴɢʙᴏxxx ▪ US²",
+      "server": "147.189.129.144",
+      "server_port": 2087,
+      "uuid": "090a3fa8-973f-4812-9b69-ed982082a933",
+      "transport": {
+        "type": "ws",
+        "path": "/4ad49ed0a3d5"
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇦🇩 @sɪɴɢʙᴏxxx ▪ AD",
+      "server": "146.70.26.156",
+      "server_port": 1080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "ztToshu4qYAD9zXqHwu4vA"
+    },
+    {
+      "type": "vless",
+      "tag": "🇰🇷 @sɪɴɢʙᴏxxx ▪ KR",
+      "server": "130.94.29.111",
+      "server_port": 2087,
+      "uuid": "84da6391-1539-4583-a3d9-d6efd796b4d6",
+      "transport": {
+        "type": "ws",
+        "path": "/e17586a75123"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇵🇭 @sɪɴɢʙᴏxxx ▪ PH",
+      "server": "149.104.109.17",
+      "server_port": 2087,
+      "uuid": "9ed3dcb3-b71a-4ae1-8210-95e33615d7e6",
+      "transport": {
+        "type": "ws",
+        "path": "/04461917b179"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE¹³",
+      "server": "82.24.203.48",
+      "server_port": 2092,
+      "uuid": "d6e9c318-237d-431f-9cb6-48220d1bce83",
+      "transport": {
+        "type": "http",
+        "path": "/cbf6b669af74730980afc712"
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇦🇬 @sɪɴɢʙᴏxxx ▪ AG",
+      "server": "146.70.53.62",
+      "server_port": 1080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "ztToshu4qYAD9zXqHwu4vA"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇨🇦 @sɪɴɢʙᴏxxx ▪ CA³",
+      "server": "184.75.221.134",
+      "server_port": 1080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "ztToshu4qYAD9zXqHwu4vA"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇮🇳 @sɪɴɢʙᴏxxx ▪ IN²",
+      "server": "103.111.114.115",
+      "server_port": 23559,
+      "method": "chacha20-ietf-poly1305",
+      "password": "QPGm3ZcDI_CoSxfWej9U-H5hFKaYs="
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    }
+  ],
+  "route": {
+    "rules": [
+      {
+        "action": "sniff"
+      },
+      {
+        "protocol": [
+          "dns"
+        ],
+        "action": "hijack-dns"
+      },
+      {
+        "clash_mode": "@SINGBOXXX",
+        "outbound": "Telegram ➡ @SINGBOXXX"
+      },
+      {
+        "network": [
+          "udp"
+        ],
+        "port": [
+          80,
+          443
+        ],
+        "action": "reject"
+      },
+      {
+        "rule_set": [
+          "geosite-malware",
+          "geoip-malware",
+          "geosite-phishing",
+          "geoip-phishing",
+          "geosite-cryptominers",
+          "geosite-category-ads-all"
+        ],
+        "action": "reject"
+      },
+      {
+        "rule_set": [
+          "geosite-ir",
+          "geoip-ir"
+        ],
+        "outbound": "direct"
+      }
+    ],
+    "rule_set": [
+      {
+        "type": "remote",
+        "tag": "geosite-malware",
+        "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-malware.srs",
+        "download_detour": "direct"
+      },
+      {
+        "type": "remote",
+        "tag": "geoip-malware",
+        "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geoip-malware.srs",
+        "download_detour": "direct"
+      },
+      {
+        "type": "remote",
+        "tag": "geosite-phishing",
+        "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-phishing.srs",
+        "download_detour": "direct"
+      },
+      {
+        "type": "remote",
+        "tag": "geoip-phishing",
+        "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geoip-phishing.srs",
+        "download_detour": "direct"
+      },
+      {
+        "type": "remote",
+        "tag": "geosite-cryptominers",
+        "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-cryptominers.srs",
+        "download_detour": "direct"
+      },
+      {
+        "type": "remote",
+        "tag": "geosite-category-ads-all",
+        "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-category-ads-all.srs",
+        "download_detour": "direct"
+      },
+      {
+        "type": "remote",
+        "tag": "geosite-ir",
+        "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-ir.srs",
+        "download_detour": "direct"
+      },
+      {
+        "type": "remote",
+        "tag": "geoip-ir",
+        "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geoip-ir.srs",
+        "download_detour": "direct"
+      }
+    ],
+    "final": "Telegram ➡ @SINGBOXXX",
+    "auto_detect_interface": true,
+    "default_domain_resolver": {
+      "server": "dns-direct",
+      "strategy": "prefer_ipv4",
+      "rewrite_ttl": 60
+    }
+  },
+  "experimental": {
+    "cache_file": {
+      "enabled": true,
+      "store_fakeip": true
+    },
+    "clash_api": {
+      "external_controller": "127.0.0.1:9090",
+      "external_ui": "ui",
+      "external_ui_download_url": "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip",
+      "external_ui_download_detour": "direct",
+      "default_mode": "SMART MODE"
+    }
+  }
+}
