@@ -70,10 +70,10 @@ dns:
     - "78.157.42.100"
 
 # ------------------------------------------
-# Proxies (10 Hysteria 2 Servers)
+# Proxies (16 Hysteria 2 Servers)
 # ------------------------------------------
 proxies:
-  - name: "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE"
+  - name: "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE¹"
     type: hysteria2
     server: 2.27.59.206
     port: 443
@@ -82,6 +82,72 @@ proxies:
     skip-cert-verify: true
     obfs: salamander
     obfs-password: "44f1c1e2f8b99e792ceed574627a1eb0"
+
+  - name: "🇬🇧 @sɪɴɢʙᴏxxx ▪ GB"
+    type: hysteria2
+    server: giftcard.gateway-stream.com
+    port: 52034
+    password: "4savc5ig1n3549e4"
+    sni: "giftcard.gateway-stream.com"
+    alpn:
+      - h3
+    obfs: salamander
+    obfs-password: "fuw2k1ddrouwxr3u"
+
+  - name: "🇨🇿 @sɪɴɢʙᴏxxx ▪ CZ"
+    type: hysteria2
+    server: giftcard.gateway-stream.com
+    port: 52020
+    password: "4savc5ig1n3549e4"
+    sni: "giftcard.gateway-stream.com"
+    alpn:
+      - h3
+    obfs: salamander
+    obfs-password: "fuw2k1ddrouwxr3u"
+
+  - name: "🇩🇰 @sɪɴɢʙᴏxxx ▪ DK"
+    type: hysteria2
+    server: giftcard.gateway-stream.com
+    port: 52024
+    password: "4savc5ig1n3549e4"
+    sni: "giftcard.gateway-stream.com"
+    alpn:
+      - h3
+    obfs: salamander
+    obfs-password: "fuw2k1ddrouwxr3u"
+
+  - name: "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE²"
+    type: hysteria2
+    server: giftcard.gateway-stream.com
+    port: 52023
+    password: "4savc5ig1n3549e4"
+    sni: "giftcard.gateway-stream.com"
+    alpn:
+      - h3
+    obfs: salamander
+    obfs-password: "fuw2k1ddrouwxr3u"
+
+  - name: "🇨🇭 @sɪɴɢʙᴏxxx ▪ CH"
+    type: hysteria2
+    server: giftcard.gateway-stream.com
+    port: 52016
+    password: "4savc5ig1n3549e4"
+    sni: "giftcard.gateway-stream.com"
+    alpn:
+      - h3
+    obfs: salamander
+    obfs-password: "fuw2k1ddrouwxr3u"
+
+  - name: "🇦🇺 @sɪɴɢʙᴏxxx ▪ AU"
+    type: hysteria2
+    server: giftcard.gateway-stream.com
+    port: 52005
+    password: "4savc5ig1n3549e4"
+    sni: "giftcard.gateway-stream.com"
+    alpn:
+      - h3
+    obfs: salamander
+    obfs-password: "fuw2k1ddrouwxr3u"
 
   - name: "🇮🇳 @sɪɴɢʙᴏxxx ▪ IN"
     type: hysteria2
@@ -179,7 +245,13 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE"
+      - "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE¹"
+      - "🇬🇧 @sɪɴɢʙᴏxxx ▪ GB"
+      - "🇨🇿 @sɪɴɢʙᴏxxx ▪ CZ"
+      - "🇩🇰 @sɪɴɢʙᴏxxx ▪ DK"
+      - "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE²"
+      - "🇨🇭 @sɪɴɢʙᴏxxx ▪ CH"
+      - "🇦🇺 @sɪɴɢʙᴏxxx ▪ AU"
       - "🇮🇳 @sɪɴɢʙᴏxxx ▪ IN"
       - "🇸🇬 @sɪɴɢʙᴏxxx ▪ SG"
       - "🇵🇹 @sɪɴɢʙᴏxxx ▪ PT"
@@ -193,7 +265,13 @@ proxy-groups:
   - name: "Manual Select"
     type: select
     proxies:
-      - "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE"
+      - "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE¹"
+      - "🇬🇧 @sɪɴɢʙᴏxxx ▪ GB"
+      - "🇨🇿 @sɪɴɢʙᴏxxx ▪ CZ"
+      - "🇩🇰 @sɪɴɢʙᴏxxx ▪ DK"
+      - "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE²"
+      - "🇨🇭 @sɪɴɢʙᴏxxx ▪ CH"
+      - "🇦🇺 @sɪɴɢʙᴏxxx ▪ AU"
       - "🇮🇳 @sɪɴɢʙᴏxxx ▪ IN"
       - "🇸🇬 @sɪɴɢʙᴏxxx ▪ SG"
       - "🇵🇹 @sɪɴɢʙᴏxxx ▪ PT"
