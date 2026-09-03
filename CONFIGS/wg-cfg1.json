@@ -1,0 +1,334 @@
+{
+  "log": {
+    "disabled": false,
+    "level": "warn",
+    "timestamp": true
+  },
+  "dns": {
+    "servers": [
+      {
+        "tag": "dns-remote",
+        "type": "udp",
+        "server": "1.1.1.1",
+        "detour": "PROXY"
+      },
+      {
+        "tag": "dns-direct",
+        "type": "udp",
+        "server": "1.1.1.1"
+      }
+    ],
+    "rules": [
+      {
+        "outbound": "any",
+        "server": "dns-direct"
+      },
+      {
+        "clash_mode": "Direct",
+        "server": "dns-direct"
+      },
+      {
+        "clash_mode": "Global",
+        "server": "dns-remote"
+      }
+    ],
+    "final": "dns-remote",
+    "strategy": "prefer_ipv4"
+  },
+  "inbounds": [
+    {
+      "type": "tun",
+      "tag": "tun-in",
+      "interface_name": "tun0",
+      "address": [
+        "172.19.0.1/30"
+      ],
+      "auto_route": true,
+      "strict_route": true,
+      "stack": "mixed"
+    },
+    {
+      "type": "mixed",
+      "tag": "mixed-in",
+      "listen": "127.0.0.1",
+      "listen_port": 7890
+    }
+  ],
+  "endpoints": [
+    {
+      "type": "wireguard",
+      "tag": "🇱🇺 @sɪɴɢʙᴏxxx ▪ LU",
+      "address": [
+        "10.211.202.242/30"
+      ],
+      "private_key": "XYYH/zYbbOZqkO76lZ+EoWu/+kN/m1t2CoYzqYeL8qg=",
+      "mtu": 1280,
+      "peers": [
+        {
+          "address": "45.80.209.202",
+          "port": 31995,
+          "public_key": "FrysjcQjdaVXIdZie6VhnTCNKELjNJhILl7upcSBmlI=",
+          "allowed_ips": [
+            "0.0.0.0/0"
+          ],
+          "persistent_keepalive_interval": 15
+        }
+      ]
+    },
+    {
+      "type": "wireguard",
+      "tag": "🇳🇴 @sɪɴɢʙᴏxxx ▪ NO",
+      "address": [
+        "10.175.190.158/30"
+      ],
+      "private_key": "c9/YYAt1nPira8NFFT+ODY0pHxJocr9mxSCB3IcYfwI=",
+      "mtu": 1280,
+      "peers": [
+        {
+          "address": "38.244.172.96",
+          "port": 25431,
+          "public_key": "9XUoaUcXaFYWfvHuqcJ9JWrg0K7eKxNIsCr+E9zkXBk=",
+          "allowed_ips": [
+            "0.0.0.0/0"
+          ],
+          "persistent_keepalive_interval": 15
+        }
+      ]
+    },
+    {
+      "type": "wireguard",
+      "tag": "🇪🇪 @sɪɴɢʙᴏxxx ▪ EE",
+      "address": [
+        "10.210.117.146/30"
+      ],
+      "private_key": "cvakkRVpmXGpCEgzL7U4ERisoJ7IgNnfbPpQhI553yE=",
+      "mtu": 1280,
+      "peers": [
+        {
+          "address": "185.155.96.42",
+          "port": 23192,
+          "public_key": "dF3sPc0gGGm6NwsGI4tjrCQwIDnypcb16Pr6oYeRlgY=",
+          "allowed_ips": [
+            "0.0.0.0/0"
+          ],
+          "persistent_keepalive_interval": 15
+        }
+      ]
+    },
+    {
+      "type": "wireguard",
+      "tag": "🇮🇷 @sɪɴɢʙᴏxxx ▪ IR¹",
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:86b8:11c6:dfd6:102f:c44d/128"
+      ],
+      "private_key": "cLa+KXAoSz7/TLB+MfSK8HIrWA4npfVjOyLrSnnHT3c=",
+      "mtu": 1280,
+      "peers": [
+        {
+          "address": "8.6.112.235",
+          "port": 1070,
+          "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+          "allowed_ips": [
+            "0.0.0.0/0",
+            "::/0"
+          ],
+          "persistent_keepalive_interval": 5
+        }
+      ]
+    },
+    {
+      "type": "wireguard",
+      "tag": "🇮🇷 @sɪɴɢʙᴏxxx ▪ IR²",
+      "address": [
+        "172.16.0.2/32"
+      ],
+      "private_key": "aA/LIyCjbmXE0tblgYNjvwmYd1KnMVSkBChK9ztoV3A=",
+      "mtu": 1280,
+      "peers": [
+        {
+          "address": "162.159.192.5",
+          "port": 908,
+          "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+          "reserved": [56, 66, 5],
+          "allowed_ips": [
+            "0.0.0.0/0",
+            "::/0"
+          ],
+          "persistent_keepalive_interval": 5
+        }
+      ]
+    },
+    {
+      "type": "wireguard",
+      "tag": "🇮🇷 @sɪɴɢʙᴏxxx ▪ IR³",
+      "address": [
+        "172.16.0.2/32"
+      ],
+      "private_key": "COqijNGkY75P4AiLuYijLwv+9nuOXsCdIEza5hE0NG8=",
+      "mtu": 1280,
+      "peers": [
+        {
+          "address": "162.159.192.6",
+          "port": 908,
+          "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+          "reserved": [53, 102, 34],
+          "allowed_ips": [
+            "0.0.0.0/0",
+            "::/0"
+          ],
+          "persistent_keepalive_interval": 5
+        }
+      ]
+    },
+    {
+      "type": "wireguard",
+      "tag": "🇮🇷 @sɪɴɢʙᴏxxx ▪ IR⁴",
+      "address": [
+        "172.16.0.2/32"
+      ],
+      "private_key": "kK/DhxAUbX/Cr0n2sSEl/LEiZS8d4uXTMqMbea5OrUc=",
+      "mtu": 1280,
+      "peers": [
+        {
+          "address": "8.39.125.197",
+          "port": 1014,
+          "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+          "reserved": [0, 0, 0],
+          "allowed_ips": [
+            "0.0.0.0/0"
+          ],
+          "persistent_keepalive_interval": 15
+        }
+      ]
+    },
+    {
+      "type": "wireguard",
+      "tag": "🇮🇷 @sɪɴɢʙᴏxxx ▪ IR⁵",
+      "address": [
+        "172.16.0.2/32"
+      ],
+      "private_key": "kK/DhxAUbX/Cr0n2sSEl/LEiZS8d4uXTMqMbea5OrUc=",
+      "mtu": 1280,
+      "peers": [
+        {
+          "address": "8.35.211.46",
+          "port": 987,
+          "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+          "reserved": [0, 0, 0],
+          "allowed_ips": [
+            "0.0.0.0/0"
+          ],
+          "persistent_keepalive_interval": 15
+        }
+      ]
+    },
+    {
+      "type": "wireguard",
+      "tag": "🇮🇷 @sɪɴɢʙᴏxxx ▪ IR⁶",
+      "address": [
+        "2606:4700:110:84b5:5c59:34e5:c03e:56bb/128"
+      ],
+      "private_key": "kK/DhxAUbX/Cr0n2sSEl/LEiZS8d4uXTMqMbea5OrUc=",
+      "mtu": 1280,
+      "peers": [
+        {
+          "address": "8.39.125.178",
+          "port": 7156,
+          "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+          "reserved": [0, 0, 0],
+          "allowed_ips": [
+            "::/0"
+          ],
+          "persistent_keepalive_interval": 15
+        }
+      ]
+    },
+    {
+      "type": "wireguard",
+      "tag": "🇮🇷 @sɪɴɢʙᴏxxx ▪ IR⁷",
+      "address": [
+        "172.16.0.2/32"
+      ],
+      "private_key": "kK/DhxAUbX/Cr0n2sSEl/LEiZS8d4uXTMqMbea5OrUc=",
+      "mtu": 1280,
+      "peers": [
+        {
+          "address": "8.39.125.178",
+          "port": 7559,
+          "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+          "reserved": [0, 0, 0],
+          "allowed_ips": [
+            "0.0.0.0/0"
+          ],
+          "persistent_keepalive_interval": 15
+        }
+      ]
+    }
+  ],
+  "outbounds": [
+    {
+      "type": "selector",
+      "tag": "PROXY",
+      "outbounds": [
+        "Auto Select",
+        "🇱🇺 @sɪɴɢʙᴏxxx ▪ LU",
+        "🇳🇴 @sɪɴɢʙᴏxxx ▪ NO",
+        "🇪🇪 @sɪɴɢʙᴏxxx ▪ EE",
+        "🇮🇷 @sɪɴɢʙᴏxxx ▪ IR¹",
+        "🇮🇷 @sɪɴɢʙᴏxxx ▪ IR²",
+        "🇮🇷 @sɪɴɢʙᴏxxx ▪ IR³",
+        "🇮🇷 @sɪɴɢʙᴏxxx ▪ IR⁴",
+        "🇮🇷 @sɪɴɢʙᴏxxx ▪ IR⁵",
+        "🇮🇷 @sɪɴɢʙᴏxxx ▪ IR⁶",
+        "🇮🇷 @sɪɴɢʙᴏxxx ▪ IR⁷",
+        "direct"
+      ],
+      "default": "Auto Select"
+    },
+    {
+      "type": "urltest",
+      "tag": "Auto Select",
+      "outbounds": [
+        "🇱🇺 @sɪɴɢʙᴏxxx ▪ LU",
+        "🇳🇴 @sɪɴɢʙᴏxxx ▪ NO",
+        "🇪🇪 @sɪɴɢʙᴏxxx ▪ EE",
+        "🇮🇷 @sɪɴɢʙᴏxxx ▪ IR¹",
+        "🇮🇷 @sɪɴɢʙᴏxxx ▪ IR²",
+        "🇮🇷 @sɪɴɢʙᴏxxx ▪ IR³",
+        "🇮🇷 @sɪɴɢʙᴏxxx ▪ IR⁴",
+        "🇮🇷 @sɪɴɢʙᴏxxx ▪ IR⁵",
+        "🇮🇷 @sɪɴɢʙᴏxxx ▪ IR⁶",
+        "🇮🇷 @sɪɴɢʙᴏxxx ▪ IR⁷"
+      ],
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": "3m",
+      "tolerance": 50
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    }
+  ],
+  "route": {
+    "rules": [
+      {
+        "action": "sniff"
+      },
+      {
+        "protocol": "dns",
+        "action": "hijack-dns"
+      },
+      {
+        "clash_mode": "Direct",
+        "outbound": "direct"
+      },
+      {
+        "clash_mode": "Global",
+        "outbound": "PROXY"
+      }
+    ],
+    "final": "PROXY",
+    "auto_detect_interface": true
+  }
+}
