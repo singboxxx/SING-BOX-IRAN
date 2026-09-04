@@ -117,7 +117,11 @@
         "🇦🇺 @sɪɴɢʙᴏxxx ▪ AU¹",
         "🇺🇸 @sɪɴɢʙᴏxxx ▪ US¹",
         "🇺🇸 @sɪɴɢʙᴏxxx ▪ US²",
-        "🇫🇮 @sɪɴɢʙᴏxxx ▪ FI²",
+        "🇺🇸 @sɪɴɢʙᴏxxx ▪ US³",
+        "🇺🇸 @sɪɴɢʙᴏxxx ▪ US⁴",
+        "🇺🇸 @sɪɴɢʙᴏxxx ▪ US⁵",
+        "🇺🇸 @sɪɴɢʙᴏxxx ▪ US⁶",
+        "🇷🇺 @sɪɴɢʙᴏxxx ▪ RU¹",
         "direct"
       ]
     },
@@ -144,7 +148,11 @@
         "🇦🇺 @sɪɴɢʙᴏxxx ▪ AU¹",
         "🇺🇸 @sɪɴɢʙᴏxxx ▪ US¹",
         "🇺🇸 @sɪɴɢʙᴏxxx ▪ US²",
-        "🇫🇮 @sɪɴɢʙᴏxxx ▪ FI²"
+        "🇺🇸 @sɪɴɢʙᴏxxx ▪ US³",
+        "🇺🇸 @sɪɴɢʙᴏxxx ▪ US⁴",
+        "🇺🇸 @sɪɴɢʙᴏxxx ▪ US⁵",
+        "🇺🇸 @sɪɴɢʙᴏxxx ▪ US⁶",
+        "🇷🇺 @sɪɴɢʙᴏxxx ▪ RU¹"
       ],
       "url": "https://www.gstatic.com/generate_204",
       "interval": "30s",
@@ -340,12 +348,96 @@
       }
     },
     {
-      "type": "shadowsocks",
-      "tag": "🇫🇮 @sɪɴɢʙᴏxxx ▪ FI²",
-      "server": "185.117.119.8",
-      "server_port": 1080,
-      "method": "chacha20-ietf-poly1305",
-      "password": "hUR6YrX-CaAL1C-t5HcdVg"
+      "type": "trojan",
+      "tag": "🇺🇸 @sɪɴɢʙᴏxxx ▪ US³",
+      "server": "151.101.56.7",
+      "server_port": 443,
+      "password": "MiTiVPN",
+      "tls": {
+        "enabled": true,
+        "server_name": "ssl.fastly.com",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/D-e2@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN",
+        "headers": {
+          "Host": "mitivpn-mitivpn-mitivpn---mitivpn--mitivpn.global.ssl.fastly.net"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇺🇸 @sɪɴɢʙᴏxxx ▪ US⁴",
+      "server": "199.232.78.160",
+      "server_port": 443,
+      "password": "MiTiVPN",
+      "tls": {
+        "enabled": true,
+        "server_name": "ssl.fastly.com",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/NLSs---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN",
+        "headers": {
+          "Host": "mitivpn-mitivpn-mitivpn---mitivpn--mitivpn.global.ssl.fastly.net"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇺🇸 @sɪɴɢʙᴏxxx ▪ US⁵",
+      "server": "199.232.78.160",
+      "server_port": 443,
+      "password": "MiTiVPN",
+      "tls": {
+        "enabled": true,
+        "server_name": "ssl.fastly.com",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/---TOOTFFARANGI---TOOTFFARANGI---TOOTFFARANGI---TOOTFFARANGI---TOOTFFARANGI---TOOTFFARANGI---TOOTFFARANGI",
+        "headers": {
+          "Host": "mitivpn-mitivpn-mitivpn---mitivpn--mitivpn.global.ssl.fastly.net"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇺🇸 @sɪɴɢʙᴏxxx ▪ US⁶",
+      "server": "199.232.78.160",
+      "server_port": 443,
+      "password": "MiTiVPN",
+      "tls": {
+        "enabled": true,
+        "server_name": "ssl.fastly.com",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/---kasibam1---kasibam1---kasibam1---kasibam1---kasibam1---kasibam1",
+        "headers": {
+          "Host": "mitivpn-mitivpn-mitivpn---mitivpn--mitivpn.global.ssl.fastly.net"
+        }
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇷🇺 @sɪɴɢʙᴏxxx ▪ RU¹",
+      "server": "144.31.49.138",
+      "server_port": 443,
+      "password": "cd74c0a406664a5bc0bac098220a2468",
+      "tls": {
+        "enabled": true,
+        "server_name": "ru1.sferavpn.pro",
+        "insecure": false
+      },
+      "obfs": {
+        "type": "salamander",
+        "password": "44f1c1e2f8b99e792ceed574627a1eb0"
+      }
     },
     {
       "type": "direct",
