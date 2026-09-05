@@ -1,0 +1,759 @@
+# ==========================================
+# Clash Meta / Mihomo Native AnyTLS Config (56 Servers)
+# ==========================================
+
+port: 0
+socks-port: 0
+redir-port: 0
+tproxy-port: 0
+mixed-port: 7890
+allow-lan: false
+bind-address: "*"
+mode: "rule"
+log-level: "warning"
+ipv6: false
+unified-delay: true
+tcp-concurrent: true
+find-process-mode: "always"
+global-client-fingerprint: "chrome"
+global-ua: "FlClash/v0.8.96 clash-verge Platform/android"
+keep-alive-interval: 30
+
+# ------------------------------------------
+# TUN Configuration
+# ------------------------------------------
+tun:
+  enable: true
+  stack: "mixed"
+  dns-hijack:
+    - "any:53"
+  auto-route: true
+  auto-detect-interface: true
+
+# ------------------------------------------
+# Optimized DNS Configuration
+# ------------------------------------------
+dns:
+  enable: true
+  prefer-h3: false
+  ipv6: false
+  use-hosts: true
+  use-system-hosts: true
+  respect-rules: true
+  enhanced-mode: "fake-ip"
+  fake-ip-range: "198.18.0.1/16"
+  fake-ip-filter:
+    - "*.lan"
+    - "*.local"
+    - "*.ir"
+    - "stun.*.*.*"
+    - "stun.*.*"
+    - "time.*.com"
+    - "time.*.gov"
+    - "pool.ntp.org"
+    - "*.ntp.org"
+  default-nameserver:
+    - "1.1.1.1"
+    - "8.8.8.8"
+  proxy-server-nameserver:
+    - "1.1.1.1"
+    - "8.8.8.8"
+    - "https://1.1.1.1/dns-query"
+  nameserver:
+    - "https://1.1.1.1/dns-query"
+    - "https://8.8.8.8/dns-query"
+    - "tcp://1.1.1.1"
+    - "tcp://8.8.8.8"
+  direct-nameserver:
+    - "10.202.10.202"
+    - "10.202.10.102"
+    - "78.157.42.100"
+
+# ------------------------------------------
+# Proxies (Native AnyTLS Protocol)
+# ------------------------------------------
+proxies:
+  - name: "🇺🇸 @sɪɴɢʙᴏxxx ▪ US¹"
+    type: anytls
+    server: "194.113.194.231"
+    port: 1443
+    password: "b652305a-0c63-4527-8cb3-0ea582076124"
+    sni: "ny.freeguard.org"
+    skip-cert-verify: true
+    udp: true
+
+  - name: "🇺🇸 @sɪɴɢʙᴏxxx ▪ US²"
+    type: anytls
+    server: "51.81.203.176"
+    port: 1443
+    password: "b652305a-0c63-4527-8cb3-0ea582076124"
+    sni: "rs.freeguard.org"
+    skip-cert-verify: true
+    udp: true
+
+  - name: "🇺🇸 @sɪɴɢʙᴏxxx ▪ US³"
+    type: anytls
+    server: "15.204.248.181"
+    port: 1443
+    password: "b652305a-0c63-4527-8cb3-0ea582076124"
+    sni: "rs2.freeguard.org"
+    skip-cert-verify: true
+    udp: true
+
+  - name: "🇺🇸 @sɪɴɢʙᴏxxx ▪ US⁴"
+    type: anytls
+    server: "15.204.248.103"
+    port: 1443
+    password: "b652305a-0c63-4527-8cb3-0ea582076124"
+    sni: "rs3.freeguard.org"
+    skip-cert-verify: true
+    udp: true
+
+  - name: "🇺🇸 @sɪɴɢʙᴏxxx ▪ US⁵"
+    type: anytls
+    server: "51.81.203.233"
+    port: 1443
+    password: "b652305a-0c63-4527-8cb3-0ea582076124"
+    sni: "rs4.freeguard.org"
+    skip-cert-verify: true
+    udp: true
+
+  - name: "🇺🇸 @sɪɴɢʙᴏxxx ▪ US⁶"
+    type: anytls
+    server: "38.180.4.144"
+    port: 1443
+    password: "b652305a-0c63-4527-8cb3-0ea582076124"
+    sni: "la2.freeguard.org"
+    skip-cert-verify: true
+    udp: true
+
+  - name: "🇺🇸 @sɪɴɢʙᴏxxx ▪ US⁷"
+    type: anytls
+    server: "75.127.13.247"
+    port: 1443
+    password: "b652305a-0c63-4527-8cb3-0ea582076124"
+    sni: "se.freeguard.org"
+    skip-cert-verify: true
+    udp: true
+
+  - name: "🇺🇸 @sɪɴɢʙᴏxxx ▪ US⁸"
+    type: anytls
+    server: "107.175.221.104"
+    port: 1443
+    password: "b652305a-0c63-4527-8cb3-0ea582076124"
+    sni: "rc.freeguard.org"
+    skip-cert-verify: true
+    udp: true
+
+  - name: "🇺🇸 @sɪɴɢʙᴏxxx ▪ US⁹"
+    type: anytls
+    server: "198.23.246.187"
+    port: 1443
+    password: "b652305a-0c63-4527-8cb3-0ea582076124"
+    sni: "rc2.freeguard.org"
+    skip-cert-verify: true
+    udp: true
+
+  - name: "🇺🇸 @sɪɴɢʙᴏxxx ▪ US¹⁰"
+    type: anytls
+    server: "172.245.131.79"
+    port: 1443
+    password: "b652305a-0c63-4527-8cb3-0ea582076124"
+    sni: "rc3.freeguard.org"
+    skip-cert-verify: true
+    udp: true
+
+  - name: "🇺🇸 @sɪɴɢʙᴏxxx ▪ US¹¹"
+    type: anytls
+    server: "107.175.221.101"
+    port: 1443
+    password: "b652305a-0c63-4527-8cb3-0ea582076124"
+    sni: "rc4.freeguard.org"
+    skip-cert-verify: true
+    udp: true
+
+  - name: "🇺🇸 @sɪɴɢʙᴏxxx ▪ US¹²"
+    type: anytls
+    server: "192.3.150.235"
+    port: 1443
+    password: "b652305a-0c63-4527-8cb3-0ea582076124"
+    sni: "rc5.freeguard.org"
+    skip-cert-verify: true
+    udp: true
+
+  - name: "🇺🇸 @sɪɴɢʙᴏxxx ▪ US¹³"
+    type: anytls
+    server: "192.3.107.252"
+    port: 1443
+    password: "b652305a-0c63-4527-8cb3-0ea582076124"
+    sni: "rc8.freeguard.org"
+    skip-cert-verify: true
+    udp: true
+
+  - name: "🇺🇸 @sɪɴɢʙᴏxxx ▪ US¹⁴"
+    type: anytls
+    server: "23.95.14.5"
+    port: 1443
+    password: "b652305a-0c63-4527-8cb3-0ea582076124"
+    sni: "rc9.freeguard.org"
+    skip-cert-verify: true
+    udp: true
+
+  - name: "🇺🇸 @sɪɴɢʙᴏxxx ▪ US¹⁵"
+    type: anytls
+    server: "3.89.113.76"
+    port: 1443
+    password: "b652305a-0c63-4527-8cb3-0ea582076124"
+    sni: "abr.freeguard.org"
+    skip-cert-verify: true
+    udp: true
+
+  - name: "🇺🇸 @sɪɴɢʙᴏxxx ▪ US¹⁶"
+    type: anytls
+    server: "107.175.35.85"
+    port: 1443
+    password: "b652305a-0c63-4527-8cb3-0ea582076124"
+    sni: "nj.freeguard.org"
+    skip-cert-verify: true
+    udp: true
+
+  - name: "🇺🇸 @sɪɴɢʙᴏxxx ▪ US¹⁷"
+    type: anytls
+    server: "198.46.215.156"
+    port: 1443
+    password: "b652305a-0c63-4527-8cb3-0ea582076124"
+    sni: "chi.freeguard.org"
+    skip-cert-verify: true
+    udp: true
+
+  - name: "🇺🇸 @sɪɴɢʙᴏxxx ▪ US¹⁸"
+    type: anytls
+    server: "144.172.113.110"
+    port: 1443
+    password: "b652305a-0c63-4527-8cb3-0ea582076124"
+    sni: "ma.freeguard.org"
+    skip-cert-verify: true
+    udp: true
+
+  - name: "🇺🇸 @sɪɴɢʙᴏxxx ▪ US¹⁹"
+    type: anytls
+    server: "45.61.158.67"
+    port: 1443
+    password: "b652305a-0c63-4527-8cb3-0ea582076124"
+    sni: "dal1.freeguard.org"
+    skip-cert-verify: true
+    udp: true
+
+  - name: "🇨🇦 @sɪɴɢʙᴏxxx ▪ CA¹"
+    type: anytls
+    server: "103.98.215.134"
+    port: 1443
+    password: "b652305a-0c63-4527-8cb3-0ea582076124"
+    sni: "to.freeguard.org"
+    skip-cert-verify: true
+    udp: true
+
+  - name: "🇬🇧 @sɪɴɢʙᴏxxx ▪ GB¹"
+    type: anytls
+    server: "95.168.184.34"
+    port: 1443
+    password: "b652305a-0c63-4527-8cb3-0ea582076124"
+    sni: "lon1.freeguard.org"
+    skip-cert-verify: true
+    udp: true
+
+  - name: "🇬🇧 @sɪɴɢʙᴏxxx ▪ GB²"
+    type: anytls
+    server: "185.237.12.42"
+    port: 1443
+    password: "b652305a-0c63-4527-8cb3-0ea582076124"
+    sni: "lon2.freeguard.org"
+    skip-cert-verify: true
+    udp: true
+
+  - name: "🇸🇬 @sɪɴɢʙᴏxxx ▪ SG¹"
+    type: anytls
+    server: "139.99.55.177"
+    port: 1443
+    password: "b652305a-0c63-4527-8cb3-0ea582076124"
+    sni: "sin.freeguard.org"
+    skip-cert-verify: true
+    udp: true
+
+  - name: "🇭🇰 @sɪɴɢʙᴏxxx ▪ HK¹"
+    type: anytls
+    server: "62.72.163.59"
+    port: 1443
+    password: "b652305a-0c63-4527-8cb3-0ea582076124"
+    sni: "hk2.freeguard.org"
+    skip-cert-verify: true
+    udp: true
+
+  - name: "🇭🇰 @sɪɴɢʙᴏxxx ▪ HK²"
+    type: anytls
+    server: "103.252.116.138"
+    port: 1443
+    password: "b652305a-0c63-4527-8cb3-0ea582076124"
+    sni: "hk.freeguard.org"
+    skip-cert-verify: true
+    udp: true
+
+  - name: "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE¹"
+    type: anytls
+    server: "178.162.221.200"
+    port: 1443
+    password: "b652305a-0c63-4527-8cb3-0ea582076124"
+    sni: "fra.freeguard.org"
+    skip-cert-verify: true
+    udp: true
+
+  - name: "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL¹"
+    type: anytls
+    server: "45.91.169.80"
+    port: 1443
+    password: "b652305a-0c63-4527-8cb3-0ea582076124"
+    sni: "ams.freeguard.org"
+    skip-cert-verify: true
+    udp: true
+
+  - name: "🇸🇪 @sɪɴɢʙᴏxxx ▪ SE¹"
+    type: anytls
+    server: "45.91.171.116"
+    port: 1443
+    password: "b652305a-0c63-4527-8cb3-0ea582076124"
+    sni: "sto.freeguard.org"
+    skip-cert-verify: true
+    udp: true
+
+  - name: "🇮🇪 @sɪɴɢʙᴏxxx ▪ IE¹"
+    type: anytls
+    server: "185.108.129.126"
+    port: 1443
+    password: "b652305a-0c63-4527-8cb3-0ea582076124"
+    sni: "dmw.freeguard.org"
+    skip-cert-verify: true
+    udp: true
+
+  - name: "🇮🇳 @sɪɴɢʙᴏxxx ▪ IN¹"
+    type: anytls
+    server: "65.20.76.224"
+    port: 1443
+    password: "b652305a-0c63-4527-8cb3-0ea582076124"
+    sni: "mb.freeguard.org"
+    skip-cert-verify: true
+    udp: true
+
+  - name: "🇯🇵 @sɪɴɢʙᴏxxx ▪ JP¹"
+    type: anytls
+    server: "178.239.124.174"
+    port: 1443
+    password: "b652305a-0c63-4527-8cb3-0ea582076124"
+    sni: "jp.freeguard.org"
+    skip-cert-verify: true
+    udp: true
+
+  - name: "🇮🇹 @sɪɴɢʙᴏxxx ▪ IT¹"
+    type: anytls
+    server: "113.30.151.164"
+    port: 1443
+    password: "b652305a-0c63-4527-8cb3-0ea582076124"
+    sni: "it.freeguard.org"
+    skip-cert-verify: true
+    udp: true
+
+  - name: "🇮🇱 @sɪɴɢʙᴏxxx ▪ IL¹"
+    type: anytls
+    server: "31.133.102.142"
+    port: 1443
+    password: "b652305a-0c63-4527-8cb3-0ea582076124"
+    sni: "il.freeguard.org"
+    skip-cert-verify: true
+    udp: true
+
+  - name: "🇪🇸 @sɪɴɢʙᴏxxx ▪ ES¹"
+    type: anytls
+    server: "113.30.148.197"
+    port: 1443
+    password: "b652305a-0c63-4527-8cb3-0ea582076124"
+    sni: "es.freeguard.org"
+    skip-cert-verify: true
+    udp: true
+
+  - name: "🇰🇷 @sɪɴɢʙᴏxxx ▪ KR¹"
+    type: anytls
+    server: "158.247.222.240"
+    port: 1443
+    password: "b652305a-0c63-4527-8cb3-0ea582076124"
+    sni: "kr.freeguard.org"
+    skip-cert-verify: true
+    udp: true
+
+  - name: "🇲🇽 @sɪɴɢʙᴏxxx ▪ MX¹"
+    type: anytls
+    server: "216.238.72.195"
+    port: 1443
+    password: "b652305a-0c63-4527-8cb3-0ea582076124"
+    sni: "mx.freeguard.org"
+    skip-cert-verify: true
+    udp: true
+
+  - name: "🇺🇦 @sɪɴɢʙᴏxxx ▪ UA¹"
+    type: anytls
+    server: "130.0.236.88"
+    port: 1443
+    password: "b652305a-0c63-4527-8cb3-0ea582076124"
+    sni: "ua.freeguard.org"
+    skip-cert-verify: true
+    udp: true
+
+  - name: "🇳🇴 @sɪɴɢʙᴏxxx ▪ NO¹"
+    type: anytls
+    server: "195.54.170.7"
+    port: 1443
+    password: "b652305a-0c63-4527-8cb3-0ea582076124"
+    sni: "no.freeguard.org"
+    skip-cert-verify: true
+    udp: true
+
+  - name: "🇨🇭 @sɪɴɢʙᴏxxx ▪ CH¹"
+    type: anytls
+    server: "38.180.161.71"
+    port: 1443
+    password: "b652305a-0c63-4527-8cb3-0ea582076124"
+    sni: "ch.freeguard.org"
+    skip-cert-verify: true
+    udp: true
+
+  - name: "🇪🇪 @sɪɴɢʙᴏxxx ▪ EE¹"
+    type: anytls
+    server: "38.180.216.135"
+    port: 1443
+    password: "b652305a-0c63-4527-8cb3-0ea582076124"
+    sni: "ee.freeguard.org"
+    skip-cert-verify: true
+    udp: true
+
+  - name: "🇫🇷 @sɪɴɢʙᴏxxx ▪ FR¹"
+    type: anytls
+    server: "38.180.240.150"
+    port: 1443
+    password: "b652305a-0c63-4527-8cb3-0ea582076124"
+    sni: "fr.freeguard.org"
+    skip-cert-verify: true
+    udp: true
+
+  - name: "🇧🇷 @sɪɴɢʙᴏxxx ▪ BR¹"
+    type: anytls
+    server: "38.180.220.114"
+    port: 1443
+    password: "b652305a-0c63-4527-8cb3-0ea582076124"
+    sni: "br.freeguard.org"
+    skip-cert-verify: true
+    udp: true
+
+  - name: "🇲🇾 @sɪɴɢʙᴏxxx ▪ MY¹"
+    type: anytls
+    server: "23.27.240.144"
+    port: 1443
+    password: "b652305a-0c63-4527-8cb3-0ea582076124"
+    sni: "my.freeguard.org"
+    skip-cert-verify: true
+    udp: true
+
+  - name: "🇵🇱 @sɪɴɢʙᴏxxx ▪ PL¹"
+    type: anytls
+    server: "92.118.205.237"
+    port: 1443
+    password: "b652305a-0c63-4527-8cb3-0ea582076124"
+    sni: "pl.freeguard.org"
+    skip-cert-verify: true
+    udp: true
+
+  - name: "🇹🇭 @sɪɴɢʙᴏxxx ▪ TH¹"
+    type: anytls
+    server: "46.16.129.114"
+    port: 1443
+    password: "b652305a-0c63-4527-8cb3-0ea582076124"
+    sni: "th.freeguard.org"
+    skip-cert-verify: true
+    udp: true
+
+  - name: "🇿🇦 @sɪɴɢʙᴏxxx ▪ ZA¹"
+    type: anytls
+    server: "139.84.239.12"
+    port: 1443
+    password: "b652305a-0c63-4527-8cb3-0ea582076124"
+    sni: "za.freeguard.org"
+    skip-cert-verify: true
+    udp: true
+
+  - name: "🇨🇦 @sɪɴɢʙᴏxxx ▪ CA²"
+    type: anytls
+    server: "205.204.87.32"
+    port: 1443
+    password: "b652305a-0c63-4527-8cb3-0ea582076124"
+    sni: "mtl.freeguard.org"
+    skip-cert-verify: true
+    udp: true
+
+  - name: "🇨🇦 @sɪɴɢʙᴏxxx ▪ CA³"
+    type: anytls
+    server: "38.95.173.80"
+    port: 1443
+    password: "b652305a-0c63-4527-8cb3-0ea582076124"
+    sni: "mtl1.freeguard.org"
+    skip-cert-verify: true
+    udp: true
+
+  - name: "🇨🇦 @sɪɴɢʙᴏxxx ▪ CA⁴"
+    type: anytls
+    server: "198.50.117.99"
+    port: 1443
+    password: "b652305a-0c63-4527-8cb3-0ea582076124"
+    sni: "mtl3.freeguard.org"
+    skip-cert-verify: true
+    udp: true
+
+  - name: "🇬🇧 @sɪɴɢʙᴏxxx ▪ GB³"
+    type: anytls
+    server: "173.208.50.220"
+    port: 1443
+    password: "b652305a-0c63-4527-8cb3-0ea582076124"
+    sni: "lon3.freeguard.org"
+    skip-cert-verify: true
+    udp: true
+
+  - name: "🇸🇮 @sɪɴɢʙᴏxxx ▪ SI¹"
+    type: anytls
+    server: "194.58.66.162"
+    port: 1443
+    password: "b652305a-0c63-4527-8cb3-0ea582076124"
+    sni: "ljb.freeguard.org"
+    skip-cert-verify: true
+    udp: true
+
+  - name: "🇺🇸 @sɪɴɢʙᴏxxx ▪ US²⁰"
+    type: anytls
+    server: "23.82.99.162"
+    port: 1443
+    password: "b652305a-0c63-4527-8cb3-0ea582076124"
+    sni: "dal3.freeguard.org"
+    skip-cert-verify: true
+    udp: true
+
+  - name: "🇺🇸 @sɪɴɢʙᴏxxx ▪ US²¹"
+    type: anytls
+    server: "209.50.228.248"
+    port: 1443
+    password: "b652305a-0c63-4527-8cb3-0ea582076124"
+    sni: "ma2.freeguard.org"
+    skip-cert-verify: true
+    udp: true
+
+  - name: "🇺🇸 @sɪɴɢʙᴏxxx ▪ US²²"
+    type: anytls
+    server: "23.80.89.75"
+    port: 1443
+    password: "b652305a-0c63-4527-8cb3-0ea582076124"
+    sni: "la7.freeguard.org"
+    skip-cert-verify: true
+    udp: true
+
+  - name: "🇺🇸 @sɪɴɢʙᴏxxx ▪ US²³"
+    type: anytls
+    server: "15.204.243.106"
+    port: 1443
+    password: "b652305a-0c63-4527-8cb3-0ea582076124"
+    sni: "rs5.freeguard.org"
+    skip-cert-verify: true
+    udp: true
+
+  - name: "🇫🇮 @sɪɴɢʙᴏxxx ▪ FI¹"
+    type: anytls
+    server: "176.32.39.116"
+    port: 1443
+    password: "b652305a-0c63-4527-8cb3-0ea582076124"
+    sni: "msk4.freeguard.org"
+    skip-cert-verify: true
+    udp: true
+
+# ------------------------------------------
+# Proxy Groups
+# ------------------------------------------
+proxy-groups:
+  - name: "PROXY"
+    type: select
+    proxies:
+      - "Auto Select"
+      - "Manual Select"
+      - "DIRECT"
+
+  - name: "Auto Select"
+    type: url-test
+    url: "http://www.gstatic.com/generate_204"
+    interval: 300
+    tolerance: 50
+    proxies:
+      - "🇺🇸 @sɪɴɢʙᴏxxx ▪ US¹"
+      - "🇺🇸 @sɪɴɢʙᴏxxx ▪ US²"
+      - "🇺🇸 @sɪɴɢʙᴏxxx ▪ US³"
+      - "🇺🇸 @sɪɴɢʙᴏxxx ▪ US⁴"
+      - "🇺🇸 @sɪɴɢʙᴏxxx ▪ US⁵"
+      - "🇺🇸 @sɪɴɢʙᴏxxx ▪ US⁶"
+      - "🇺🇸 @sɪɴɢʙᴏxxx ▪ US⁷"
+      - "🇺🇸 @sɪɴɢʙᴏxxx ▪ US⁸"
+      - "🇺🇸 @sɪɴɢʙᴏxxx ▪ US⁹"
+      - "🇺🇸 @sɪɴɢʙᴏxxx ▪ US¹⁰"
+      - "🇺🇸 @sɪɴɢʙᴏxxx ▪ US¹¹"
+      - "🇺🇸 @sɪɴɢʙᴏxxx ▪ US¹²"
+      - "🇺🇸 @sɪɴɢʙᴏxxx ▪ US¹³"
+      - "🇺🇸 @sɪɴɢʙᴏxxx ▪ US¹⁴"
+      - "🇺🇸 @sɪɴɢʙᴏxxx ▪ US¹⁵"
+      - "🇺🇸 @sɪɴɢʙᴏxxx ▪ US¹⁶"
+      - "🇺🇸 @sɪɴɢʙᴏxxx ▪ US¹⁷"
+      - "🇺🇸 @sɪɴɢʙᴏxxx ▪ US¹⁸"
+      - "🇺🇸 @sɪɴɢʙᴏxxx ▪ US¹⁹"
+      - "🇨🇦 @sɪɴɢʙᴏxxx ▪ CA¹"
+      - "🇬🇧 @sɪɴɢʙᴏxxx ▪ GB¹"
+      - "🇬🇧 @sɪɴɢʙᴏxxx ▪ GB²"
+      - "🇸🇬 @sɪɴɢʙᴏxxx ▪ SG¹"
+      - "🇭🇰 @sɪɴɢʙᴏxxx ▪ HK¹"
+      - "🇭🇰 @sɪɴɢʙᴏxxx ▪ HK²"
+      - "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE¹"
+      - "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL¹"
+      - "🇸🇪 @sɪɴɢʙᴏxxx ▪ SE¹"
+      - "🇮🇪 @sɪɴɢʙᴏxxx ▪ IE¹"
+      - "🇮🇳 @sɪɴɢʙᴏxxx ▪ IN¹"
+      - "🇯🇵 @sɪɴɢʙᴏxxx ▪ JP¹"
+      - "🇮🇹 @sɪɴɢʙᴏxxx ▪ IT¹"
+      - "🇮🇱 @sɪɴɢʙᴏxxx ▪ IL¹"
+      - "🇪🇸 @sɪɴɢʙᴏxxx ▪ ES¹"
+      - "🇰🇷 @sɪɴɢʙᴏxxx ▪ KR¹"
+      - "🇲🇽 @sɪɴɢʙᴏxxx ▪ MX¹"
+      - "🇺🇦 @sɪɴɢʙᴏxxx ▪ UA¹"
+      - "🇳🇴 @sɪɴɢʙᴏxxx ▪ NO¹"
+      - "🇨🇭 @sɪɴɢʙᴏxxx ▪ CH¹"
+      - "🇪🇪 @sɪɴɢʙᴏxxx ▪ EE¹"
+      - "🇫🇷 @sɪɴɢʙᴏxxx ▪ FR¹"
+      - "🇧🇷 @sɪɴɢʙᴏxxx ▪ BR¹"
+      - "🇲🇾 @sɪɴɢʙᴏxxx ▪ MY¹"
+      - "🇵🇱 @sɪɴɢʙᴏxxx ▪ PL¹"
+      - "🇹🇭 @sɪɴɢʙᴏxxx ▪ TH¹"
+      - "🇿🇦 @sɪɴɢʙᴏxxx ▪ ZA¹"
+      - "🇨🇦 @sɪɴɢʙᴏxxx ▪ CA²"
+      - "🇨🇦 @sɪɴɢʙᴏxxx ▪ CA³"
+      - "🇨🇦 @sɪɴɢʙᴏxxx ▪ CA⁴"
+      - "🇬🇧 @sɪɴɢʙᴏxxx ▪ GB³"
+      - "🇸🇮 @sɪɴɢʙᴏxxx ▪ SI¹"
+      - "🇺🇸 @sɪɴɢʙᴏxxx ▪ US²⁰"
+      - "🇺🇸 @sɪɴɢʙᴏxxx ▪ US²¹"
+      - "🇺🇸 @sɪɴɢʙᴏxxx ▪ US²²"
+      - "🇺🇸 @sɪɴɢʙᴏxxx ▪ US²³"
+      - "🇫🇮 @sɪɴɢʙᴏxxx ▪ FI¹"
+
+  - name: "Manual Select"
+    type: select
+    proxies:
+      - "🇺🇸 @sɪɴɢʙᴏxxx ▪ US¹"
+      - "🇺🇸 @sɪɴɢʙᴏxxx ▪ US²"
+      - "🇺🇸 @sɪɴɢʙᴏxxx ▪ US³"
+      - "🇺🇸 @sɪɴɢʙᴏxxx ▪ US⁴"
+      - "🇺🇸 @sɪɴɢʙᴏxxx ▪ US⁵"
+      - "🇺🇸 @sɪɴɢʙᴏxxx ▪ US⁶"
+      - "🇺🇸 @sɪɴɢʙᴏxxx ▪ US⁷"
+      - "🇺🇸 @sɪɴɢʙᴏxxx ▪ US⁸"
+      - "🇺🇸 @sɪɴɢʙᴏxxx ▪ US⁹"
+      - "🇺🇸 @sɪɴɢʙᴏxxx ▪ US¹⁰"
+      - "🇺🇸 @sɪɴɢʙᴏxxx ▪ US¹¹"
+      - "🇺🇸 @sɪɴɢʙᴏxxx ▪ US¹²"
+      - "🇺🇸 @sɪɴɢʙᴏxxx ▪ US¹³"
+      - "🇺🇸 @sɪɴɢʙᴏxxx ▪ US¹⁴"
+      - "🇺🇸 @sɪɴɢʙᴏxxx ▪ US¹⁵"
+      - "🇺🇸 @sɪɴɢʙᴏxxx ▪ US¹⁶"
+      - "🇺🇸 @sɪɴɢʙᴏxxx ▪ US¹⁷"
+      - "🇺🇸 @sɪɴɢʙᴏxxx ▪ US¹⁸"
+      - "🇺🇸 @sɪɴɢʙᴏxxx ▪ US¹⁹"
+      - "🇨🇦 @sɪɴɢʙᴏxxx ▪ CA¹"
+      - "🇬🇧 @sɪɴɢʙᴏxxx ▪ GB¹"
+      - "🇬🇧 @sɪɴɢʙᴏxxx ▪ GB²"
+      - "🇸🇬 @sɪɴɢʙᴏxxx ▪ SG¹"
+      - "🇭🇰 @sɪɴɢʙᴏxxx ▪ HK¹"
+      - "🇭🇰 @sɪɴɢʙᴏxxx ▪ HK²"
+      - "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE¹"
+      - "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL¹"
+      - "🇸🇪 @sɪɴɢʙᴏxxx ▪ SE¹"
+      - "🇮🇪 @sɪɴɢʙᴏxxx ▪ IE¹"
+      - "🇮🇳 @sɪɴɢʙᴏxxx ▪ IN¹"
+      - "🇯🇵 @sɪɴɢʙᴏxxx ▪ JP¹"
+      - "🇮🇹 @sɪɴɢʙᴏxxx ▪ IT¹"
+      - "🇮🇱 @sɪɴɢʙᴏxxx ▪ IL¹"
+      - "🇪🇸 @sɪɴɢʙᴏxxx ▪ ES¹"
+      - "🇰🇷 @sɪɴɢʙᴏxxx ▪ KR¹"
+      - "🇲🇽 @sɪɴɢʙᴏxxx ▪ MX¹"
+      - "🇺🇦 @sɪɴɢʙᴏxxx ▪ UA¹"
+      - "🇳🇴 @sɪɴɢʙᴏxxx ▪ NO¹"
+      - "🇨🇭 @sɪɴɢʙᴏxxx ▪ CH¹"
+      - "🇪🇪 @sɪɴɢʙᴏxxx ▪ EE¹"
+      - "🇫🇷 @sɪɴɢʙᴏxxx ▪ FR¹"
+      - "🇧🇷 @sɪɴɢʙᴏxxx ▪ BR¹"
+      - "🇲🇾 @sɪɴɢʙᴏxxx ▪ MY¹"
+      - "🇵🇱 @sɪɴɢʙᴏxxx ▪ PL¹"
+      - "🇹🇭 @sɪɴɢʙᴏxxx ▪ TH¹"
+      - "🇿🇦 @sɪɴɢʙᴏxxx ▪ ZA¹"
+      - "🇨🇦 @sɪɴɢʙᴏxxx ▪ CA²"
+      - "🇨🇦 @sɪɴɢʙᴏxxx ▪ CA³"
+      - "🇨🇦 @sɪɴɢʙᴏxxx ▪ CA⁴"
+      - "🇬🇧 @sɪɴɢʙᴏxxx ▪ GB³"
+      - "🇸🇮 @sɪɴɢʙᴏxxx ▪ SI¹"
+      - "🇺🇸 @sɪɴɢʙᴏxxx ▪ US²⁰"
+      - "🇺🇸 @sɪɴɢʙᴏxxx ▪ US²¹"
+      - "🇺🇸 @sɪɴɢʙᴏxxx ▪ US²²"
+      - "🇺🇸 @sɪɴɢʙᴏxxx ▪ US²³"
+      - "🇫🇮 @sɪɴɢʙᴏxxx ▪ FI¹"
+
+  - name: "Iran Traffic"
+    type: select
+    proxies:
+      - "DIRECT"
+      - "PROXY"
+
+  - name: "Ad Block"
+    type: select
+    proxies:
+      - "REJECT"
+      - "DIRECT"
+
+# ------------------------------------------
+# Rule Providers
+# ------------------------------------------
+rule-providers:
+  iran_domains:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt"
+    path: "./rulesets/iran_domains.yaml"
+    interval: 86400
+  iran_ip:
+    type: http
+    behavior: ipcidr
+    url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/cncidr.txt"
+    path: "./rulesets/iran_ip.yaml"
+    interval: 86400
+  goolag_ads:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/reject.txt"
+    path: "./rulesets/reject.yaml"
+    interval: 86400
+
+# ------------------------------------------
+# Routing Rules
+# ------------------------------------------
+rules:
+  - "GEOIP,private,DIRECT,no-resolve"
+  - "RULE-SET,goolag_ads,Ad Block"
+  - "GEOSITE,category-ir,Iran Traffic"
+  - "GEOIP,IR,Iran Traffic"
+  - "RULE-SET,iran_domains,Iran Traffic"
+  - "RULE-SET,iran_ip,Iran Traffic"
+  - "MATCH,PROXY"
