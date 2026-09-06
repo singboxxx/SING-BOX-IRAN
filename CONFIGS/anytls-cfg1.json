@@ -8,7 +8,7 @@
       {
         "type": "https",
         "tag": "dns-remote",
-        "detour": "Telegram ➡ @SINGBOXXX",
+        "detour": "ᴛɢ➜@sɪɴɢʙᴏxxx",
         "server": "8.8.8.8"
       },
       {
@@ -95,7 +95,7 @@
   "outbounds": [
     {
       "type": "selector",
-      "tag": "Telegram ➡ @SINGBOXXX",
+      "tag": "ᴛɢ➜@sɪɴɢʙᴏxxx",
       "outbounds": [
         "🚀 Auto Pilot",
         "🇺🇸 @sɪɴɢʙᴏxxx ▪ US¹",
@@ -913,7 +913,7 @@
       },
       {
         "clash_mode": "@SINGBOXXX",
-        "outbound": "Telegram ➡ @SINGBOXXX"
+        "outbound": "ᴛɢ➜@sɪɴɢʙᴏxxx"
       },
       {
         "network": [
@@ -994,7 +994,7 @@
         "download_detour": "direct"
       }
     ],
-    "final": "Telegram ➡ @SINGBOXXX",
+    "final": "ᴛɢ➜@sɪɴɢʙᴏxxx",
     "auto_detect_interface": true,
     "default_domain_resolver": {
       "server": "dns-direct",
