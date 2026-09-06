@@ -14,7 +14,7 @@
       {
         "type": "https",
         "tag": "dns-remote",
-        "detour": "Telegram ➡ @SINGBOXXX",
+        "detour": "ᴛɢ➜@sɪɴɢʙᴏxxx",
         "server": "https://1.1.1.1/dns-query"
       },
       {
@@ -85,7 +85,7 @@
   "outbounds": [
     {
       "type": "selector",
-      "tag": "Telegram ➡ @SINGBOXXX",
+      "tag": "ᴛɢ➜@sɪɴɢʙᴏxxx",
       "outbounds": [
         "🚀 Auto Pilot",
         "🇷🇸 @sɪɴɢʙᴏxxx ▪ RS",
@@ -640,7 +640,7 @@
         "download_detour": "direct"
       }
     ],
-    "final": "Telegram ➡ @SINGBOXXX",
+    "final": "ᴛɢ➜@sɪɴɢʙᴏxxx",
     "auto_detect_interface": true
   },
   "experimental": {
