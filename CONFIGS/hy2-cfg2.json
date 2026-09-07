@@ -6,16 +6,16 @@
   "dns": {
     "servers": [
       {
-        "type": "udp",
-        "tag": "dns-direct",
-        "server": "1.1.1.1",
-        "server_port": 53
-      },
-      {
         "type": "https",
         "tag": "dns-remote",
         "detour": "ᴛɢ➜@sɪɴɢʙᴏxxx",
-        "server": "https://1.1.1.1/dns-query"
+        "server": "8.8.8.8"
+      },
+      {
+        "type": "udp",
+        "tag": "dns-direct",
+        "server": "178.22.122.100",
+        "server_port": 53
       },
       {
         "type": "fakeip",
@@ -26,7 +26,9 @@
     ],
     "rules": [
       {
-        "domain": "raw.githubusercontent.com",
+        "domain": [
+          "raw.githubusercontent.com"
+        ],
         "server": "dns-direct"
       },
       {
@@ -39,11 +41,19 @@
         "action": "reject"
       },
       {
-        "rule_set": "geosite-ir",
+        "rule_set": [
+          "geosite-ir"
+        ],
         "server": "dns-direct"
       },
       {
-        "inbound": "tun-in",
+        "clash_mode": "@SINGBOXXX",
+        "server": "dns-remote"
+      },
+      {
+        "inbound": [
+          "tun-in"
+        ],
         "query_type": [
           "A",
           "AAAA"
@@ -65,9 +75,9 @@
     {
       "type": "tun",
       "tag": "tun-in",
-      "mtu": 1400,
+      "mtu": 1500,
       "address": [
-        "172.19.0.1/30",
+        "172.18.0.1/30",
         "fdfe:dcba:9876::1/126"
       ],
       "auto_route": true,
@@ -88,28 +98,22 @@
       "tag": "ᴛɢ➜@sɪɴɢʙᴏxxx",
       "outbounds": [
         "🚀 Auto Pilot",
-        "🇷🇸 @sɪɴɢʙᴏxxx ▪ RS",
-        "🇸🇪 @sɪɴɢʙᴏxxx ▪ SE",
-        "🇹🇷 @sɪɴɢʙᴏxxx ▪ TR",
-        "🇺🇦 @sɪɴɢʙᴏxxx ▪ UA",
-        "🇦🇱 @sɪɴɢʙᴏxxx ▪ AL",
-        "🇦🇹 @sɪɴɢʙᴏxxx ▪ AT",
-        "🇧🇪 @sɪɴɢʙᴏxxx ▪ BE",
-        "🇦🇷 @sɪɴɢʙᴏxxx ▪ AR",
-        "🇧🇬 @sɪɴɢʙᴏxxx ▪ BG",
-        "🇵🇱 @sɪɴɢʙᴏxxx ▪ PL",
-        "🇵🇹 @sɪɴɢʙᴏxxx ▪ PT",
-        "🇨🇦 @sɪɴɢʙᴏxxx ▪ CA",
-        "🇦🇺 @sɪɴɢʙᴏxxx ▪ AU",
-        "🇧🇷 @sɪɴɢʙᴏxxx ▪ BR",
-        "🇭🇷 @sɪɴɢʙᴏxxx ▪ HR",
-        "🇮🇪 @sɪɴɢʙᴏxxx ▪ IE",
-        "🇭🇺 @sɪɴɢʙᴏxxx ▪ HU",
-        "🇿🇦 @sɪɴɢʙᴏxxx ▪ ZA",
-        "🇲🇾 @sɪɴɢʙᴏxxx ▪ MY",
-        "🇮🇩 @sɪɴɢʙᴏxxx ▪ ID",
-        "🇷🇴 @sɪɴɢʙᴏxxx ▪ RO¹",
-        "🇷🇴 @sɪɴɢʙᴏxxx ▪ RO²",      
+        "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE¹",
+        "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE²",
+        "🇦🇹 @sɪɴɢʙᴏxxx ▪ AT¹",
+        "🇮🇩 @sɪɴɢʙᴏxxx ▪ ID¹",
+        "🇳🇬 @sɪɴɢʙᴏxxx ▪ NG¹",
+        "🇹🇼 @sɪɴɢʙᴏxxx ▪ TW¹",
+        "🇺🇸 @sɪɴɢʙᴏxxx ▪ US¹",
+        "🇺🇸 @sɪɴɢʙᴏxxx ▪ US²",
+        "🇺🇸 @sɪɴɢʙᴏxxx ▪ US³",
+        "🇺🇸 @sɪɴɢʙᴏxxx ▪ US⁴",
+        "🇺🇸 @sɪɴɢʙᴏxxx ▪ US⁵",
+        "🇺🇸 @sɪɴɢʙᴏxxx ▪ US⁶",
+        "🇺🇸 @sɪɴɢʙᴏxxx ▪ US⁷",
+        "🇺🇸 @sɪɴɢʙᴏxxx ▪ US⁸",
+        "🇺🇸 @sɪɴɢʙᴏxxx ▪ US⁹",
+        "🇺🇸 @sɪɴɢʙᴏxxx ▪ US¹⁰",
         "direct"
       ]
     },
@@ -117,438 +121,224 @@
       "type": "urltest",
       "tag": "🚀 Auto Pilot",
       "outbounds": [
-        "🇷🇸 @sɪɴɢʙᴏxxx ▪ RS",
-        "🇸🇪 @sɪɴɢʙᴏxxx ▪ SE",
-        "🇹🇷 @sɪɴɢʙᴏxxx ▪ TR",
-        "🇺🇦 @sɪɴɢʙᴏxxx ▪ UA",
-        "🇦🇱 @sɪɴɢʙᴏxxx ▪ AL",
-        "🇦🇹 @sɪɴɢʙᴏxxx ▪ AT",
-        "🇧🇪 @sɪɴɢʙᴏxxx ▪ BE",
-        "🇦🇷 @sɪɴɢʙᴏxxx ▪ AR",
-        "🇧🇬 @sɪɴɢʙᴏxxx ▪ BG",
-        "🇵🇱 @sɪɴɢʙᴏxxx ▪ PL",
-        "🇵🇹 @sɪɴɢʙᴏxxx ▪ PT",
-        "🇨🇦 @sɪɴɢʙᴏxxx ▪ CA",
-        "🇦🇺 @sɪɴɢʙᴏxxx ▪ AU",
-        "🇧🇷 @sɪɴɢʙᴏxxx ▪ BR",
-        "🇭🇷 @sɪɴɢʙᴏxxx ▪ HR",
-        "🇮🇪 @sɪɴɢʙᴏxxx ▪ IE",
-        "🇭🇺 @sɪɴɢʙᴏxxx ▪ HU",
-        "🇿🇦 @sɪɴɢʙᴏxxx ▪ ZA",
-        "🇲🇾 @sɪɴɢʙᴏxxx ▪ MY",
-        "🇮🇩 @sɪɴɢʙᴏxxx ▪ ID",
-        "🇷🇴 @sɪɴɢʙᴏxxx ▪ RO¹",
-        "🇷🇴 @sɪɴɢʙᴏxxx ▪ RO²"        
+        "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE¹",
+        "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE²",
+        "🇦🇹 @sɪɴɢʙᴏxxx ▪ AT¹",
+        "🇮🇩 @sɪɴɢʙᴏxxx ▪ ID¹",
+        "🇳🇬 @sɪɴɢʙᴏxxx ▪ NG¹",
+        "🇹🇼 @sɪɴɢʙᴏxxx ▪ TW¹",
+        "🇺🇸 @sɪɴɢʙᴏxxx ▪ US¹",
+        "🇺🇸 @sɪɴɢʙᴏxxx ▪ US²",
+        "🇺🇸 @sɪɴɢʙᴏxxx ▪ US³",
+        "🇺🇸 @sɪɴɢʙᴏxxx ▪ US⁴",
+        "🇺🇸 @sɪɴɢʙᴏxxx ▪ US⁵",
+        "🇺🇸 @sɪɴɢʙᴏxxx ▪ US⁶",
+        "🇺🇸 @sɪɴɢʙᴏxxx ▪ US⁷",
+        "🇺🇸 @sɪɴɢʙᴏxxx ▪ US⁸",
+        "🇺🇸 @sɪɴɢʙᴏxxx ▪ US⁹",
+        "🇺🇸 @sɪɴɢʙᴏxxx ▪ US¹⁰"
       ],
-      "url": "https://www.gstatic.com/generate_204",
+      "url": "http://www.apple.com/library/test/success.html",
       "interval": "1m0s",
       "tolerance": 50,
-      "idle_timeout": "20m"
+      "idle_timeout": "30m0s"
     },
     {
       "type": "hysteria2",
-      "tag": "🇷🇸 @sɪɴɢʙᴏxxx ▪ RS",
-      "server": "assets.gateway-stream.com",
-      "server_port": 52059,
-      "password": "k1dom6dyqelryllv",
-      "tls": {
-        "enabled": true,
-        "server_name": "assets.gateway-stream.com",
-        "alpn": [
-          "h3"
-        ],
-        "insecure": true
-      },
-      "obfs": {
-        "type": "salamander",
-        "password": "vic6damutmthllnd"
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇸🇪 @sɪɴɢʙᴏxxx ▪ SE",
-      "server": "assets.gateway-stream.com",
-      "server_port": 52060,
-      "password": "k1dom6dyqelryllv",
-      "tls": {
-        "enabled": true,
-        "server_name": "assets.gateway-stream.com",
-        "alpn": [
-          "h3"
-        ],
-        "insecure": true
-      },
-      "obfs": {
-        "type": "salamander",
-        "password": "l960g2kn19nphlra"
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇹🇷 @sɪɴɢʙᴏxxx ▪ TR",
-      "server": "assets.gateway-stream.com",
-      "server_port": 52067,
-      "password": "k1dom6dyqelryllv",
-      "tls": {
-        "enabled": true,
-        "server_name": "assets.gateway-stream.com",
-        "alpn": [
-          "h3"
-        ],
-        "insecure": true
-      },
-      "obfs": {
-        "type": "salamander",
-        "password": "txwr28j1lntoy0sj"
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇺🇦 @sɪɴɢʙᴏxxx ▪ UA",
-      "server": "assets.gateway-stream.com",
-      "server_port": 52068,
-      "password": "k1dom6dyqelryllv",
-      "tls": {
-        "enabled": true,
-        "server_name": "assets.gateway-stream.com",
-        "alpn": [
-          "h3"
-        ],
-        "insecure": true
-      },
-      "obfs": {
-        "type": "salamander",
-        "password": "ene2f0oo4n8i3inf"
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇦🇱 @sɪɴɢʙᴏxxx ▪ AL",
-      "server": "assets.gateway-stream.com",
-      "server_port": 52000,
-      "password": "k1dom6dyqelryllv",
-      "tls": {
-        "enabled": true,
-        "server_name": "assets.gateway-stream.com",
-        "alpn": [
-          "h3"
-        ],
-        "insecure": true
-      },
-      "obfs": {
-        "type": "salamander",
-        "password": "gu74jg3ym0e21zco"
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇦🇹 @sɪɴɢʙᴏxxx ▪ AT",
-      "server": "assets.gateway-stream.com",
-      "server_port": 52002,
-      "password": "k1dom6dyqelryllv",
-      "tls": {
-        "enabled": true,
-        "server_name": "assets.gateway-stream.com",
-        "alpn": [
-          "h3"
-        ],
-        "insecure": true
-      },
-      "obfs": {
-        "type": "salamander",
-        "password": "ielzukpwth087afx"
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇧🇪 @sɪɴɢʙᴏxxx ▪ BE",
-      "server": "assets.gateway-stream.com",
-      "server_port": 52008,
-      "password": "k1dom6dyqelryllv",
-      "tls": {
-        "enabled": true,
-        "server_name": "assets.gateway-stream.com",
-        "alpn": [
-          "h3"
-        ],
-        "insecure": true
-      },
-      "obfs": {
-        "type": "salamander",
-        "password": "93lc6r07zfx4crct"
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇦🇷 @sɪɴɢʙᴏxxx ▪ AR",
-      "server": "assets.gateway-stream.com",
-      "server_port": 52001,
-      "password": "k1dom6dyqelryllv",
-      "tls": {
-        "enabled": true,
-        "server_name": "assets.gateway-stream.com",
-        "alpn": [
-          "h3"
-        ],
-        "insecure": true
-      },
-      "obfs": {
-        "type": "salamander",
-        "password": "527zd9w4nuaccd7g"
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇧🇬 @sɪɴɢʙᴏxxx ▪ BG",
-      "server": "assets.gateway-stream.com",
-      "server_port": 52009,
-      "password": "k1dom6dyqelryllv",
-      "tls": {
-        "enabled": true,
-        "server_name": "assets.gateway-stream.com",
-        "alpn": [
-          "h3"
-        ],
-        "insecure": true
-      },
-      "obfs": {
-        "type": "salamander",
-        "password": "kf1lypzqidy6pimt"
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇵🇱 @sɪɴɢʙᴏxxx ▪ PL",
-      "server": "assets.gateway-stream.com",
-      "server_port": 52056,
-      "password": "k1dom6dyqelryllv",
-      "tls": {
-        "enabled": true,
-        "server_name": "assets.gateway-stream.com",
-        "alpn": [
-          "h3"
-        ],
-        "insecure": true
-      },
-      "obfs": {
-        "type": "salamander",
-        "password": "pha76a5o7ormjepb"
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇵🇹 @sɪɴɢʙᴏxxx ▪ PT",
-      "server": "assets.gateway-stream.com",
-      "server_port": 52057,
-      "password": "k1dom6dyqelryllv",
-      "tls": {
-        "enabled": true,
-        "server_name": "assets.gateway-stream.com",
-        "alpn": [
-          "h3"
-        ],
-        "insecure": false
-      },
-      "obfs": {
-        "type": "salamander",
-        "password": "auw7lhtk2kxyq4g9"
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇨🇦 @sɪɴɢʙᴏxxx ▪ CA",
-      "server": "assets.gateway-stream.com",
-      "server_port": 52012,
-      "password": "k1dom6dyqelryllv",
-      "tls": {
-        "enabled": true,
-        "server_name": "assets.gateway-stream.com",
-        "alpn": [
-          "h3"
-        ],
-        "insecure": false
-      },
-      "obfs": {
-        "type": "salamander",
-        "password": "sdx1qdzqgp8lcajn"
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇦🇺 @sɪɴɢʙᴏxxx ▪ AU",
-      "server": "assets.gateway-stream.com",
-      "server_port": 52003,
-      "password": "k1dom6dyqelryllv",
-      "tls": {
-        "enabled": true,
-        "server_name": "assets.gateway-stream.com",
-        "alpn": [
-          "h3"
-        ],
-        "insecure": false
-      },
-      "obfs": {
-        "type": "salamander",
-        "password": "5xo4v7u2pv8bktvb"
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇧🇷 @sɪɴɢʙᴏxxx ▪ BR",
-      "server": "assets.gateway-stream.com",
-      "server_port": 52010,
-      "password": "k1dom6dyqelryllv",
-      "tls": {
-        "enabled": true,
-        "server_name": "assets.gateway-stream.com",
-        "alpn": [
-          "h3"
-        ],
-        "insecure": false
-      },
-      "obfs": {
-        "type": "salamander",
-        "password": "ntygj5lde0e7tm1m"
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇭🇷 @sɪɴɢʙᴏxxx ▪ HR",
-      "server": "assets.gateway-stream.com",
-      "server_port": 52038,
-      "password": "k1dom6dyqelryllv",
-      "tls": {
-        "enabled": true,
-        "server_name": "assets.gateway-stream.com",
-        "alpn": [
-          "h3"
-        ],
-        "insecure": false
-      },
-      "obfs": {
-        "type": "salamander",
-        "password": "957df5ae9ci6tkbk"
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇮🇪 @sɪɴɢʙᴏxxx ▪ IE",
-      "server": "assets.gateway-stream.com",
-      "server_port": 52041,
-      "password": "k1dom6dyqelryllv",
-      "tls": {
-        "enabled": true,
-        "server_name": "assets.gateway-stream.com",
-        "alpn": [
-          "h3"
-        ],
-        "insecure": false
-      },
-      "obfs": {
-        "type": "salamander",
-        "password": "ovh5m03o3l97igco"
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇭🇺 @sɪɴɢʙᴏxxx ▪ HU",
-      "server": "assets.gateway-stream.com",
-      "server_port": 52039,
-      "password": "k1dom6dyqelryllv",
-      "tls": {
-        "enabled": true,
-        "server_name": "assets.gateway-stream.com",
-        "alpn": [
-          "h3"
-        ],
-        "insecure": false
-      },
-      "obfs": {
-        "type": "salamander",
-        "password": "p56kl4pnloz585ce"
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇿🇦 @sɪɴɢʙᴏxxx ▪ ZA",
-      "server": "assets.gateway-stream.com",
-      "server_port": 52089,
-      "password": "k1dom6dyqelryllv",
-      "tls": {
-        "enabled": true,
-        "server_name": "assets.gateway-stream.com",
-        "alpn": [
-          "h3"
-        ],
-        "insecure": false
-      },
-      "obfs": {
-        "type": "salamander",
-        "password": "hitar6eeayxd7imh"
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇲🇾 @sɪɴɢʙᴏxxx ▪ MY",
-      "server": "assets.gateway-stream.com",
-      "server_port": 52048,
-      "password": "k1dom6dyqelryllv",
-      "tls": {
-        "enabled": true,
-        "server_name": "assets.gateway-stream.com",
-        "alpn": [
-          "h3"
-        ],
-        "insecure": false
-      },
-      "obfs": {
-        "type": "salamander",
-        "password": "rfsh74w3ncbh9lhd"
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇮🇩 @sɪɴɢʙᴏxxx ▪ ID",
-      "server": "assets.gateway-stream.com",
-      "server_port": 52040,
-      "password": "k1dom6dyqelryllv",
-      "tls": {
-        "enabled": true,
-        "server_name": "assets.gateway-stream.com",
-        "alpn": [
-          "h3"
-        ],
-        "insecure": false
-      },
-      "obfs": {
-        "type": "salamander",
-        "password": "7206pa46enqqdnmt"
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇷🇴 @sɪɴɢʙᴏxxx ▪ RO¹",
-      "server": "ro.h2corp.org",
+      "tag": "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE¹",
+      "server": "2.27.59.206",
       "server_port": 443,
-      "password": "uj7XGZGUqRlmdpk6rysyZMN333RWsxTFj0hBIMaFV-NUCd5r",
+      "obfs": {
+        "type": "salamander",
+        "password": "44f1c1e2f8b99e792ceed574627a1eb0"
+      },
+      "password": "cd74c0a406664a5bc0bac098220a2468",
       "tls": {
         "enabled": true,
-        "server_name": "ro.h2corp.org",
-        "insecure": false
+        "server_name": "de1.sferavpn.pro",
+        "insecure": true
       }
     },
     {
       "type": "hysteria2",
-      "tag": "🇷🇴 @sɪɴɢʙᴏxxx ▪ RO²",
-      "server": "205.237.109.213",
-      "server_port": 8443,
-      "password": "s0_sdK93x9wer_D02Lz9cvK3_Sa014Oakl_C2z",
+      "tag": "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE²",
+      "server": "195.128.101.253",
+      "server_port": 2443,
+      "password": "b652305a-0c63-4527-8cb3-0ea582076124",
       "tls": {
         "enabled": true,
-        "server_name": "grape-turbo-fr.roxa.org",
-        "insecure": false
+        "server_name": "ka2.freeguard.org",
+        "insecure": true
       }
-    },    
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇦🇹 @sɪɴɢʙᴏxxx ▪ AT¹",
+      "server": "86.106.119.23",
+      "server_port": 2443,
+      "password": "b652305a-0c63-4527-8cb3-0ea582076124",
+      "tls": {
+        "enabled": true,
+        "server_name": "gr.freeguard.org",
+        "insecure": true
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇮🇩 @sɪɴɢʙᴏxxx ▪ ID¹",
+      "server": "172.235.244.154",
+      "server_port": 2443,
+      "password": "b652305a-0c63-4527-8cb3-0ea582076124",
+      "tls": {
+        "enabled": true,
+        "server_name": "ja.freeguard.org",
+        "insecure": true
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇳🇬 @sɪɴɢʙᴏxxx ▪ NG¹",
+      "server": "103.97.91.17",
+      "server_port": 2443,
+      "password": "b652305a-0c63-4527-8cb3-0ea582076124",
+      "tls": {
+        "enabled": true,
+        "server_name": "la.freeguard.org",
+        "insecure": true
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇹🇼 @sɪɴɢʙᴏxxx ▪ TW¹",
+      "server": "151.242.189.247",
+      "server_port": 2443,
+      "password": "b652305a-0c63-4527-8cb3-0ea582076124",
+      "tls": {
+        "enabled": true,
+        "server_name": "tw2.freeguard.org",
+        "insecure": true
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇺🇸 @sɪɴɢʙᴏxxx ▪ US¹",
+      "server": "23.82.99.162",
+      "server_port": 2443,
+      "password": "b652305a-0c63-4527-8cb3-0ea582076124",
+      "tls": {
+        "enabled": true,
+        "server_name": "dal3.freeguard.org",
+        "insecure": true
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇺🇸 @sɪɴɢʙᴏxxx ▪ US²",
+      "server": "209.50.228.248",
+      "server_port": 2443,
+      "password": "b652305a-0c63-4527-8cb3-0ea582076124",
+      "tls": {
+        "enabled": true,
+        "server_name": "ma2.freeguard.org",
+        "insecure": true
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇺🇸 @sɪɴɢʙᴏxxx ▪ US³",
+      "server": "23.80.89.75",
+      "server_port": 2443,
+      "password": "b652305a-0c63-4527-8cb3-0ea582076124",
+      "tls": {
+        "enabled": true,
+        "server_name": "la7.freeguard.org",
+        "insecure": true
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇺🇸 @sɪɴɢʙᴏxxx ▪ US⁴",
+      "server": "15.204.243.106",
+      "server_port": 2443,
+      "password": "b652305a-0c63-4527-8cb3-0ea582076124",
+      "tls": {
+        "enabled": true,
+        "server_name": "rs5.freeguard.org",
+        "insecure": true
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇺🇸 @sɪɴɢʙᴏxxx ▪ US⁵",
+      "server": "23.106.44.13",
+      "server_port": 2443,
+      "password": "b652305a-0c63-4527-8cb3-0ea582076124",
+      "tls": {
+        "enabled": true,
+        "server_name": "sj5.freeguard.org",
+        "insecure": true
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇺🇸 @sɪɴɢʙᴏxxx ▪ US⁶",
+      "server": "23.106.44.14",
+      "server_port": 2443,
+      "password": "b652305a-0c63-4527-8cb3-0ea582076124",
+      "tls": {
+        "enabled": true,
+        "server_name": "sj6.freeguard.org",
+        "insecure": true
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇺🇸 @sɪɴɢʙᴏxxx ▪ US⁷",
+      "server": "51.81.87.73",
+      "server_port": 2443,
+      "password": "b652305a-0c63-4527-8cb3-0ea582076124",
+      "tls": {
+        "enabled": true,
+        "server_name": "rs6.freeguard.org",
+        "insecure": true
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇺🇸 @sɪɴɢʙᴏxxx ▪ US⁸",
+      "server": "23.81.37.216",
+      "server_port": 2443,
+      "password": "b652305a-0c63-4527-8cb3-0ea582076124",
+      "tls": {
+        "enabled": true,
+        "server_name": "wa.freeguard.org",
+        "insecure": true
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇺🇸 @sɪɴɢʙᴏxxx ▪ US⁹",
+      "server": "152.53.80.195",
+      "server_port": 2443,
+      "password": "b652305a-0c63-4527-8cb3-0ea582076124",
+      "tls": {
+        "enabled": true,
+        "server_name": "abr2.freeguard.org",
+        "insecure": true
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇺🇸 @sɪɴɢʙᴏxxx ▪ US¹⁰",
+      "server": "152.53.80.195",
+      "server_port": 2443,
+      "password": "b652305a-0c63-4527-8cb3-0ea582076124",
+      "tls": {
+        "enabled": true,
+        "server_name": "abr2.freeguard.org",
+        "insecure": true
+      }
+    },
     {
       "type": "direct",
       "tag": "direct"
