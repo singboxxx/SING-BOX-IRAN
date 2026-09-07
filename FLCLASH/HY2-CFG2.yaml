@@ -1,0 +1,305 @@
+# ==========================================
+# Clash Meta / Mihomo Hysteria 2 Config
+# ==========================================
+
+port: 0
+socks-port: 0
+redir-port: 0
+tproxy-port: 0
+mixed-port: 7890
+allow-lan: false
+bind-address: "*"
+mode: "rule"
+log-level: "warning"
+ipv6: false
+unified-delay: true
+tcp-concurrent: true
+find-process-mode: "always"
+global-client-fingerprint: "chrome"
+global-ua: "FlClash/v0.8.96 clash-verge Platform/android"
+keep-alive-interval: 30
+
+# ------------------------------------------
+# TUN Configuration
+# ------------------------------------------
+tun:
+  enable: true
+  stack: "mixed"
+  dns-hijack:
+    - "any:53"
+  auto-route: true
+  auto-detect-interface: true
+
+# ------------------------------------------
+# Optimized DNS Configuration
+# ------------------------------------------
+dns:
+  enable: true
+  prefer-h3: false
+  ipv6: false
+  use-hosts: true
+  use-system-hosts: true
+  respect-rules: true
+  enhanced-mode: "fake-ip"
+  fake-ip-range: "198.18.0.1/16"
+  fake-ip-filter:
+    - "*.lan"
+    - "*.local"
+    - "*.ir"
+    - "stun.*.*.*"
+    - "stun.*.*"
+    - "time.*.com"
+    - "time.*.gov"
+    - "pool.ntp.org"
+    - "*.ntp.org"
+  default-nameserver:
+    - "1.1.1.1"
+    - "8.8.8.8"
+  proxy-server-nameserver:
+    - "1.1.1.1"
+    - "8.8.8.8"
+    - "https://1.1.1.1/dns-query"
+  nameserver:
+    - "https://1.1.1.1/dns-query"
+    - "https://8.8.8.8/dns-query"
+    - "tcp://1.1.1.1"
+    - "tcp://8.8.8.8"
+  direct-nameserver:
+    - "10.202.10.202"
+    - "10.202.10.102"
+    - "78.157.42.100"
+
+# ------------------------------------------
+# Proxies (16 Hysteria 2 Servers)
+# ------------------------------------------
+proxies:
+  - name: "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE¹"
+    type: hysteria2
+    server: 2.27.59.206
+    port: 443
+    password: "cd74c0a406664a5bc0bac098220a2468"
+    sni: "de1.sferavpn.pro"
+    skip-cert-verify: true
+    obfs: salamander
+    obfs-password: "44f1c1e2f8b99e792ceed574627a1eb0"
+
+  - name: "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE²"
+    type: hysteria2
+    server: 195.128.101.253
+    port: 2443
+    password: "b652305a-0c63-4527-8cb3-0ea582076124"
+    sni: "ka2.freeguard.org"
+    skip-cert-verify: true
+
+  - name: "🇦🇹 @sɪɴɢʙᴏxxx ▪ AT¹"
+    type: hysteria2
+    server: 86.106.119.23
+    port: 2443
+    password: "b652305a-0c63-4527-8cb3-0ea582076124"
+    sni: "gr.freeguard.org"
+    skip-cert-verify: true
+
+  - name: "🇮🇩 @sɪɴɢʙᴏxxx ▪ ID¹"
+    type: hysteria2
+    server: 172.235.244.154
+    port: 2443
+    password: "b652305a-0c63-4527-8cb3-0ea582076124"
+    sni: "ja.freeguard.org"
+    skip-cert-verify: true
+
+  - name: "🇳🇬 @sɪɴɢʙᴏxxx ▪ NG¹"
+    type: hysteria2
+    server: 103.97.91.17
+    port: 2443
+    password: "b652305a-0c63-4527-8cb3-0ea582076124"
+    sni: "la.freeguard.org"
+    skip-cert-verify: true
+
+  - name: "🇹🇼 @sɪɴɢʙᴏxxx ▪ TW¹"
+    type: hysteria2
+    server: 151.242.189.247
+    port: 2443
+    password: "b652305a-0c63-4527-8cb3-0ea582076124"
+    sni: "tw2.freeguard.org"
+    skip-cert-verify: true
+
+  - name: "🇺🇸 @sɪɴɢʙᴏxxx ▪ US¹"
+    type: hysteria2
+    server: 23.82.99.162
+    port: 2443
+    password: "b652305a-0c63-4527-8cb3-0ea582076124"
+    sni: "dal3.freeguard.org"
+    skip-cert-verify: true
+
+  - name: "🇺🇸 @sɪɴɢʙᴏxxx ▪ US²"
+    type: hysteria2
+    server: 209.50.228.248
+    port: 2443
+    password: "b652305a-0c63-4527-8cb3-0ea582076124"
+    sni: "ma2.freeguard.org"
+    skip-cert-verify: true
+
+  - name: "🇺🇸 @sɪɴɢʙᴏxxx ▪ US³"
+    type: hysteria2
+    server: 23.80.89.75
+    port: 2443
+    password: "b652305a-0c63-4527-8cb3-0ea582076124"
+    sni: "la7.freeguard.org"
+    skip-cert-verify: true
+
+  - name: "🇺🇸 @sɪɴɢʙᴏxxx ▪ US⁴"
+    type: hysteria2
+    server: 15.204.243.106
+    port: 2443
+    password: "b652305a-0c63-4527-8cb3-0ea582076124"
+    sni: "rs5.freeguard.org"
+    skip-cert-verify: true
+
+  - name: "🇺🇸 @sɪɴɢʙᴏxxx ▪ US⁵"
+    type: hysteria2
+    server: 23.106.44.13
+    port: 2443
+    password: "b652305a-0c63-4527-8cb3-0ea582076124"
+    sni: "sj5.freeguard.org"
+    skip-cert-verify: true
+
+  - name: "🇺🇸 @sɪɴɢʙᴏxxx ▪ US⁶"
+    type: hysteria2
+    server: 23.106.44.14
+    port: 2443
+    password: "b652305a-0c63-4527-8cb3-0ea582076124"
+    sni: "sj6.freeguard.org"
+    skip-cert-verify: true
+
+  - name: "🇺🇸 @sɪɴɢʙᴏxxx ▪ US⁷"
+    type: hysteria2
+    server: 51.81.87.73
+    port: 2443
+    password: "b652305a-0c63-4527-8cb3-0ea582076124"
+    sni: "rs6.freeguard.org"
+    skip-cert-verify: true
+
+  - name: "🇺🇸 @sɪɴɢʙᴏxxx ▪ US⁸"
+    type: hysteria2
+    server: 23.81.37.216
+    port: 2443
+    password: "b652305a-0c63-4527-8cb3-0ea582076124"
+    sni: "wa.freeguard.org"
+    skip-cert-verify: true
+
+  - name: "🇺🇸 @sɪɴɢʙᴏxxx ▪ US⁹"
+    type: hysteria2
+    server: 152.53.80.195
+    port: 2443
+    password: "b652305a-0c63-4527-8cb3-0ea582076124"
+    sni: "abr2.freeguard.org"
+    skip-cert-verify: true
+
+  - name: "🇺🇸 @sɪɴɢʙᴏxxx ▪ US¹⁰"
+    type: hysteria2
+    server: 152.53.80.195
+    port: 2443
+    password: "b652305a-0c63-4527-8cb3-0ea582076124"
+    sni: "abr2.freeguard.org"
+    skip-cert-verify: true
+
+# ------------------------------------------
+# Proxy Groups
+# ------------------------------------------
+proxy-groups:
+  - name: "PROXY"
+    type: select
+    proxies:
+      - "Auto Select"
+      - "Manual Select"
+      - "DIRECT"
+
+  - name: "Auto Select"
+    type: url-test
+    url: "http://www.gstatic.com/generate_204"
+    interval: 300
+    tolerance: 50
+    proxies:
+      - "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE¹"
+      - "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE²"
+      - "🇦🇹 @sɪɴɢʙᴏxxx ▪ AT¹"
+      - "🇮🇩 @sɪɴɢʙᴏxxx ▪ ID¹"
+      - "🇳🇬 @sɪɴɢʙᴏxxx ▪ NG¹"
+      - "🇹🇼 @sɪɴɢʙᴏxxx ▪ TW¹"
+      - "🇺🇸 @sɪɴɢʙᴏxxx ▪ US¹"
+      - "🇺🇸 @sɪɴɢʙᴏxxx ▪ US²"
+      - "🇺🇸 @sɪɴɢʙᴏxxx ▪ US³"
+      - "🇺🇸 @sɪɴɢʙᴏxxx ▪ US⁴"
+      - "🇺🇸 @sɪɴɢʙᴏxxx ▪ US⁵"
+      - "🇺🇸 @sɪɴɢʙᴏxxx ▪ US⁶"
+      - "🇺🇸 @sɪɴɢʙᴏxxx ▪ US⁷"
+      - "🇺🇸 @sɪɴɢʙᴏxxx ▪ US⁸"
+      - "🇺🇸 @sɪɴɢʙᴏxxx ▪ US⁹"
+      - "🇺🇸 @sɪɴɢʙᴏxxx ▪ US¹⁰"
+
+  - name: "Manual Select"
+    type: select
+    proxies:
+      - "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE¹"
+      - "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE²"
+      - "🇦🇹 @sɪɴɢʙᴏxxx ▪ AT¹"
+      - "🇮🇩 @sɪɴɢʙᴏxxx ▪ ID¹"
+      - "🇳🇬 @sɪɴɢʙᴏxxx ▪ NG¹"
+      - "🇹🇼 @sɪɴɢʙᴏxxx ▪ TW¹"
+      - "🇺🇸 @sɪɴɢʙᴏxxx ▪ US¹"
+      - "🇺🇸 @sɪɴɢʙᴏxxx ▪ US²"
+      - "🇺🇸 @sɪɴɢʙᴏxxx ▪ US³"
+      - "🇺🇸 @sɪɴɢʙᴏxxx ▪ US⁴"
+      - "🇺🇸 @sɪɴɢʙᴏxxx ▪ US⁵"
+      - "🇺🇸 @sɪɴɢʙᴏxxx ▪ US⁶"
+      - "🇺🇸 @sɪɴɢʙᴏxxx ▪ US⁷"
+      - "🇺🇸 @sɪɴɢʙᴏxxx ▪ US⁸"
+      - "🇺🇸 @sɪɴɢʙᴏxxx ▪ US⁹"
+      - "🇺🇸 @sɪɴɢʙᴏxxx ▪ US¹⁰"
+
+  - name: "Iran Traffic"
+    type: select
+    proxies:
+      - "DIRECT"
+      - "PROXY"
+
+  - name: "Ad Block"
+    type: select
+    proxies:
+      - "REJECT"
+      - "DIRECT"
+
+# ------------------------------------------
+# Rule Providers
+# ------------------------------------------
+rule-providers:
+  iran_domains:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt"
+    path: "./rulesets/iran_domains.yaml"
+    interval: 86400
+  iran_ip:
+    type: http
+    behavior: ipcidr
+    url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/cncidr.txt"
+    path: "./rulesets/iran_ip.yaml"
+    interval: 86400
+  goolag_ads:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/reject.txt"
+    path: "./rulesets/reject.yaml"
+    interval: 86400
+
+# ------------------------------------------
+# Routing Rules
+# ------------------------------------------
+rules:
+  - "GEOIP,private,DIRECT,no-resolve"
+  - "RULE-SET,goolag_ads,Ad Block"
+  - "GEOSITE,category-ir,Iran Traffic"
+  - "GEOIP,IR,Iran Traffic"
+  - "RULE-SET,iran_domains,Iran Traffic"
+  - "RULE-SET,iran_ip,Iran Traffic"
+  - "MATCH,PROXY"
