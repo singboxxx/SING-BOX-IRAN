@@ -1,0 +1,188 @@
+# ==========================================
+# Clash Meta / Mihomo Masque Config
+# ==========================================
+
+port: 0
+socks-port: 0
+redir-port: 0
+tproxy-port: 0
+mixed-port: 7890
+allow-lan: false
+bind-address: "*"
+mode: "rule"
+log-level: "warning"
+ipv6: false
+unified-delay: true
+tcp-concurrent: true
+find-process-mode: "always"
+global-client-fingerprint: "chrome"
+global-ua: "FlClash/v0.8.97 clash-verge Platform/android"
+keep-alive-interval: 30
+
+# ------------------------------------------
+# TUN Configuration
+# ------------------------------------------
+tun:
+  enable: true
+  stack: "mixed"
+  dns-hijack:
+    - "any:53"
+  auto-route: true
+  auto-detect-interface: true
+
+# ------------------------------------------
+# Optimized DNS Configuration
+# ------------------------------------------
+dns:
+  enable: true
+  prefer-h3: false
+  ipv6: false
+  use-hosts: true
+  use-system-hosts: true
+  respect-rules: true
+  enhanced-mode: "fake-ip"
+  fake-ip-range: "198.18.0.1/16"
+  fake-ip-filter:
+    - "*.lan"
+    - "*.local"
+    - "*.ir"
+    - "stun.*.*.*"
+    - "stun.*.*"
+    - "time.*.com"
+    - "time.*.gov"
+    - "pool.ntp.org"
+    - "*.ntp.org"
+  default-nameserver:
+    - "1.1.1.1"
+    - "8.8.8.8"
+  proxy-server-nameserver:
+    - "1.1.1.1"
+    - "8.8.8.8"
+    - "https://1.1.1.1/dns-query"
+  nameserver:
+    - "https://1.1.1.1/dns-query"
+    - "https://8.8.8.8/dns-query"
+    - "tcp://1.1.1.1"
+    - "tcp://8.8.8.8"
+  direct-nameserver:
+    - "10.202.10.202"
+    - "10.202.10.102"
+    - "78.157.42.100"
+
+# ------------------------------------------
+# Proxies (3 Masque Servers)
+# ------------------------------------------
+proxies:
+  - name: "MASQUE H2 WARP 1"
+    type: masque
+    server: 162.159.199.7
+    port: 443
+    network: h2
+    sni: consumer-masque.cloudflareclient.com
+    private-key: MHcCAQEEIFIs8tCufSn+3Mn1umddpY1Ue9H4NaNERP7Cu901+wQmoAoGCCqGSM49AwEHoUQDQgAEflwU6OyEO9qVrrL93oEi7YJoNCvYb17p1TRLc48Y+/Z2XDnu1+2I8dCc8+BEP/6rZeLYvWiT7tXKNz/98em9iw==
+    public-key: MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==
+    ip: 172.16.0.2
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+
+  - name: "MASQUE H2 WARP 2"
+    type: masque
+    server: 162.159.198.80
+    port: 8095
+    network: h2
+    sni: consumer-masque.cloudflareclient.com
+    private-key: MHcCAQEEIFIs8tCufSn+3Mn1umddpY1Ue9H4NaNERP7Cu901+wQmoAoGCCqGSM49AwEHoUQDQgAEflwU6OyEO9qVrrL93oEi7YJoNCvYb17p1TRLc48Y+/Z2XDnu1+2I8dCc8+BEP/6rZeLYvWiT7tXKNz/98em9iw==
+    public-key: MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==
+    ip: 172.16.0.2
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+
+  - name: "MASQUE H2 WARP 3"
+    type: masque
+    server: 162.159.198.125
+    port: 8095
+    network: h2
+    sni: consumer-masque.cloudflareclient.com
+    private-key: MHcCAQEEIFIs8tCufSn+3Mn1umddpY1Ue9H4NaNERP7Cu901+wQmoAoGCCqGSM49AwEHoUQDQgAEflwU6OyEO9qVrrL93oEi7YJoNCvYb17p1TRLc48Y+/Z2XDnu1+2I8dCc8+BEP/6rZeLYvWiT7tXKNz/98em9iw==
+    public-key: MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==
+    ip: 172.16.0.2
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+
+# ------------------------------------------
+# Proxy Groups
+# ------------------------------------------
+proxy-groups:
+  - name: "PROXY"
+    type: select
+    proxies:
+      - "Auto Select"
+      - "Manual Select"
+      - "DIRECT"
+
+  - name: "Auto Select"
+    type: url-test
+    url: "http://www.gstatic.com/generate_204"
+    interval: 300
+    tolerance: 50
+    proxies:
+      - "MASQUE H2 WARP 1"
+      - "MASQUE H2 WARP 2"
+      - "MASQUE H2 WARP 3"
+
+  - name: "Manual Select"
+    type: select
+    proxies:
+      - "MASQUE H2 WARP 1"
+      - "MASQUE H2 WARP 2"
+      - "MASQUE H2 WARP 3"
+
+  - name: "Iran Traffic"
+    type: select
+    proxies:
+      - "DIRECT"
+      - "PROXY"
+
+  - name: "Ad Block"
+    type: select
+    proxies:
+      - "REJECT"
+      - "DIRECT"
+
+# ------------------------------------------
+# Rule Providers
+# ------------------------------------------
+rule-providers:
+  iran_domains:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt"
+    path: "./rulesets/iran_domains.yaml"
+    interval: 86400
+  iran_ip:
+    type: http
+    behavior: ipcidr
+    url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/cncidr.txt"
+    path: "./rulesets/iran_ip.yaml"
+    interval: 86400
+  goolag_ads:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/reject.txt"
+    path: "./rulesets/reject.yaml"
+    interval: 86400
+
+# ------------------------------------------
+# Routing Rules
+# ------------------------------------------
+rules:
+  - "GEOIP,private,DIRECT,no-resolve"
+  - "RULE-SET,goolag_ads,Ad Block"
+  - "GEOSITE,category-ir,Iran Traffic"
+  - "GEOIP,IR,Iran Traffic"
+  - "RULE-SET,iran_domains,Iran Traffic"
+  - "RULE-SET,iran_ip,Iran Traffic"
+  - "MATCH,PROXY"
