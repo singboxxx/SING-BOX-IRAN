@@ -16,7 +16,7 @@ unified-delay: true
 tcp-concurrent: true
 find-process-mode: "always"
 global-client-fingerprint: "chrome"
-global-ua: "FlClash/v0.8.95 clash-verge Platform/android"
+global-ua: "FlClash/v0.8.98 clash-verge Platform/android"
 keep-alive-interval: 30
 
 # ------------------------------------------
