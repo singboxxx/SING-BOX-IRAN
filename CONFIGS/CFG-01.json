@@ -26,9 +26,7 @@
     ],
     "rules": [
       {
-        "domain": [
-          "raw.githubusercontent.com"
-        ],
+        "domain": "raw.githubusercontent.com",
         "server": "dns-direct"
       },
       {
@@ -41,9 +39,7 @@
         "action": "reject"
       },
       {
-        "rule_set": [
-          "geosite-ir"
-        ],
+        "rule_set": "geosite-ir",
         "server": "dns-direct"
       },
       {
@@ -51,9 +47,7 @@
         "server": "dns-remote"
       },
       {
-        "inbound": [
-          "tun-in"
-        ],
+        "inbound": "tun-in",
         "query_type": [
           "A",
           "AAAA"
@@ -98,30 +92,54 @@
       "tag": "ᴛɢ➜@sɪɴɢʙᴏxxx",
       "outbounds": [
         "🚀 Auto Pilot",
-        "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE¹",
-        "🇬🇧 @sɪɴɢʙᴏxxx ▪ GB¹",
-        "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE²",
-        "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE³",
-        "🇬🇧 @sɪɴɢʙᴏxxx ▪ GB²",
-        "🇬🇧 @sɪɴɢʙᴏxxx ▪ GB³",
-        "🇬🇧 @sɪɴɢʙᴏxxx ▪ GB⁴",
-        "🇬🇧 @sɪɴɢʙᴏxxx ▪ GB⁵",
         "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL¹",
-        "🇫🇮 @sɪɴɢʙᴏxxx ▪ FI¹",
-        "🇦🇱 @sɪɴɢʙᴏxxx ▪ AL¹",
-        "🇨🇦 @sɪɴɢʙᴏxxx ▪ CA¹",
-        "🇨🇦 @sɪɴɢʙᴏxxx ▪ CA²",
-        "🇨🇦 @sɪɴɢʙᴏxxx ▪ CA³",
-        "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE⁴",
-        "🇬🇧 @sɪɴɢʙᴏxxx ▪ GB⁶",
-        "🇦🇺 @sɪɴɢʙᴏxxx ▪ AU¹",
+        "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL²",
+        "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL³",
+        "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL⁴",
+        "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL⁵",
+        "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL⁶",
+        "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL⁷",
+        "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL⁸",
+        "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL⁹",
+        "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL¹⁰",
+        "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL¹¹",
+        "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL¹²",
+        "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL¹³",
+        "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL¹⁴",
+        "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL¹⁵",
+        "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL¹⁶",
+        "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL¹⁷",
+        "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL¹⁸",
+        "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL¹⁹",
+        "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL²⁰",
+        "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL²¹",
+        "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL²²",
+        "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL²³",
+        "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL²⁴",
+        "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL²⁵",
+        "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL²⁶",
         "🇺🇸 @sɪɴɢʙᴏxxx ▪ US¹",
         "🇺🇸 @sɪɴɢʙᴏxxx ▪ US²",
         "🇺🇸 @sɪɴɢʙᴏxxx ▪ US³",
         "🇺🇸 @sɪɴɢʙᴏxxx ▪ US⁴",
         "🇺🇸 @sɪɴɢʙᴏxxx ▪ US⁵",
         "🇺🇸 @sɪɴɢʙᴏxxx ▪ US⁶",
+        "🇺🇸 @sɪɴɢʙᴏxxx ▪ US⁷",
+        "🇨🇦 @sɪɴɢʙᴏxxx ▪ CA¹",
+        "🇨🇦 @sɪɴɢʙᴏxxx ▪ CA²",
+        "🇨🇦 @sɪɴɢʙᴏxxx ▪ CA³",
+        "🇨🇦 @sɪɴɢʙᴏxxx ▪ CA⁴",
+        "🇨🇦 @sɪɴɢʙᴏxxx ▪ CA⁵",
+        "🇪🇸 @sɪɴɢʙᴏxxx ▪ ES¹",
+        "🇪🇸 @sɪɴɢʙᴏxxx ▪ ES²",
+        "🇵🇱 @sɪɴɢʙᴏxxx ▪ PL¹",
+        "🇵🇱 @sɪɴɢʙᴏxxx ▪ PL²",
         "🇷🇺 @sɪɴɢʙᴏxxx ▪ RU¹",
+        "🇯🇵 @sɪɴɢʙᴏxxx ▪ JP¹",
+        "🇯🇵 @sɪɴɢʙᴏxxx ▪ JP²",
+        "🇬🇧 @sɪɴɢʙᴏxxx ▪ GB¹",
+        "🇸🇮 @sɪɴɢʙᴏxxx ▪ SI¹",
+        "🇲🇷 @sɪɴɢʙᴏxxx ▪ MR¹",
         "direct"
       ]
     },
@@ -129,315 +147,524 @@
       "type": "urltest",
       "tag": "🚀 Auto Pilot",
       "outbounds": [
-        "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE¹",
-        "🇬🇧 @sɪɴɢʙᴏxxx ▪ GB¹",
-        "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE²",
-        "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE³",
-        "🇬🇧 @sɪɴɢʙᴏxxx ▪ GB²",
-        "🇬🇧 @sɪɴɢʙᴏxxx ▪ GB³",
-        "🇬🇧 @sɪɴɢʙᴏxxx ▪ GB⁴",
-        "🇬🇧 @sɪɴɢʙᴏxxx ▪ GB⁵",
         "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL¹",
-        "🇫🇮 @sɪɴɢʙᴏxxx ▪ FI¹",
-        "🇦🇱 @sɪɴɢʙᴏxxx ▪ AL¹",
-        "🇨🇦 @sɪɴɢʙᴏxxx ▪ CA¹",
-        "🇨🇦 @sɪɴɢʙᴏxxx ▪ CA²",
-        "🇨🇦 @sɪɴɢʙᴏxxx ▪ CA³",
-        "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE⁴",
-        "🇬🇧 @sɪɴɢʙᴏxxx ▪ GB⁶",
-        "🇦🇺 @sɪɴɢʙᴏxxx ▪ AU¹",
+        "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL²",
+        "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL³",
+        "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL⁴",
+        "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL⁵",
+        "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL⁶",
+        "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL⁷",
+        "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL⁸",
+        "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL⁹",
+        "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL¹⁰",
+        "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL¹¹",
+        "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL¹²",
+        "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL¹³",
+        "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL¹⁴",
+        "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL¹⁵",
+        "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL¹⁶",
+        "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL¹⁷",
+        "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL¹⁸",
+        "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL¹⁹",
+        "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL²⁰",
+        "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL²¹",
+        "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL²²",
+        "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL²³",
+        "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL²⁴",
+        "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL²⁵",
+        "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL²⁶",
         "🇺🇸 @sɪɴɢʙᴏxxx ▪ US¹",
         "🇺🇸 @sɪɴɢʙᴏxxx ▪ US²",
         "🇺🇸 @sɪɴɢʙᴏxxx ▪ US³",
         "🇺🇸 @sɪɴɢʙᴏxxx ▪ US⁴",
         "🇺🇸 @sɪɴɢʙᴏxxx ▪ US⁵",
         "🇺🇸 @sɪɴɢʙᴏxxx ▪ US⁶",
-        "🇷🇺 @sɪɴɢʙᴏxxx ▪ RU¹"
+        "🇺🇸 @sɪɴɢʙᴏxxx ▪ US⁷",
+        "🇨🇦 @sɪɴɢʙᴏxxx ▪ CA¹",
+        "🇨🇦 @sɪɴɢʙᴏxxx ▪ CA²",
+        "🇨🇦 @sɪɴɢʙᴏxxx ▪ CA³",
+        "🇨🇦 @sɪɴɢʙᴏxxx ▪ CA⁴",
+        "🇨🇦 @sɪɴɢʙᴏxxx ▪ CA⁵",
+        "🇪🇸 @sɪɴɢʙᴏxxx ▪ ES¹",
+        "🇪🇸 @sɪɴɢʙᴏxxx ▪ ES²",
+        "🇵🇱 @sɪɴɢʙᴏxxx ▪ PL¹",
+        "🇵🇱 @sɪɴɢʙᴏxxx ▪ PL²",
+        "🇷🇺 @sɪɴɢʙᴏxxx ▪ RU¹",
+        "🇯🇵 @sɪɴɢʙᴏxxx ▪ JP¹",
+        "🇯🇵 @sɪɴɢʙᴏxxx ▪ JP²",
+        "🇬🇧 @sɪɴɢʙᴏxxx ▪ GB¹",
+        "🇸🇮 @sɪɴɢʙᴏxxx ▪ SI¹",
+        "🇲🇷 @sɪɴɢʙᴏxxx ▪ MR¹"
       ],
       "url": "https://www.gstatic.com/generate_204",
       "interval": "30s",
       "tolerance": 50,
-      "idle_timeout": "20m"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE¹",
-      "server": "62.113.194.157",
-      "server_port": 1080,
-      "method": "chacha20-ietf-poly1305",
-      "password": "hUR6YrX-CaAL1C-t5HcdVg"
+      "idle_timeout": "20m0s"
     },
     {
       "type": "vless",
-      "tag": "🇬🇧 @sɪɴɢʙᴏxxx ▪ GB¹",
-      "server": "45.95.184.120",
-      "server_port": 2087,
-      "uuid": "4a269a45-a9e3-4272-b04a-1d42d581150f",
-      "transport": {
-        "type": "ws",
-        "path": "/4de527ea5ed9"
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE²",
-      "server": "82.24.203.48",
-      "server_port": 2092,
-      "uuid": "d6e9c318-237d-431f-9cb6-48220d1bce83",
-      "transport": {
-        "type": "http",
-        "path": "/cbf6b669af74730980afc712"
-      }
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE³",
-      "server": "62.113.194.159",
-      "server_port": 1080,
-      "method": "chacha20-ietf-poly1305",
-      "password": "hUR6YrX-CaAL1C-t5HcdVg"
-    },
-    {
-      "type": "vless",
-      "tag": "🇬🇧 @sɪɴɢʙᴏxxx ▪ GB²",
-      "server": "147.189.141.106",
-      "server_port": 2087,
-      "uuid": "4a269a45-a9e3-4272-b04a-1d42d581150f",
-      "transport": {
-        "type": "ws",
-        "path": "/4de527ea5ed9"
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇬🇧 @sɪɴɢʙᴏxxx ▪ GB³",
-      "server": "147.189.141.114",
-      "server_port": 2087,
-      "uuid": "4a269a45-a9e3-4272-b04a-1d42d581150f",
-      "transport": {
-        "type": "ws",
-        "path": "/4de527ea5ed9"
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇬🇧 @sɪɴɢʙᴏxxx ▪ GB⁴",
-      "server": "147.189.141.104",
-      "server_port": 2087,
-      "uuid": "4a269a45-a9e3-4272-b04a-1d42d581150f",
-      "transport": {
-        "type": "ws",
-        "path": "/4de527ea5ed9"
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇬🇧 @sɪɴɢʙᴏxxx ▪ GB⁵",
-      "server": "45.95.184.90",
-      "server_port": 2087,
-      "uuid": "4a269a45-a9e3-4272-b04a-1d42d581150f",
-      "transport": {
-        "type": "ws",
-        "path": "/4de527ea5ed9"
-      }
-    },
-    {
-      "type": "shadowsocks",
       "tag": "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL¹",
-      "server": "190.2.147.119",
-      "server_port": 1080,
-      "method": "chacha20-ietf-poly1305",
-      "password": "hUR6YrX-CaAL1C-t5HcdVg"
+      "server": "212.46.33.90",
+      "server_port": 443,
+      "uuid": "71091100-c6ed-41fa-84ac-acf7ff9eeb7f",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "slowkd.sadiepinki.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "z37XIezsPyfMgmdXyFd9qT4C4maDAs1OcRt-wfyrXVo",
+          "short_id": "9c2378562188c3cb"
+        }
+      }
     },
     {
       "type": "shadowsocks",
-      "tag": "🇫🇮 @sɪɴɢʙᴏxxx ▪ FI¹",
-      "server": "185.117.119.8",
-      "server_port": 1080,
-      "method": "chacha20-ietf-poly1305",
-      "password": "hUR6YrX-CaAL1C-t5HcdVg"
+      "tag": "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL²",
+      "server": "158.173.20.208",
+      "server_port": 443,
+      "method": "aes-128-gcm",
+      "password": "shadowsocks"
+    },
+    {
+      "type": "vless",
+      "tag": "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL³",
+      "server": "78.40.195.140",
+      "server_port": 443,
+      "uuid": "eec2f6a7-c10f-43b0-b133-61f9bf9bbc27",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.booking.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "Rp0WaupRP9LtJ-dd4vjKwuvSzqo_ZqIZPZWDEbSoIAo",
+          "short_id": "98096455d963bdbb"
+        }
+      }
     },
     {
       "type": "shadowsocks",
-      "tag": "🇦🇱 @sɪɴɢʙᴏxxx ▪ AL¹",
-      "server": "31.171.152.222",
-      "server_port": 1080,
+      "tag": "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL⁴",
+      "server": "82.38.31.181",
+      "server_port": 8080,
       "method": "chacha20-ietf-poly1305",
-      "password": "hUR6YrX-CaAL1C-t5HcdVg"
+      "password": "k1dBOmOB4oqi7Ump37a1bQ"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL⁵",
+      "server": "82.38.31.176",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "k1dBOmOB4oqi7Ump37a1bQ"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL⁶",
+      "server": "82.38.31.204",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "k1dBOmOB4oqi7Ump37a1bQ"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL⁷",
+      "server": "82.38.31.183",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "k1dBOmOB4oqi7Ump37a1bQ"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL⁸",
+      "server": "82.38.31.195",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "k1dBOmOB4oqi7Ump37a1bQ"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL⁹",
+      "server": "82.38.31.218",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "k1dBOmOB4oqi7Ump37a1bQ"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL¹⁰",
+      "server": "82.38.31.192",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "k1dBOmOB4oqi7Ump37a1bQ"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL¹¹",
+      "server": "82.38.31.207",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "k1dBOmOB4oqi7Ump37a1bQ"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL¹²",
+      "server": "82.38.31.203",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "k1dBOmOB4oqi7Ump37a1bQ"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL¹³",
+      "server": "82.38.31.190",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "k1dBOmOB4oqi7Ump37a1bQ"
+    },
+    {
+      "type": "vless",
+      "tag": "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL¹⁴",
+      "server": "130.78.191.25",
+      "server_port": 443,
+      "uuid": "11f21602-47aa-42e2-9149-69120f2e6df6",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "nl07.shifor01.life",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "0FwNJ9HYJgVj5566tb0zwjGTPLb-42i-mlXnceB9-Tc",
+          "short_id": "3ac25eef1431b799"
+        }
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL¹⁵",
+      "server": "82.38.31.215",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "k1dBOmOB4oqi7Ump37a1bQ"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL¹⁶",
+      "server": "82.38.31.213",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "k1dBOmOB4oqi7Ump37a1bQ"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL¹⁷",
+      "server": "82.38.31.184",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "k1dBOmOB4oqi7Ump37a1bQ"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL¹⁸",
+      "server": "82.38.31.214",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "k1dBOmOB4oqi7Ump37a1bQ"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL¹⁹",
+      "server": "82.38.31.210",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "k1dBOmOB4oqi7Ump37a1bQ"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL²⁰",
+      "server": "82.38.31.199",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "k1dBOmOB4oqi7Ump37a1bQ"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL²¹",
+      "server": "82.38.31.201",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "k1dBOmOB4oqi7Ump37a1bQ"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL²²",
+      "server": "82.38.31.219",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "k1dBOmOB4oqi7Ump37a1bQ"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL²³",
+      "server": "82.38.31.200",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "k1dBOmOB4oqi7Ump37a1bQ"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL²⁴",
+      "server": "82.38.31.180",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "k1dBOmOB4oqi7Ump37a1bQ"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL²⁵",
+      "server": "82.38.31.208",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "k1dBOmOB4oqi7Ump37a1bQ"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇱 @sɪɴɢʙᴏxxx ▪ NL²⁶",
+      "server": "82.38.31.206",
+      "server_port": 8080,
+      "method": "chacha20-ietf-poly1305",
+      "password": "k1dBOmOB4oqi7Ump37a1bQ"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇺🇸 @sɪɴɢʙᴏxxx ▪ US¹",
+      "server": "140.82.63.79",
+      "server_port": 8388,
+      "method": "chacha20-ietf-poly1305",
+      "password": "ZoZtfPOyVvmKARUN"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇺🇸 @sɪɴɢʙᴏxxx ▪ US²",
+      "server": "23.150.248.20",
+      "server_port": 8388,
+      "method": "chacha20-ietf-poly1305",
+      "password": "qB2Cv9VIlujj"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇺🇸 @sɪɴɢʙᴏxxx ▪ US³",
+      "server": "15.204.247.206",
+      "server_port": 4444,
+      "method": "aes-256-gcm",
+      "password": "pKEW8JPByTVTLtM"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇺🇸 @sɪɴɢʙᴏxxx ▪ US⁴",
+      "server": "15.204.247.175",
+      "server_port": 8008,
+      "method": "aes-256-gcm",
+      "password": "XKFKl2rULjIp74"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇺🇸 @sɪɴɢʙᴏxxx ▪ US⁵",
+      "server": "15.204.247.244",
+      "server_port": 4444,
+      "method": "aes-256-gcm",
+      "password": "pKEW8JPByTVTLtM"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇺🇸 @sɪɴɢʙᴏxxx ▪ US⁶",
+      "server": "15.204.246.107",
+      "server_port": 8888,
+      "method": "aes-256-gcm",
+      "password": "Y6R9pAtvxxzmGC"
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 @sɪɴɢʙᴏxxx ▪ US⁷",
+      "server": "144.31.62.224",
+      "server_port": 443,
+      "uuid": "58783e94-cff6-4b74-a80c-2d8828d44cc5",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "deepl.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "3J5mYA5NziIVJi77fRsx9dZPYWzLkvaIz-cCdZQvhn8",
+          "short_id": "1a2b1a2b1a2b"
+        }
+      }
     },
     {
       "type": "shadowsocks",
       "tag": "🇨🇦 @sɪɴɢʙᴏxxx ▪ CA¹",
-      "server": "68.168.114.238",
-      "server_port": 1080,
+      "server": "15.235.75.71",
+      "server_port": 8388,
       "method": "chacha20-ietf-poly1305",
-      "password": "hUR6YrX-CaAL1C-t5HcdVg"
+      "password": "FD3rCuOsxOay"
     },
     {
       "type": "shadowsocks",
       "tag": "🇨🇦 @sɪɴɢʙᴏxxx ▪ CA²",
-      "server": "68.168.114.226",
+      "server": "51.222.200.165",
+      "server_port": 5000,
+      "method": "aes-256-gcm",
+      "password": "Y6R9pAtvxxzmGC"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇨🇦 @sɪɴɢʙᴏxxx ▪ CA³",
+      "server": "94.249.187.46",
       "server_port": 1080,
       "method": "chacha20-ietf-poly1305",
-      "password": "hUR6YrX-CaAL1C-t5HcdVg"
+      "password": "IXa3ylzS_jBOAsQy071tIQ"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇨🇦 @sɪɴɢʙᴏxxx ▪ CA⁴",
+      "server": "51.79.64.198",
+      "server_port": 8119,
+      "method": "aes-256-gcm",
+      "password": "cdBIDV42DCwnfIN"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇨🇦 @sɪɴɢʙᴏxxx ▪ CA⁵",
+      "server": "132.243.175.144",
+      "server_port": 8388,
+      "method": "chacha20-ietf-poly1305",
+      "password": "e8KgS8fD0yDqYFpgN4G5piCOt9aFyqA3"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇪🇸 @sɪɴɢʙᴏxxx ▪ ES¹",
+      "server": "140.174.184.5",
+      "server_port": 8388,
+      "method": "chacha20-ietf-poly1305",
+      "password": "qItG8SueYQcP"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇪🇸 @sɪɴɢʙᴏxxx ▪ ES²",
+      "server": "108.181.121.226",
+      "server_port": 8388,
+      "method": "chacha20-ietf-poly1305",
+      "password": "WSyL4XTwNsdv"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇵🇱 @sɪɴɢʙᴏxxx ▪ PL¹",
+      "server": "54.36.174.134",
+      "server_port": 443,
+      "method": "chacha20-ietf-poly1305",
+      "password": "mrs2e9a"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇵🇱 @sɪɴɢʙᴏxxx ▪ PL²",
+      "server": "54.36.174.140",
+      "server_port": 443,
+      "method": "chacha20-ietf-poly1305",
+      "password": "mrs2e9a"
     },
     {
       "type": "vless",
-      "tag": "🇨🇦 @sɪɴɢʙᴏxxx ▪ CA³",
-      "server": "130.94.115.231",
-      "server_port": 2087,
-      "uuid": "8a51f3d9-30cc-44e6-8d31-700211a29066",
-      "transport": {
-        "type": "ws",
-        "path": "/721740e567c7"
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇩🇪 @sɪɴɢʙᴏxxx ▪ DE⁴",
-      "server": "82.24.203.196",
-      "server_port": 2092,
-      "uuid": "d6e9c318-237d-431f-9cb6-48220d1bce83",
-      "transport": {
-        "type": "http",
-        "path": "/cbf6b669af74730980afc712"
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇬🇧 @sɪɴɢʙᴏxxx ▪ GB⁶",
-      "server": "185.126.238.151",
-      "server_port": 2083,
-      "uuid": "e7acc096-9419-4619-9756-a42778784ff4",
+      "tag": "🇷🇺 @sɪɴɢʙᴏxxx ▪ RU¹",
+      "server": "85.208.86.91",
+      "server_port": 9872,
+      "uuid": "5d16ac22-6eea-426f-b778-6f4c2961faef",
+      "tls": {
+        "enabled": true,
+        "server_name": "dl.google.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "sm3E3hjmT6_Gmg_O9rBz4nfXYrHpnl6-LvcCp6T6_xc",
+          "short_id": "aa"
+        }
+      },
       "transport": {
         "type": "grpc",
-        "service_name": "ollama.com"
+        "service_name": "grpc-tunnel"
       }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇯🇵 @sɪɴɢʙᴏxxx ▪ JP¹",
+      "server": "84.247.155.196",
+      "server_port": 80,
+      "method": "aes-256-gcm",
+      "password": "3eOFeNssde7PYYMv"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇯🇵 @sɪɴɢʙᴏxxx ▪ JP²",
+      "server": "84.247.155.196",
+      "server_port": 443,
+      "method": "aes-256-gcm",
+      "password": "3eOFeNssde7PYYMv"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇬🇧 @sɪɴɢʙᴏxxx ▪ GB¹",
+      "server": "51.77.225.200",
+      "server_port": 8388,
+      "method": "chacha20-ietf-poly1305",
+      "password": "zRZNBszYyWo5"
     },
     {
       "type": "vless",
-      "tag": "🇦🇺 @sɪɴɢʙᴏxxx ▪ AU¹",
-      "server": "103.75.119.126",
-      "server_port": 2087,
-      "uuid": "731f177e-00aa-480c-b935-661456139a32",
-      "transport": {
-        "type": "ws",
-        "path": "/7586c69d3dc9"
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇺🇸 @sɪɴɢʙᴏxxx ▪ US¹",
-      "server": "147.189.129.155",
-      "server_port": 2087,
-      "uuid": "090a3fa8-973f-4812-9b69-ed982082a933",
-      "transport": {
-        "type": "ws",
-        "path": "/4ad49ed0a3d5"
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇺🇸 @sɪɴɢʙᴏxxx ▪ US²",
-      "server": "147.189.129.144",
-      "server_port": 2087,
-      "uuid": "090a3fa8-973f-4812-9b69-ed982082a933",
-      "transport": {
-        "type": "ws",
-        "path": "/4ad49ed0a3d5"
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "🇺🇸 @sɪɴɢʙᴏxxx ▪ US³",
-      "server": "151.101.56.7",
+      "tag": "🇸🇮 @sɪɴɢʙᴏxxx ▪ SI¹",
+      "server": "5.157.10.250",
       "server_port": 443,
-      "password": "MiTiVPN",
+      "uuid": "f495298f-2bdb-4fd8-9ac9-5dd33d1b482a",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "ssl.fastly.com",
-        "insecure": false
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/D-e2@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN",
-        "headers": {
-          "Host": "mitivpn-mitivpn-mitivpn---mitivpn--mitivpn.global.ssl.fastly.net"
+        "server_name": "swebz.loozerp.wiki",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "pgG2grngQEtOFJImLfz0AEm-O2IodM2jCY4aMCYQI1U",
+          "short_id": "6aa2d2e950441a9a"
         }
       }
     },
     {
-      "type": "trojan",
-      "tag": "🇺🇸 @sɪɴɢʙᴏxxx ▪ US⁴",
-      "server": "199.232.78.160",
-      "server_port": 443,
-      "password": "MiTiVPN",
-      "tls": {
-        "enabled": true,
-        "server_name": "ssl.fastly.com",
-        "insecure": false
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/NLSs---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN",
-        "headers": {
-          "Host": "mitivpn-mitivpn-mitivpn---mitivpn--mitivpn.global.ssl.fastly.net"
-        }
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "🇺🇸 @sɪɴɢʙᴏxxx ▪ US⁵",
-      "server": "199.232.78.160",
-      "server_port": 443,
-      "password": "MiTiVPN",
-      "tls": {
-        "enabled": true,
-        "server_name": "ssl.fastly.com",
-        "insecure": false
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/---TOOTFFARANGI---TOOTFFARANGI---TOOTFFARANGI---TOOTFFARANGI---TOOTFFARANGI---TOOTFFARANGI---TOOTFFARANGI",
-        "headers": {
-          "Host": "mitivpn-mitivpn-mitivpn---mitivpn--mitivpn.global.ssl.fastly.net"
-        }
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "🇺🇸 @sɪɴɢʙᴏxxx ▪ US⁶",
-      "server": "199.232.78.160",
-      "server_port": 443,
-      "password": "MiTiVPN",
-      "tls": {
-        "enabled": true,
-        "server_name": "ssl.fastly.com",
-        "insecure": false
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/---kasibam1---kasibam1---kasibam1---kasibam1---kasibam1---kasibam1",
-        "headers": {
-          "Host": "mitivpn-mitivpn-mitivpn---mitivpn--mitivpn.global.ssl.fastly.net"
-        }
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇷🇺 @sɪɴɢʙᴏxxx ▪ RU¹",
-      "server": "144.31.49.138",
-      "server_port": 443,
-      "password": "cd74c0a406664a5bc0bac098220a2468",
-      "tls": {
-        "enabled": true,
-        "server_name": "ru1.sferavpn.pro",
-        "insecure": false
-      },
-      "obfs": {
-        "type": "salamander",
-        "password": "44f1c1e2f8b99e792ceed574627a1eb0"
-      }
+      "type": "shadowsocks",
+      "tag": "🇲🇷 @sɪɴɢʙᴏxxx ▪ MR¹",
+      "server": "51.255.13.232",
+      "server_port": 8388,
+      "method": "chacha20-ietf-poly1305",
+      "password": "BqnqToih0PbU"
     },
     {
       "type": "direct",
@@ -450,9 +677,7 @@
         "action": "sniff"
       },
       {
-        "protocol": [
-          "dns"
-        ],
+        "protocol": "dns",
         "action": "hijack-dns"
       },
       {
@@ -460,9 +685,7 @@
         "outbound": "ᴛɢ➜@sɪɴɢʙᴏxxx"
       },
       {
-        "network": [
-          "udp"
-        ],
+        "network": "udp",
         "port": [
           80,
           443
