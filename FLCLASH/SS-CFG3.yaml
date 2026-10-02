@@ -1,0 +1,543 @@
+# ==========================================
+# Clash Meta / Mihomo Shadowsocks Config
+# ==========================================
+
+port: 0
+socks-port: 0
+redir-port: 0
+tproxy-port: 0
+mixed-port: 7890
+allow-lan: false
+bind-address: "*"
+mode: "rule"
+log-level: "warning"
+ipv6: false
+unified-delay: true
+tcp-concurrent: true
+find-process-mode: "always"
+global-client-fingerprint: "chrome"
+global-ua: "FlClash/v0.8.98 clash-verge Platform/android"
+keep-alive-interval: 30
+
+# ------------------------------------------
+# TUN Configuration
+# ------------------------------------------
+tun:
+  enable: true
+  stack: "mixed"
+  dns-hijack:
+    - "any:53"
+  auto-route: true
+  auto-detect-interface: true
+
+# ------------------------------------------
+# Optimized DNS Configuration
+# ------------------------------------------
+dns:
+  enable: true
+  prefer-h3: false
+  ipv6: false
+  use-hosts: true
+  use-system-hosts: true
+  respect-rules: true
+  enhanced-mode: "fake-ip"
+  fake-ip-range: "198.18.0.1/16"
+  fake-ip-filter:
+    - "*.lan"
+    - "*.local"
+    - "*.ir"
+    - "stun.*.*.*"
+    - "stun.*.*"
+    - "time.*.com"
+    - "time.*.gov"
+    - "pool.ntp.org"
+    - "*.ntp.org"
+  default-nameserver:
+    - "1.1.1.1"
+    - "8.8.8.8"
+  proxy-server-nameserver:
+    - "1.1.1.1"
+    - "8.8.8.8"
+    - "https://1.1.1.1/dns-query"
+  nameserver:
+    - "https://1.1.1.1/dns-query"
+    - "https://8.8.8.8/dns-query"
+    - "tcp://1.1.1.1"
+    - "tcp://8.8.8.8"
+  direct-nameserver:
+    - "10.202.10.202"
+    - "10.202.10.102"
+    - "78.157.42.100"
+
+# ------------------------------------------
+# Proxies
+# ------------------------------------------
+proxies:
+  - name: "BE¹ 🇧🇪 @sɪɴɢʙᴏxxx"
+    type: "ss"
+    server: "185.210.217.94"
+    port: 1080
+    cipher: "chacha20-ietf-poly1305"
+    password: "_5ERBiKrvQX5bjU20lbi3g"
+    udp: true
+
+  - name: "BG¹ 🇧🇬 @sɪɴɢʙᴏxxx"
+    type: "ss"
+    server: "146.70.53.62"
+    port: 1080
+    cipher: "chacha20-ietf-poly1305"
+    password: "_5ERBiKrvQX5bjU20lbi3g"
+    udp: true
+
+  - name: "CA¹ 🇨🇦 @sɪɴɢʙᴏxxx"
+    type: "ss"
+    server: "72.10.173.91"
+    port: 1080
+    cipher: "chacha20-ietf-poly1305"
+    password: "_5ERBiKrvQX5bjU20lbi3g"
+    udp: true
+
+  - name: "CA² 🇨🇦 @sɪɴɢʙᴏxxx"
+    type: "ss"
+    server: "217.138.213.38"
+    port: 1080
+    cipher: "chacha20-ietf-poly1305"
+    password: "_5ERBiKrvQX5bjU20lbi3g"
+    udp: true
+
+  - name: "CA³ 🇨🇦 @sɪɴɢʙᴏxxx"
+    type: "ss"
+    server: "68.168.116.6"
+    port: 1080
+    cipher: "chacha20-ietf-poly1305"
+    password: "_5ERBiKrvQX5bjU20lbi3g"
+    udp: true
+
+  - name: "CA⁴ 🇨🇦 @sɪɴɢʙᴏxxx"
+    type: "ss"
+    server: "184.75.221.134"
+    port: 1080
+    cipher: "chacha20-ietf-poly1305"
+    password: "_5ERBiKrvQX5bjU20lbi3g"
+    udp: true
+
+  - name: "CA⁵ 🇨🇦 @sɪɴɢʙᴏxxx"
+    type: "ss"
+    server: "38.113.188.118"
+    port: 1080
+    cipher: "chacha20-ietf-poly1305"
+    password: "_5ERBiKrvQX5bjU20lbi3g"
+    udp: true
+
+  - name: "CA⁶ 🇨🇦 @sɪɴɢʙᴏxxx"
+    type: "ss"
+    server: "51.222.200.165"
+    port: 5000
+    cipher: "aes-256-gcm"
+    password: "Y6R9pAtvxxzmGC"
+    udp: true
+
+  - name: "CH¹ 🇨🇭 @sɪɴɢʙᴏxxx"
+    type: "ss"
+    server: "185.212.170.58"
+    port: 1080
+    cipher: "chacha20-ietf-poly1305"
+    password: "_5ERBiKrvQX5bjU20lbi3g"
+    udp: true
+
+  - name: "CH² 🇨🇭 @sɪɴɢʙᴏxxx"
+    type: "ss"
+    server: "146.70.26.156"
+    port: 1080
+    cipher: "chacha20-ietf-poly1305"
+    password: "_5ERBiKrvQX5bjU20lbi3g"
+    udp: true
+
+  - name: "CZ¹ 🇨🇿 @sɪɴɢʙᴏxxx"
+    type: "ss"
+    server: "146.70.222.126"
+    port: 1080
+    cipher: "chacha20-ietf-poly1305"
+    password: "_5ERBiKrvQX5bjU20lbi3g"
+    udp: true
+
+  - name: "CZ² 🇨🇿 @sɪɴɢʙᴏxxx"
+    type: "ss"
+    server: "185.156.174.106"
+    port: 1080
+    cipher: "chacha20-ietf-poly1305"
+    password: "_5ERBiKrvQX5bjU20lbi3g"
+    udp: true
+
+  - name: "DE¹ 🇩🇪 @sɪɴɢʙᴏxxx"
+    type: "ss"
+    server: "212.83.51.81"
+    port: 1080
+    cipher: "chacha20-ietf-poly1305"
+    password: "_5ERBiKrvQX5bjU20lbi3g"
+    udp: true
+
+  - name: "DE² 🇩🇪 @sɪɴɢʙᴏxxx"
+    type: "ss"
+    server: "31.76.11.83"
+    port: 11750
+    cipher: "chacha20-ietf-poly1305"
+    password: "iku/Gfrt9YeEUUleXr2Ptf3uvs0hszCR0JHPqGSjs+c="
+    udp: true
+
+  - name: "DK¹ 🇩🇰 @sɪɴɢʙᴏxxx"
+    type: "ss"
+    server: "37.120.131.62"
+    port: 1080
+    cipher: "chacha20-ietf-poly1305"
+    password: "_5ERBiKrvQX5bjU20lbi3g"
+    udp: true
+
+  - name: "DK² 🇩🇰 @sɪɴɢʙᴏxxx"
+    type: "ss"
+    server: "135.136.33.134"
+    port: 1080
+    cipher: "chacha20-ietf-poly1305"
+    password: "_5ERBiKrvQX5bjU20lbi3g"
+    udp: true
+
+  - name: "EE¹ 🇪🇪 @sɪɴɢʙᴏxxx"
+    type: "ss"
+    server: "77.83.198.104"
+    port: 1080
+    cipher: "chacha20-ietf-poly1305"
+    password: "_5ERBiKrvQX5bjU20lbi3g"
+    udp: true
+
+  - name: "ES¹ 🇪🇸 @sɪɴɢʙᴏxxx"
+    type: "ss"
+    server: "146.70.128.108"
+    port: 1080
+    cipher: "chacha20-ietf-poly1305"
+    password: "_5ERBiKrvQX5bjU20lbi3g"
+    udp: true
+
+  - name: "FI¹ 🇫🇮 @sɪɴɢʙᴏxxx"
+    type: "ss"
+    server: "185.117.119.8"
+    port: 1080
+    cipher: "chacha20-ietf-poly1305"
+    password: "_5ERBiKrvQX5bjU20lbi3g"
+    udp: true
+
+  - name: "FR¹ 🇫🇷 @sɪɴɢʙᴏxxx"
+    type: "ss"
+    server: "217.138.207.106"
+    port: 1080
+    cipher: "chacha20-ietf-poly1305"
+    password: "_5ERBiKrvQX5bjU20lbi3g"
+    udp: true
+
+  - name: "GB¹ 🇬🇧 @sɪɴɢʙᴏxxx"
+    type: "ss"
+    server: "51.38.71.51"
+    port: 2083
+    cipher: "2022-blake3-aes-256-gcm"
+    password: "cOiC+3JhAXMwdGV5exnrMSorJU0Rl5qlLCbCAuDlWY4=:2tFqykGqZ101XW11f6iRiERnPycFAjjYq0y2zUYhKho="
+    udp: true
+
+  - name: "GB² 🇬🇧 @sɪɴɢʙᴏxxx"
+    type: "ss"
+    server: "89.249.74.188"
+    port: 1080
+    cipher: "chacha20-ietf-poly1305"
+    password: "_5ERBiKrvQX5bjU20lbi3g"
+    udp: true
+
+  - name: "HU¹ 🇭🇺 @sɪɴɢʙᴏxxx"
+    type: "ss"
+    server: "146.70.203.254"
+    port: 1080
+    cipher: "chacha20-ietf-poly1305"
+    password: "_5ERBiKrvQX5bjU20lbi3g"
+    udp: true
+
+  - name: "IE¹ 🇮🇪 @sɪɴɢʙᴏxxx"
+    type: "ss"
+    server: "84.247.48.78"
+    port: 1080
+    cipher: "chacha20-ietf-poly1305"
+    password: "_5ERBiKrvQX5bjU20lbi3g"
+    udp: true
+
+  - name: "IL¹ 🇮🇱 @sɪɴɢʙᴏxxx"
+    type: "ss"
+    server: "185.185.134.70"
+    port: 1080
+    cipher: "chacha20-ietf-poly1305"
+    password: "_5ERBiKrvQX5bjU20lbi3g"
+    udp: true
+
+  - name: "IT¹ 🇮🇹 @sɪɴɢʙᴏxxx"
+    type: "ss"
+    server: "91.193.5.112"
+    port: 1080
+    cipher: "chacha20-ietf-poly1305"
+    password: "_5ERBiKrvQX5bjU20lbi3g"
+    udp: true
+
+  - name: "LV¹ 🇱🇻 @sɪɴɢʙᴏxxx"
+    type: "ss"
+    server: "195.123.209.159"
+    port: 1080
+    cipher: "chacha20-ietf-poly1305"
+    password: "_5ERBiKrvQX5bjU20lbi3g"
+    udp: true
+
+  - name: "NL¹ 🇳🇱 @sɪɴɢʙᴏxxx"
+    type: "ss"
+    server: "82.38.31.206"
+    port: 8080
+    cipher: "chacha20-ietf-poly1305"
+    password: "k1dBOmOB4oqi7Ump37a1bQ"
+    udp: true
+
+  - name: "NL² 🇳🇱 @sɪɴɢʙᴏxxx"
+    type: "ss"
+    server: "217.23.13.210"
+    port: 1080
+    cipher: "chacha20-ietf-poly1305"
+    password: "_5ERBiKrvQX5bjU20lbi3g"
+    udp: true
+
+  - name: "NO¹ 🇳🇴 @sɪɴɢʙᴏxxx"
+    type: "ss"
+    server: "185.253.97.206"
+    port: 1080
+    cipher: "chacha20-ietf-poly1305"
+    password: "_5ERBiKrvQX5bjU20lbi3g"
+    udp: true
+
+  - name: "RO¹ 🇷🇴 @sɪɴɢʙᴏxxx"
+    type: "ss"
+    server: "146.70.254.238"
+    port: 1080
+    cipher: "chacha20-ietf-poly1305"
+    password: "_5ERBiKrvQX5bjU20lbi3g"
+    udp: true
+
+  - name: "RS¹ 🇷🇸 @sɪɴɢʙᴏxxx"
+    type: "ss"
+    server: "146.70.221.238"
+    port: 1080
+    cipher: "chacha20-ietf-poly1305"
+    password: "_5ERBiKrvQX5bjU20lbi3g"
+    udp: true
+
+  - name: "UA¹ 🇺🇦 @sɪɴɢʙᴏxxx"
+    type: "ss"
+    server: "194.54.80.37"
+    port: 1080
+    cipher: "chacha20-ietf-poly1305"
+    password: "_5ERBiKrvQX5bjU20lbi3g"
+    udp: true
+
+  - name: "US¹ 🇺🇸 @sɪɴɢʙᴏxxx"
+    type: "ss"
+    server: "37.120.139.234"
+    port: 1080
+    cipher: "chacha20-ietf-poly1305"
+    password: "_5ERBiKrvQX5bjU20lbi3g"
+    udp: true
+
+  - name: "US² 🇺🇸 @sɪɴɢʙᴏxxx"
+    type: "ss"
+    server: "185.247.68.94"
+    port: 1080
+    cipher: "chacha20-ietf-poly1305"
+    password: "_5ERBiKrvQX5bjU20lbi3g"
+    udp: true
+
+  - name: "US³ 🇺🇸 @sɪɴɢʙᴏxxx"
+    type: "ss"
+    server: "185.232.22.18"
+    port: 1080
+    cipher: "chacha20-ietf-poly1305"
+    password: "_5ERBiKrvQX5bjU20lbi3g"
+    udp: true
+
+  - name: "US⁴ 🇺🇸 @sɪɴɢʙᴏxxx"
+    type: "ss"
+    server: "146.70.34.226"
+    port: 1080
+    cipher: "chacha20-ietf-poly1305"
+    password: "_5ERBiKrvQX5bjU20lbi3g"
+    udp: true
+
+  - name: "US⁵ 🇺🇸 @sɪɴɢʙᴏxxx"
+    type: "ss"
+    server: "194.124.229.135"
+    port: 1080
+    cipher: "chacha20-ietf-poly1305"
+    password: "_5ERBiKrvQX5bjU20lbi3g"
+    udp: true
+
+  - name: "US⁶ 🇺🇸 @sɪɴɢʙᴏxxx"
+    type: "ss"
+    server: "193.42.38.209"
+    port: 1080
+    cipher: "chacha20-ietf-poly1305"
+    password: "_5ERBiKrvQX5bjU20lbi3g"
+    udp: true
+
+  - name: "ZA¹ 🇿🇦 @sɪɴɢʙᴏxxx"
+    type: "ss"
+    server: "102.133.165.160"
+    port: 16233
+    cipher: "chacha20-ietf-poly1305"
+    password: "Xsy8Ox4yOV3xLlpxtjzs3X"
+    udp: true
+
+# ------------------------------------------
+# Proxy Groups
+# ------------------------------------------
+proxy-groups:
+  - name: "PROXY"
+    type: select
+    proxies:
+      - "Auto Select"
+      - "Manual Select"
+      - "DIRECT"
+
+  - name: "Auto Select"
+    type: url-test
+    url: "http://www.gstatic.com/generate_204"
+    interval: 300
+    tolerance: 50
+    proxies:
+      - "BE¹ 🇧🇪 @sɪɴɢʙᴏxxx"
+      - "BG¹ 🇧🇬 @sɪɴɢʙᴏxxx"
+      - "CA¹ 🇨🇦 @sɪɴɢʙᴏxxx"
+      - "CA² 🇨🇦 @sɪɴɢʙᴏxxx"
+      - "CA³ 🇨🇦 @sɪɴɢʙᴏxxx"
+      - "CA⁴ 🇨🇦 @sɪɴɢʙᴏxxx"
+      - "CA⁵ 🇨🇦 @sɪɴɢʙᴏxxx"
+      - "CA⁶ 🇨🇦 @sɪɴɢʙᴏxxx"
+      - "CH¹ 🇨🇭 @sɪɴɢʙᴏxxx"
+      - "CH² 🇨🇭 @sɪɴɢʙᴏxxx"
+      - "CZ¹ 🇨🇿 @sɪɴɢʙᴏxxx"
+      - "CZ² 🇨🇿 @sɪɴɢʙᴏxxx"
+      - "DE¹ 🇩🇪 @sɪɴɢʙᴏxxx"
+      - "DE² 🇩🇪 @sɪɴɢʙᴏxxx"
+      - "DK¹ 🇩🇰 @sɪɴɢʙᴏxxx"
+      - "DK² 🇩🇰 @sɪɴɢʙᴏxxx"
+      - "EE¹ 🇪🇪 @sɪɴɢʙᴏxxx"
+      - "ES¹ 🇪🇸 @sɪɴɢʙᴏxxx"
+      - "FI¹ 🇫🇮 @sɪɴɢʙᴏxxx"
+      - "FR¹ 🇫🇷 @sɪɴɢʙᴏxxx"
+      - "GB¹ 🇬🇧 @sɪɴɢʙᴏxxx"
+      - "GB² 🇬🇧 @sɪɴɢʙᴏxxx"
+      - "HU¹ 🇭🇺 @sɪɴɢʙᴏxxx"
+      - "IE¹ 🇮🇪 @sɪɴɢʙᴏxxx"
+      - "IL¹ 🇮🇱 @sɪɴɢʙᴏxxx"
+      - "IT¹ 🇮🇹 @sɪɴɢʙᴏxxx"
+      - "LV¹ 🇱🇻 @sɪɴɢʙᴏxxx"
+      - "NL¹ 🇳🇱 @sɪɴɢʙᴏxxx"
+      - "NL² 🇳🇱 @sɪɴɢʙᴏxxx"
+      - "NO¹ 🇳🇴 @sɪɴɢʙᴏxxx"
+      - "RO¹ 🇷🇴 @sɪɴɢʙᴏxxx"
+      - "RS¹ 🇷🇸 @sɪɴɢʙᴏxxx"
+      - "UA¹ 🇺🇦 @sɪɴɢʙᴏxxx"
+      - "US¹ 🇺🇸 @sɪɴɢʙᴏxxx"
+      - "US² 🇺🇸 @sɪɴɢʙᴏxxx"
+      - "US³ 🇺🇸 @sɪɴɢʙᴏxxx"
+      - "US⁴ 🇺🇸 @sɪɴɢʙᴏxxx"
+      - "US⁵ 🇺🇸 @sɪɴɢʙᴏxxx"
+      - "US⁶ 🇺🇸 @sɪɴɢʙᴏxxx"
+      - "ZA¹ 🇿🇦 @sɪɴɢʙᴏxxx"
+
+  - name: "Manual Select"
+    type: select
+    proxies:
+      - "BE¹ 🇧🇪 @sɪɴɢʙᴏxxx"
+      - "BG¹ 🇧🇬 @sɪɴɢʙᴏxxx"
+      - "CA¹ 🇨🇦 @sɪɴɢʙᴏxxx"
+      - "CA² 🇨🇦 @sɪɴɢʙᴏxxx"
+      - "CA³ 🇨🇦 @sɪɴɢʙᴏxxx"
+      - "CA⁴ 🇨🇦 @sɪɴɢʙᴏxxx"
+      - "CA⁵ 🇨🇦 @sɪɴɢʙᴏxxx"
+      - "CA⁶ 🇨🇦 @sɪɴɢʙᴏxxx"
+      - "CH¹ 🇨🇭 @sɪɴɢʙᴏxxx"
+      - "CH² 🇨🇭 @sɪɴɢʙᴏxxx"
+      - "CZ¹ 🇨🇿 @sɪɴɢʙᴏxxx"
+      - "CZ² 🇨🇿 @sɪɴɢʙᴏxxx"
+      - "DE¹ 🇩🇪 @sɪɴɢʙᴏxxx"
+      - "DE² 🇩🇪 @sɪɴɢʙᴏxxx"
+      - "DK¹ 🇩🇰 @sɪɴɢʙᴏxxx"
+      - "DK² 🇩🇰 @sɪɴɢʙᴏxxx"
+      - "EE¹ 🇪🇪 @sɪɴɢʙᴏxxx"
+      - "ES¹ 🇪🇸 @sɪɴɢʙᴏxxx"
+      - "FI¹ 🇫🇮 @sɪɴɢʙᴏxxx"
+      - "FR¹ 🇫🇷 @sɪɴɢʙᴏxxx"
+      - "GB¹ 🇬🇧 @sɪɴɢʙᴏxxx"
+      - "GB² 🇬🇧 @sɪɴɢʙᴏxxx"
+      - "HU¹ 🇭🇺 @sɪɴɢʙᴏxxx"
+      - "IE¹ 🇮🇪 @sɪɴɢʙᴏxxx"
+      - "IL¹ 🇮🇱 @sɪɴɢʙᴏxxx"
+      - "IT¹ 🇮🇹 @sɪɴɢʙᴏxxx"
+      - "LV¹ 🇱🇻 @sɪɴɢʙᴏxxx"
+      - "NL¹ 🇳🇱 @sɪɴɢʙᴏxxx"
+      - "NL² 🇳🇱 @sɪɴɢʙᴏxxx"
+      - "NO¹ 🇳🇴 @sɪɴɢʙᴏxxx"
+      - "RO¹ 🇷🇴 @sɪɴɢʙᴏxxx"
+      - "RS¹ 🇷🇸 @sɪɴɢʙᴏxxx"
+      - "UA¹ 🇺🇦 @sɪɴɢʙᴏxxx"
+      - "US¹ 🇺🇸 @sɪɴɢʙᴏxxx"
+      - "US² 🇺🇸 @sɪɴɢʙᴏxxx"
+      - "US³ 🇺🇸 @sɪɴɢʙᴏxxx"
+      - "US⁴ 🇺🇸 @sɪɴɢʙᴏxxx"
+      - "US⁵ 🇺🇸 @sɪɴɢʙᴏxxx"
+      - "US⁶ 🇺🇸 @sɪɴɢʙᴏxxx"
+      - "ZA¹ 🇿🇦 @sɪɴɢʙᴏxxx"
+
+  - name: "Iran Traffic"
+    type: select
+    proxies:
+      - "DIRECT"
+      - "PROXY"
+
+  - name: "Ad Block"
+    type: select
+    proxies:
+      - "REJECT"
+      - "DIRECT"
+
+# ------------------------------------------
+# Rule Providers
+# ------------------------------------------
+rule-providers:
+  iran_domains:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt"
+    path: "./rulesets/iran_domains.yaml"
+    interval: 86400
+  iran_ip:
+    type: http
+    behavior: ipcidr
+    url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/cncidr.txt"
+    path: "./rulesets/iran_ip.yaml"
+    interval: 86400
+  goolag_ads:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/reject.txt"
+    path: "./rulesets/reject.yaml"
+    interval: 86400
+
+# ------------------------------------------
+# Routing Rules
+# ------------------------------------------
+rules:
+  - "GEOIP,private,DIRECT,no-resolve"
+  - "RULE-SET,goolag_ads,Ad Block"
+  - "GEOSITE,category-ir,Iran Traffic"
+  - "GEOIP,IR,Iran Traffic"
+  - "RULE-SET,iran_domains,Iran Traffic"
+  - "RULE-SET,iran_ip,Iran Traffic"
+  - "MATCH,PROXY"
