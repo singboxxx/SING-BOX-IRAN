@@ -16,7 +16,7 @@ unified-delay: true
 tcp-concurrent: true
 find-process-mode: "always"
 global-client-fingerprint: "chrome"
-global-ua: "FlClash/v0.8.97 clash-verge Platform/android"
+global-ua: "FlClash/v0.8.99 clash-verge Platform/android"
 keep-alive-interval: 30
 
 # ------------------------------------------
@@ -70,16 +70,16 @@ dns:
     - "78.157.42.100"
 
 # ------------------------------------------
-# Proxies (3 Masque Servers)
+# Proxies (5 Unique Masque Servers)
 # ------------------------------------------
 proxies:
   - name: "MASQUE H2 WARP 1"
     type: masque
-    server: 162.159.199.7
-    port: 443
+    server: 162.159.199.17
+    port: 4443
     network: h2
     sni: consumer-masque.cloudflareclient.com
-    private-key: MHcCAQEEIFIs8tCufSn+3Mn1umddpY1Ue9H4NaNERP7Cu901+wQmoAoGCCqGSM49AwEHoUQDQgAEflwU6OyEO9qVrrL93oEi7YJoNCvYb17p1TRLc48Y+/Z2XDnu1+2I8dCc8+BEP/6rZeLYvWiT7tXKNz/98em9iw==
+    private-key: MHcCAQEEIEuB/GOITlIx2LYbXDJhdkQjyHk7W6crO/S+xZr14/UzoAoGCCqGSM49AwEHoUQDQgAEUModdgdJ0yst8t0lhwh9JfZAuV7caZt9qBdlyHiS5oYD34w+R/9MkRhJzAT9Bc1AUnaOzvPwbdsfoSEyAoOCWw==
     public-key: MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==
     ip: 172.16.0.2
     udp: true
@@ -88,8 +88,21 @@ proxies:
 
   - name: "MASQUE H2 WARP 2"
     type: masque
-    server: 162.159.198.80
-    port: 8095
+    server: 162.159.199.4
+    port: 8443
+    network: h2
+    sni: consumer-masque.cloudflareclient.com
+    private-key: MHcCAQEEIGD8STvTG3w2LErDXt0ysDwprelTaHdV40CicSvz9vpAoAoGCCqGSM49AwEHoUQDQgAEKOyYut7hcYalBduejcOf58jomJZfyVcqyn8/wZjrFA5XgIiSC7MiRRGIR9wtvbJ7huylj8gxtx9mS5a/rcB0Hg==
+    public-key: MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==
+    ip: 172.16.0.2
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+
+  - name: "MASQUE H2 WARP 3"
+    type: masque
+    server: 162.159.199.4
+    port: 8443
     network: h2
     sni: consumer-masque.cloudflareclient.com
     private-key: MHcCAQEEIFIs8tCufSn+3Mn1umddpY1Ue9H4NaNERP7Cu901+wQmoAoGCCqGSM49AwEHoUQDQgAEflwU6OyEO9qVrrL93oEi7YJoNCvYb17p1TRLc48Y+/Z2XDnu1+2I8dCc8+BEP/6rZeLYvWiT7tXKNz/98em9iw==
@@ -99,7 +112,20 @@ proxies:
     remote-dns-resolve: true
     dns: ['1.1.1.1', '1.0.0.1']
 
-  - name: "MASQUE H2 WARP 3"
+  - name: "MASQUE H2 WARP 4"
+    type: masque
+    server: 162.159.199.124
+    port: 8095
+    network: h2
+    sni: consumer-masque.cloudflareclient.com
+    private-key: MHcCAQEEIEuB/GOITlIx2LYbXDJhdkQjyHk7W6crO/S+xZr14/UzoAoGCCqGSM49AwEHoUQDQgAEUModdgdJ0yst8t0lhwh9JfZAuV7caZt9qBdlyHiS5oYD34w+R/9MkRhJzAT9Bc1AUnaOzvPwbdsfoSEyAoOCWw==
+    public-key: MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==
+    ip: 172.16.0.2
+    udp: true
+    remote-dns-resolve: true
+    dns: ['1.1.1.1', '1.0.0.1']
+
+  - name: "MASQUE H2 WARP 5"
     type: masque
     server: 162.159.198.125
     port: 8095
@@ -132,6 +158,8 @@ proxy-groups:
       - "MASQUE H2 WARP 1"
       - "MASQUE H2 WARP 2"
       - "MASQUE H2 WARP 3"
+      - "MASQUE H2 WARP 4"
+      - "MASQUE H2 WARP 5"
 
   - name: "Manual Select"
     type: select
@@ -139,6 +167,8 @@ proxy-groups:
       - "MASQUE H2 WARP 1"
       - "MASQUE H2 WARP 2"
       - "MASQUE H2 WARP 3"
+      - "MASQUE H2 WARP 4"
+      - "MASQUE H2 WARP 5"
 
   - name: "Iran Traffic"
     type: select
