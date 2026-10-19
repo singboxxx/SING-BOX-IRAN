@@ -1,0 +1,334 @@
+{
+  "log": {
+    "disabled": false,
+    "level": "warn",
+    "timestamp": true
+  },
+  "dns": {
+    "servers": [
+      {
+        "tag": "dns-remote",
+        "type": "udp",
+        "server": "1.1.1.1",
+        "detour": "ᴛɢ➜@sɪɴɢʙᴏxxx"
+      },
+      {
+        "tag": "dns-direct",
+        "type": "udp",
+        "server": "1.1.1.1"
+      }
+    ],
+    "rules": [
+      {
+        "outbound": "any",
+        "server": "dns-direct"
+      },
+      {
+        "clash_mode": "Direct",
+        "server": "dns-direct"
+      },
+      {
+        "clash_mode": "Global",
+        "server": "dns-remote"
+      }
+    ],
+    "final": "dns-remote",
+    "strategy": "prefer_ipv4"
+  },
+  "inbounds": [
+    {
+      "type": "tun",
+      "tag": "tun-in",
+      "interface_name": "tun0",
+      "address": [
+        "172.19.0.1/30"
+      ],
+      "auto_route": true,
+      "strict_route": true,
+      "stack": "mixed"
+    },
+    {
+      "type": "mixed",
+      "tag": "mixed-in",
+      "listen": "127.0.0.1",
+      "listen_port": 7890
+    }
+  ],
+  "endpoints": [
+    {
+      "type": "openvpn-client",
+      "tag": "🇱🇺 LU-UDP-2500",
+      "server": "107.189.7.49",
+      "server_port": 2500,
+      "network": "udp",
+      "username": "F8jVtW-vpnjantit.com",
+      "password": "G9lOfZ",
+      "auth": "SHA512",
+      "data_ciphers": [
+        "AES-256-CBC"
+      ],
+      "tls": {
+        "certificate": [
+          "-----BEGIN CERTIFICATE-----",
+          "MIIDSzCCAjOgAwIBAgIUPR2meFDBLTFsbWVWIRoNhiYa/eowDQYJKoZIhvcNAQEL",
+          "BQAwFjEUMBIGA1UEAwwLRWFzeS1SU0EgQ0EwHhcNMjMwNTAxMjIzNzAwWhcNMzMw",
+          "NDI4MjIzNzAwWjAWMRQwEgYDVQQDDAtFYXN5LVJTQSBDQTCCASIwDQYJKoZIhvcN",
+          "AQEBBQADggEPADCCAQoCggEBAL0bJCHNOgV06GRHB+3S3R0MEaBHC8uGx+GN+AsK",
+          "ArxWZEVOuzZMdxz5aSAvRNXxL2FB+Qc2Ik9rgNZxcYzIz3CT1w1KMh7zQJ5HcxGp",
+          "Cf2igzjXo8xTJ78oE9lEZn5mA5H5sF9dg+8Fuzr/1GyFzV0Y19px44cpXDUEmlI0",
+          "KWRtFejW9eP9MjU+JTGKG2ZD+Phmu/OqQPYUtPX/wyekQB4X7V0RuLaKTx8tuKSh",
+          "wBLecBQ6PsMyGLYa4j7c07Qf9WcKRFdZDNpqgiDM3AjueH22jEhBIcdjUceKY1nh",
+          "NKS08lkbUBPwlWznXpUwZ0jbGB2aLmjhsPY1NvwZ0L/SeP0CAwEAAaOBkDCBjTAM",
+          "BgNVHRMEBTADAQH/MB0GA1UdDgQWBBTSiNgJpwb0V//dh4fAHjojok8tfDBRBgNV",
+          "HSMESjBIgBTSiNgJpwb0V//dh4fAHjojok8tfKEapBgwFjEUMBIGA1UEAwwLRWFz",
+          "eS1SU0EgQ0GCFD0dpnhQwS0xbG1lViEaDYYmGv3qMAsGA1UdDwQEAwIBBjANBgkq",
+          "hkiG9w0BAQsFAAOCAQEANs/QhCF6aixncl8os5B2CecfK3PvLmOIrfejXWJP7Nxm",
+          "6GvVP6z5AXOuIvhJnNcXm0jOUpf/6xRBDpJp7nZzV9dlF87EKgRKQMd7RfH9N+Lg",
+          "UCwz2l7wjYAx4upZSrAG1ipgZVZkzHFgoO3FryvTZlqv3LIvux2EQXfA9f4929YX",
+          "quEBcP/In0UnufMyilB1LFdWAV4yamPKRXbqjy4qb4Gs6uXjcGLsXpl34JXobogZ",
+          "ipZNe1SOlIXah/jB5Kt12dQV2o1VzXOMtyBKRpmqR/lk0vfzQK5xZxKWcY3o3b+q",
+          "ZimNqON6Zk8bRJKpmZCA5XkjGzG8KUSp7FLP8eAxqQ==",
+          "-----END CERTIFICATE-----"
+        ],
+        "client_certificate": [
+          "-----BEGIN CERTIFICATE-----",
+          "MIIDYzCCAkugAwIBAgIRAOTmdbOrf84X+LeISMIplm0wDQYJKoZIhvcNAQELBQAw",
+          "FjEUMBIGA1UEAwwLRWFzeS1SU0EgQ0EwHhcNMjYxMDE5MjI1MTUzWhcNMzYxMDE2",
+          "MjI1MTUzWjAfMR0wGwYDVQQDDBRGOGpWdFctdnBuamFudGl0LmNvbTCCASIwDQYJ",
+          "KoZIhvcNAQEBBQADggEPADCCAQoCggEBAJVsH+tJ+udQnmnnlfOfYr9Fo8gE4D1j",
+          "UvXAOKmThhHPMlcgl6qfXkzRS4wDSQvUbQBHXNL00y0+DrVMLfK9Fm55WEkeljs4",
+          "lPPwYp/mfg35wCbKmcZA63Tp04q1hyrKWC8IMUlE1ufg90H25p/Ar3rU0kYoWsiQ",
+          "G9SIx/qptD1s2GXI2HzQrFerx7aMXTqNuOXmn8+XRGdlmf3/d41WmBW16bxKXzHj",
+          "i+QG8e12p7jUj4bLIfiF1gDkIMIGUT64R1dvXdWX259JakA2p71X1m1Zoynk4+F1",
+          "zIXWjKdOwsG0Tins3oEflJlJ0LCsVd8447TadHDQrqaOZaOBGtE2+VMCAwEAAaOB",
+          "ojCBnzAJBgNVHRMEAjAAMB0GA1UdDgQWBBT/8ogTkkJu2L2znF+7fG85ACU6jjBR",
+          "BgNVHSMESjBIgBTSiNgJpwb0V//dh4fAHjojok8tfKEapBgwFjEUMBIGA1UEAwwL",
+          "RWFzeS1SU0EgQ0GCFD0dpnhQwS0xbG1lViEaDYYmGv3qMBMGA1UdJQQMMAoGCCsG",
+          "AQUFBwMCMAsGA1UdDwQEAwIHgDANBgkqhkiG9w0BAQsFAAOCAQEATdIoHb9XHpP1",
+          "oHYzyLfjVRArcAGARHJRGh5lWzUpSww2ptD/b7b6aZXR3SkER/Xsx2fjnA/NFHlh",
+          "XEM4PWD5ETf6YmvqxqNW8+85b+OLyCH+sQTTx76rpxOGQOKxx8cQiYonraPaYEC0",
+          "8PlByv4WHhfegKyAGpQMmn/HWtKyxpW3oRqFv3B22WoQ9KLPxX9IPQfR0vgn3kZc",
+          "kj34GjHPXjHGkCMewg4ne4natb4XgkKPOAW6MkkQWTcbfAHe3ngu9bjmnSxtzyIJ",
+          "UxS+bLeEwaOI0j/p1zweBItEGoYh6P/xeITw9putELcee2TWeaxd/Gf2Uzt38hMq",
+          "n6C0hqHynA==",
+          "-----END CERTIFICATE-----"
+        ],
+        "client_key": [
+          "-----BEGIN PRIVATE KEY-----",
+          "MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCVbB/rSfrnUJ5p",
+          "55Xzn2K/RaPIBOA9Y1L1wDipk4YRzzJXIJeqn15M0UuMA0kL1G0AR1zS9NMtPg61",
+          "TC3yvRZueVhJHpY7OJTz8GKf5n4N+cAmypnGQOt06dOKtYcqylgvCDFJRNbn4PdB",
+          "9uafwK961NJGKFrIkBvUiMf6qbQ9bNhlyNh80KxXq8e2jF06jbjl5p/Pl0RnZZn9",
+          "/3eNVpgVtem8Sl8x44vkBvHtdqe41I+GyyH4hdYA5CDCBlE+uEdXb13Vl9ufSWpA",
+          "Nqe9V9ZtWaMp5OPhdcyF1oynTsLBtE4p7N6BH5SZSdCwrFXfOOO02nRw0K6mjmWj",
+          "gRrRNvlTAgMBAAECggEAWVvdRt/qTdV3t0wI8DYcXtjt1pub4vp4TYGUIU2ZOyNX",
+          "LqXOLfq68WOlM2lvkMSMH0OOLpa9h+v57dBOFkGgnZayBqBlJatz4OKciJXWQtNe",
+          "Z5R4HAkNBtEjcmuXFy8FR7M1jmS9xNRT6j4Ws+kOyH1n9w8BI7qS+iqGtdAxex2n",
+          "4aCTf8+8VlKTavC143m1YV88OTX/iWenJ7pRyld94hISR7yqStc2G3ZltVszSTHp",
+          "Zkq6NZ057wUDP+bhwBIqEEy+f8urtSwk2zQrHhpSDsykX8USSzL3s4AcuZV+RkYh",
+          "g42fqe4lyN9HMjkyIPIt/sbV1ND9QUTwghqVpr988QKBgQDG6bQiCsAK7IXuSVQQ",
+          "s2pUkMjKzBRW56vCzgDUctV/NLn4SBFsVpKAmjZdeDALMpsD8XLIkJwhclttiuJe",
+          "wjOHa3UdlLX0dD4jnMN/0ZhbJAlQYPb8sk4puJul74qJauEQ4F3kLomXyDaiPPf0",
+          "Zn6xSpQyBKd5RsOwE5k5zdpl2QKBgQDATk9LnaS5foqQg/t5486mSjRWMkIHlY94",
+          "x/xuujets6W6WmjC1pqXnoP8tqPSfmsDV5sdIoySVc5LXgDuwCLWY1jYdBPQyOYE",
+          "uwXZ3vMJLpTGeRn9/cyLXn+Ax0IqBGKKnn8yFK3N5hgCC7Cka+CXUyqHMPv2X508",
+          "hypoHuzBCwKBgQC/V+Lq+FJib8IqRamzYxO/A4PT6VsLelI007viohCUDGF038a6",
+          "49CMG0x+v3Xf369UrLfRDaLTXdFrX7WAl+m/s/P2H66k2AlKcqtxUmrwCYtYId6V",
+          "mOQtqCM6DWLD6+dTN7G6JbZAJt2/VUzkcpAe9fH255k+xX7K6x9zhn03iQKBgGaF",
+          "mTqr2ZTWxJKU+m2aKKJ4rvxBIPigIHP40jhJ6MMfIjx+VJmDBbnNVXpV+HKQ2QZY",
+          "HybiM2UUf72oaQDfx/LZ1hTXlXTald5xwoXLmXAMuF4zU8sYEoM+puUF1d1Gpy5V",
+          "n2QYqCw7/hKhHtQZewvR17tpPvqzMMWDHfWSfw/PAoGBAIGOCamDajHvMY8xpyez",
+          "UkeUwmxcaI4+0ncDLgOx/J0oVxSXoD/MevnV4Q0Hg3/687jw7ItsALQy2/Qboovz",
+          "+vultzdzZYiXLmMalyiAAF22JEvNnBzBoiMZ+LQngAqGeMh+/RlUtzodq6Fc3Mgx",
+          "s6Oa+Q6rOiPmH49YL2FXVGAQ",
+          "-----END PRIVATE KEY-----"
+        ],
+        "control_wrap": {
+          "type": "tls_crypt",
+          "key": [
+            "-----BEGIN OpenVPN Static key V1-----",
+            "f5d3f0a131a97d7ec2992e2249e589da",
+            "e6684849803aab67508d3c47984b9741",
+            "000fb529820aa5b1631bae29ab2e4e21",
+            "0c9f6661758858c5f697a659b982a595",
+            "fbe0998f38a27faf90227ac332957208",
+            "28450e2ca6745ffde927df93b0b7e9d1",
+            "b92fb9f83c82d4fabe560bb78f79e69d",
+            "af9d1268ed07b5c9fca25ebdb1df4304",
+            "591817681a9593f5ba124224fc1699e7",
+            "a644c0d405df9c3b31ebd6e7eec77a79",
+            "a709a9ff990eba2906c051b944e74286",
+            "6f91f6256a6e1b4d0713fd2d8f8d8856",
+            "3f934aeed3db958d97d8418104aee38d",
+            "ed4866c5b5331ee6526472b77e07db6e",
+            "619217b75e5157c100556c44e0f46f9e",
+            "cf8ea242a33fb0870d4c2e1971345159",
+            "-----END OpenVPN Static key V1-----"
+          ]
+        }
+      }
+    },
+    {
+      "type": "openvpn-client",
+      "tag": "🇱🇺 LU-TCP-2501",
+      "server": "107.189.7.49",
+      "server_port": 2501,
+      "network": "tcp",
+      "username": "F8jVtW-vpnjantit.com",
+      "password": "G9lOfZ",
+      "auth": "SHA512",
+      "data_ciphers": [
+        "AES-256-CBC"
+      ],
+      "tls": {
+        "certificate": [
+          "-----BEGIN CERTIFICATE-----",
+          "MIIDSzCCAjOgAwIBAgIUPR2meFDBLTFsbWVWIRoNhiYa/eowDQYJKoZIhvcNAQEL",
+          "BQAwFjEUMBIGA1UEAwwLRWFzeS1SU0EgQ0EwHhcNMjMwNTAxMjIzNzAwWhcNMzMw",
+          "NDI4MjIzNzAwWjAWMRQwEgYDVQQDDAtFYXN5LVJTQSBDQTCCASIwDQYJKoZIhvcN",
+          "AQEBBQADggEPADCCAQoCggEBAL0bJCHNOgV06GRHB+3S3R0MEaBHC8uGx+GN+AsK",
+          "ArxWZEVOuzZMdxz5aSAvRNXxL2FB+Qc2Ik9rgNZxcYzIz3CT1w1KMh7zQJ5HcxGp",
+          "Cf2igzjXo8xTJ78oE9lEZn5mA5H5sF9dg+8Fuzr/1GyFzV0Y19px44cpXDUEmlI0",
+          "KWRtFejW9eP9MjU+JTGKG2ZD+Phmu/OqQPYUtPX/wyekQB4X7V0RuLaKTx8tuKSh",
+          "wBLecBQ6PsMyGLYa4j7c07Qf9WcKRFdZDNpqgiDM3AjueH22jEhBIcdjUceKY1nh",
+          "NKS08lkbUBPwlWznXpUwZ0jbGB2aLmjhsPY1NvwZ0L/SeP0CAwEAAaOBkDCBjTAM",
+          "BgNVHRMEBTADAQH/MB0GA1UdDgQWBBTSiNgJpwb0V//dh4fAHjojok8tfDBRBgNV",
+          "HSMESjBIgBTSiNgJpwb0V//dh4fAHjojok8tfKEapBgwFjEUMBIGA1UEAwwLRWFz",
+          "eS1SU0EgQ0GCFD0dpnhQwS0xbG1lViEaDYYmGv3qMAsGA1UdDwQEAwIBBjANBgkq",
+          "hkiG9w0BAQsFAAOCAQEANs/QhCF6aixncl8os5B2CecfK3PvLmOIrfejXWJP7Nxm",
+          "6GvVP6z5AXOuIvhJnNcXm0jOUpf/6xRBDpJp7nZzV9dlF87EKgRKQMd7RfH9N+Lg",
+          "UCwz2l7wjYAx4upZSrAG1ipgZVZkzHFgoO3FryvTZlqv3LIvux2EQXfA9f4929YX",
+          "quEBcP/In0UnufMyilB1LFdWAV4yamPKRXbqjy4qb4Gs6uXjcGLsXpl34JXobogZ",
+          "ipZNe1SOlIXah/jB5Kt12dQV2o1VzXOMtyBKRpmqR/lk0vfzQK5xZxKWcY3o3b+q",
+          "ZimNqON6Zk8bRJKpmZCA5XkjGzG8KUSp7FLP8eAxqQ==",
+          "-----END CERTIFICATE-----"
+        ],
+        "client_certificate": [
+          "-----BEGIN CERTIFICATE-----",
+          "MIIDYzCCAkugAwIBAgIRAOTmdbOrf84X+LeISMIplm0wDQYJKoZIhvcNAQELBQAw",
+          "FjEUMBIGA1UEAwwLRWFzeS1SU0EgQ0EwHhcNMjYxMDE5MjI1MTUzWhcNMzYxMDE2",
+          "MjI1MTUzWjAfMR0wGwYDVQQDDBRGOGpWdFctdnBuamFudGl0LmNvbTCCASIwDQYJ",
+          "KoZIhvcNAQEBBQADggEPADCCAQoCggEBAJVsH+tJ+udQnmnnlfOfYr9Fo8gE4D1j",
+          "UvXAOKmThhHPMlcgl6qfXkzRS4wDSQvUbQBHXNL00y0+DrVMLfK9Fm55WEkeljs4",
+          "lPPwYp/mfg35wCbKmcZA63Tp04q1hyrKWC8IMUlE1ufg90H25p/Ar3rU0kYoWsiQ",
+          "G9SIx/qptD1s2GXI2HzQrFerx7aMXTqNuOXmn8+XRGdlmf3/d41WmBW16bxKXzHj",
+          "i+QG8e12p7jUj4bLIfiF1gDkIMIGUT64R1dvXdWX259JakA2p71X1m1Zoynk4+F1",
+          "zIXWjKdOwsG0Tins3oEflJlJ0LCsVd8447TadHDQrqaOZaOBGtE2+VMCAwEAAaOB",
+          "ojCBnzAJBgNVHRMEAjAAMB0GA1UdDgQWBBT/8ogTkkJu2L2znF+7fG85ACU6jjBR",
+          "BgNVHSMESjBIgBTSiNgJpwb0V//dh4fAHjojok8tfKEapBgwFjEUMBIGA1UEAwwL",
+          "RWFzeS1SU0EgQ0GCFD0dpnhQwS0xbG1lViEaDYYmGv3qMBMGA1UdJQQMMAoGCCsG",
+          "AQUFBwMCMAsGA1UdDwQEAwIHgDANBgkqhkiG9w0BAQsFAAOCAQEATdIoHb9XHpP1",
+          "oHYzyLfjVRArcAGARHJRGh5lWzUpSww2ptD/b7b6aZXR3SkER/Xsx2fjnA/NFHlh",
+          "XEM4PWD5ETf6YmvqxqNW8+85b+OLyCH+sQTTx76rpxOGQOKxx8cQiYonraPaYEC0",
+          "8PlByv4WHhfegKyAGpQMmn/HWtKyxpW3oRqFv3B22WoQ9KLPxX9IPQfR0vgn3kZc",
+          "kj34GjHPXjHGkCMewg4ne4natb4XgkKPOAW6MkkQWTcbfAHe3ngu9bjmnSxtzyIJ",
+          "UxS+bLeEwaOI0j/p1zweBItEGoYh6P/xeITw9putELcee2TWeaxd/Gf2Uzt38hMq",
+          "n6C0hqHynA==",
+          "-----END CERTIFICATE-----"
+        ],
+        "client_key": [
+          "-----BEGIN PRIVATE KEY-----",
+          "MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCVbB/rSfrnUJ5p",
+          "55Xzn2K/RaPIBOA9Y1L1wDipk4YRzzJXIJeqn15M0UuMA0kL1G0AR1zS9NMtPg61",
+          "TC3yvRZueVhJHpY7OJTz8GKf5n4N+cAmypnGQOt06dOKtYcqylgvCDFJRNbn4PdB",
+          "9uafwK961NJGKFrIkBvUiMf6qbQ9bNhlyNh80KxXq8e2jF06jbjl5p/Pl0RnZZn9",
+          "/3eNVpgVtem8Sl8x44vkBvHtdqe41I+GyyH4hdYA5CDCBlE+uEdXb13Vl9ufSWpA",
+          "Nqe9V9ZtWaMp5OPhdcyF1oynTsLBtE4p7N6BH5SZSdCwrFXfOOO02nRw0K6mjmWj",
+          "gRrRNvlTAgMBAAECggEAWVvdRt/qTdV3t0wI8DYcXtjt1pub4vp4TYGUIU2ZOyNX",
+          "LqXOLfq68WOlM2lvkMSMH0OOLpa9h+v57dBOFkGgnZayBqBlJatz4OKciJXWQtNe",
+          "Z5R4HAkNBtEjcmuXFy8FR7M1jmS9xNRT6j4Ws+kOyH1n9w8BI7qS+iqGtdAxex2n",
+          "4aCTf8+8VlKTavC143m1YV88OTX/iWenJ7pRyld94hISR7yqStc2G3ZltVszSTHp",
+          "Zkq6NZ057wUDP+bhwBIqEEy+f8urtSwk2zQrHhpSDsykX8USSzL3s4AcuZV+RkYh",
+          "g42fqe4lyN9HMjkyIPIt/sbV1ND9QUTwghqVpr988QKBgQDG6bQiCsAK7IXuSVQQ",
+          "s2pUkMjKzBRW56vCzgDUctV/NLn4SBFsVpKAmjZdeDALMpsD8XLIkJwhclttiuJe",
+          "wjOHa3UdlLX0dD4jnMN/0ZhbJAlQYPb8sk4puJul74qJauEQ4F3kLomXyDaiPPf0",
+          "Zn6xSpQyBKd5RsOwE5k5zdpl2QKBgQDATk9LnaS5foqQg/t5486mSjRWMkIHlY94",
+          "x/xuujets6W6WmjC1pqXnoP8tqPSfmsDV5sdIoySVc5LXgDuwCLWY1jYdBPQyOYE",
+          "uwXZ3vMJLpTGeRn9/cyLXn+Ax0IqBGKKnn8yFK3N5hgCC7Cka+CXUyqHMPv2X508",
+          "hypoHuzBCwKBgQC/V+Lq+FJib8IqRamzYxO/A4PT6VsLelI007viohCUDGF038a6",
+          "49CMG0x+v3Xf369UrLfRDaLTXdFrX7WAl+m/s/P2H66k2AlKcqtxUmrwCYtYId6V",
+          "mOQtqCM6DWLD6+dTN7G6JbZAJt2/VUzkcpAe9fH255k+xX7K6x9zhn03iQKBgGaF",
+          "mTqr2ZTWxJKU+m2aKKJ4rvxBIPigIHP40jhJ6MMfIjx+VJmDBbnNVXpV+HKQ2QZY",
+          "HybiM2UUf72oaQDfx/LZ1hTXlXTald5xwoXLmXAMuF4zU8sYEoM+puUF1d1Gpy5V",
+          "n2QYqCw7/hKhHtQZewvR17tpPvqzMMWDHfWSfw/PAoGBAIGOCamDajHvMY8xpyez",
+          "UkeUwmxcaI4+0ncDLgOx/J0oVxSXoD/MevnV4Q0Hg3/687jw7ItsALQy2/Qboovz",
+          "+vultzdzZYiXLmMalyiAAF22JEvNnBzBoiMZ+LQngAqGeMh+/RlUtzodq6Fc3Mgx",
+          "s6Oa+Q6rOiPmH49YL2FXVGAQ",
+          "-----END PRIVATE KEY-----"
+        ],
+        "control_wrap": {
+          "type": "tls_crypt",
+          "key": [
+            "-----BEGIN OpenVPN Static key V1-----",
+            "f5d3f0a131a97d7ec2992e2249e589da",
+            "e6684849803aab67508d3c47984b9741",
+            "000fb529820aa5b1631bae29ab2e4e21",
+            "0c9f6661758858c5f697a659b982a595",
+            "fbe0998f38a27faf90227ac332957208",
+            "28450e2ca6745ffde927df93b0b7e9d1",
+            "b92fb9f83c82d4fabe560bb78f79e69d",
+            "af9d1268ed07b5c9fca25ebdb1df4304",
+            "591817681a9593f5ba124224fc1699e7",
+            "a644c0d405df9c3b31ebd6e7eec77a79",
+            "a709a9ff990eba2906c051b944e74286",
+            "6f91f6256a6e1b4d0713fd2d8f8d8856",
+            "3f934aeed3db958d97d8418104aee38d",
+            "ed4866c5b5331ee6526472b77e07db6e",
+            "619217b75e5157c100556c44e0f46f9e",
+            "cf8ea242a33fb0870d4c2e1971345159",
+            "-----END OpenVPN Static key V1-----"
+          ]
+        }
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "type": "selector",
+      "tag": "ᴛɢ➜@sɪɴɢʙᴏxxx",
+      "outbounds": [
+        "Auto Select",
+        "🇱🇺 LU-UDP-2500",
+        "🇱🇺 LU-TCP-2501",
+        "direct"
+      ],
+      "default": "Auto Select"
+    },
+    {
+      "type": "urltest",
+      "tag": "Auto Select",
+      "outbounds": [
+        "🇱🇺 LU-UDP-2500",
+        "🇱🇺 LU-TCP-2501"
+      ],
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": "3m",
+      "tolerance": 50
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    }
+  ],
+  "route": {
+    "rules": [
+      {
+        "action": "sniff"
+      },
+      {
+        "protocol": "dns",
+        "action": "hijack-dns"
+      },
+      {
+        "clash_mode": "Direct",
+        "outbound": "direct"
+      },
+      {
+        "clash_mode": "Global",
+        "outbound": "ᴛɢ➜@sɪɴɢʙᴏxxx"
+      }
+    ],
+    "final": "ᴛɢ➜@sɪɴɢʙᴏxxx",
+    "auto_detect_interface": true
+  }
+}
